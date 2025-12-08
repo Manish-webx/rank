@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retro Highway Racer</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #222;
+            color: white;
+            font-family: 'Courier New', Courier, monospace;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        h1 {
+            margin-bottom: 10px;
+            text-shadow: 2px 2px #000;
+        }
+
+        #gameContainer {
+            position: relative;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            border: 4px solid #fff;
+        }
+
+        canvas {
+            display: block;
+            background-color: #555;
+            /* Road Color */
+        }
+
+        #ui {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 20px;
+            font-weight: bold;
+            z-index: 10;
+            pointer-events: none;
+        }
+
+        #gameOverScreen {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0, 0, 0, 0.85);
+            padding: 20px;
+            text-align: center;
+            border: 2px solid white;
+            display: none;
+            /* Hidden by default */
+        }
+
+        button {
+            background: #ff4757;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            font-family: inherit;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background: #ff6b81;
+        }
+
+        .instructions {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #aaa;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>RETRO HIGHWAY</h1>
+
+    <div id="gameContainer">
+        <div id="ui">Score: <span id="scoreVal">0</span></div>
+        <canvas id="gameCanvas" width="400" height="600"></canvas>
+
+        <div id="gameOverScreen">
+            <h2>CRASHED!</h2>
+            <p>Final Score: <span id="finalScore">0</span></p>
+            <button onclick="resetGame()">Play Again</button>
+        </div>
+    </div>
+
+    <div class="instructions">Use LEFT and RIGHT Arrow Keys to move</div>
+
+    <script>
+        const canvas = document.getElementById('gameCanvas');
+        const ctx = canvas.getContext('2d');
+        const scoreEl = document.getElementById('scoreVal');
+        const finalScoreEl = document.getElementById('finalScore');
+        const gameOverScreen = document.getElementById('gameOverScreen');
+
+        // Game Variables
+        let gameRunning = true;
+        let score = 0;
+        let speed = 5;
+        let frameCount = 0;
+
+        // Player Car
+        const car = {
+            x: canvas.width / 2 - 25,
+            y: canvas.height - 100,
+            w: 50,
+            h: 80,
+            color: '#3498db', // Blue
+            dx: 0
+        };
+
+        // Obstacles array
+        let obstacles = [];
+
+        // Controls
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight') car.dx = 5;
+            if (e.key === 'ArrowLeft') car.dx = -5;
+        });
+
+        document.addEventListener('keyup', (e) => {
+            if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') car.dx = 0;
+        });
+
+        // Draw Player
+        function drawCar() {
+            ctx.fillStyle = car.color;
+            // Car Body
+            ctx.fillRect(car.x, car.y, car.w, car.h);
+
+            // Windows (Visual detail)
+            ctx.fillStyle = '#111';
+            ctx.fillRect(car.x + 5, car.y + 10, car.w - 10, 20); // Front glass
+            ctx.fillRect(car.x + 5, car.y + 50, car.w - 10, 15); // Back glass
+        }
+
+        // Draw Obstacles
+        function drawObstacles() {
+            obstacles.forEach(obs => {
+                ctx.fillStyle = '#e74c3c'; // Red
+                ctx.fillRect(obs.x, obs.y, obs.w, obs.h);
+
+                // Visual detail for enemy car
+                ctx.fillStyle = '#000';
+                ctx.fillRect(obs.x + 5, obs.y + 10, obs.w - 10, 15);
+            });
+        }
+
+        function moveObstacles() {
+            obstacles.forEach(obs => {
+                obs.y += speed;
+            });
+
+            // Remove obstacles that go off screen and add score
+            if (obstacles.length > 0 && obstacles[0].y > canvas.height) {
+                obstacles.shift();
+                score++;
+                scoreEl.innerText = score;
+
+                // Increase difficulty every 10 points
+                if (score % 10 === 0) speed += 0.5;
+            }
+        }
+
+        function spawnObstacle() {
+            // Spawn a new car every 60 frames (approx 1 second)
+            if (frameCount % 60 === 0) {
+                const laneWidth = canvas.width / 3; // Divide road into 3 "lanes" mostly
+                const randomX = Math.random() * (canvas.width - 50);
+                obstacles.push({
+                    x: randomX,
+                    y: -100, // Start above the screen
+                    w: 50,
+                    h: 80
+                });
+            }
+        }
+
+        // Road Markings (Moving effect)
+        let lineOffset = 0;
+        function drawRoad() {
+            ctx.strokeStyle = '#fff';
+            ctx.setLineDash([20, 20]); // Dashed line
+            ctx.lineWidth = 4;
+
+            // Center Line
+            ctx.beginPath();
+            ctx.moveTo(canvas.width / 2, -50 + lineOffset);
+            ctx.lineTo(canvas.width / 2, canvas.height);
+            ctx.stroke();
+
+            lineOffset += speed;
+            if (lineOffset >= 40) lineOffset = 0; // Reset for infinite loop effect
+        }
+
+        function checkCollision() {
+            obstacles.forEach(obs => {
+                if (
+                    car.x < obs.x + obs.w &&
+                    car.x + car.w > obs.x &&
+                    car.y < obs.y + obs.h &&
+                    car.y + car.h > obs.y
+                ) {
+                    gameOver();
+                }
+            });
+        }
+
+        function update() {
+            if (!gameRunning) return;
+
+            // Clear canvas
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            // Move Player
+            car.x += car.dx;
+
+            // Wall Collision (Keep player inside road)
+            if (car.x < 0) car.x = 0;
+            if (car.x + car.w > canvas.width) car.x = canvas.width - car.w;
+
+            // Game Logic
+            spawnObstacle();
+            moveObstacles();
+            checkCollision();
+
+            // Drawing
+            drawRoad();
+            drawCar();
+            drawObstacles();
+
+            frameCount++;
+            requestAnimationFrame(update);
+        }
+
+        function gameOver() {
+            gameRunning = false;
+            finalScoreEl.innerText = score;
+            gameOverScreen.style.display = 'block';
+        }
+
+        function resetGame() {
+            obstacles = [];
+            score = 0;
+            speed = 5;
+            scoreEl.innerText = '0';
+            car.x = canvas.width / 2 - 25;
+            frameCount = 0;
+            gameRunning = true;
+            gameOverScreen.style.display = 'none';
+            update();
+        }
+
+        // Start the game loop
+        update();
+
+    </script>
+</body>
+
+</html>

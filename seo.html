@@ -36,7 +36,7 @@
 
         /* Hero Section - Dark Background with Brand Color */
         .seo-hero {
-            background-color: #000000;
+            background-color: #212121;
             background-image: url('https://cognivicdigital.com/images/seo/texture.png');
             background-repeat: repeat;
             padding: 180px 0 100px;
@@ -105,13 +105,13 @@
 
         /* Section Styles */
         .seo-section {
-            padding: 50px 0;
+            padding: 30px 0;
         }
 
         .section-title {
             font-size: 42px;
             font-weight: 800;
-            margin-bottom: 20px;
+            margin-bottom: 2px;
             line-height: 1.3;
             color: #1a1a1a;
         }
@@ -119,7 +119,7 @@
         .section-subtitle {
             font-size: 18px;
             color: #666;
-            margin-bottom: 50px;
+            margin-bottom: 5px;
             line-height: 1.6;
         }
 
@@ -132,6 +132,9 @@
             margin-bottom: 30px;
             transition: all 0.3s ease;
             border: 2px solid transparent;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
         }
 
         .why-choose-card:hover {
@@ -156,7 +159,7 @@
         /* Startup USP Section */
         .startup-usp-section {
             background: #f9f9f9;
-            padding: 80px 0;
+            padding: 40px 0;
             position: relative;
         }
 
@@ -208,6 +211,7 @@
             margin-bottom: 15px;
             font-size: 18px;
             color: #444;
+            justify-content: flex-start;
         }
 
         .startup-feature::before {
@@ -352,7 +356,7 @@
 
         /* Final CTA Section */
         .final-cta {
-            background: #000;
+            background: #212121;
             padding: 100px 0;
             color: #fff;
             text-align: center;
@@ -411,8 +415,8 @@
 
         /* Stats Section */
         .stats-section {
-            background: #212121;
-            padding: 50px 0;
+            background: #ffffff;
+            padding: 30px 0;
             position: relative;
         }
 
@@ -437,14 +441,14 @@
 
         .stat-label {
             font-size: 16px;
-            color: #fff;
+            color: #1a1a1a;
             font-weight: 500;
         }
 
         /* Testimonials Section */
         .testimonials-section {
             background: #212121;
-            padding: 50px 0;
+            padding: 30px 0;
         }
 
         .testimonials-grid {
@@ -517,7 +521,7 @@
         /* Pricing Section */
         .pricing-section {
             background: #f9f9f9;
-            padding: 50px 0;
+            padding: 30px 0;
         }
 
         .pricing-grid {
@@ -610,7 +614,7 @@
         /* FAQ Section */
         .faq-section {
             background: #212121;
-            padding: 50px 0;
+            padding: 30px 0;
         }
 
         .faq-container {
@@ -676,7 +680,7 @@
         /* Portfolio/Results Showcase Section */
         .portfolio-section {
             background: #fff;
-            padding: 50px 0;
+            padding: 30px 0;
         }
 
         .portfolio-grid {
@@ -735,14 +739,14 @@
         /* Process Section */
         .process-section {
             background: #212121;
-            padding: 50px 0;
+            padding: 30px 0;
         }
 
         .process-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 30px;
-            margin-top: 40px;
+            margin-top: 20px;
         }
 
         .process-step {
@@ -775,10 +779,7 @@
             margin: 0 auto 20px;
         }
 
-        .process-icon {
-            font-size: 48px;
-            margin-bottom: 15px;
-        }
+
 
         .process-step h4 {
             color: #fff;
@@ -876,10 +877,10 @@
         }
 
         .btn-sticky {
-            background: #000;
+            background: #212121;
             color: #fff;
             padding: 12px 30px;
-            border: 2px solid #000;
+            border: 2px solid #212121;
             border-radius: 50px;
             font-weight: 700;
             text-decoration: none;
@@ -970,6 +971,126 @@
                 font-size: 14px;
             }
         }
+
+        /* Growth CTA Section */
+        .growth-cta-section {
+            background-color: #212121;
+            padding: 80px 0;
+            color: #fff;
+            position: relative;
+        }
+
+        .growth-cta-content h2 {
+            font-size: 38px;
+            font-weight: 800;
+            margin-bottom: 15px;
+            line-height: 1.2;
+            color: #fff;
+            text-align: left;
+        }
+
+        .growth-cta-content p.subheadline {
+            font-size: 20px;
+            font-weight: 500;
+            margin-bottom: 30px;
+            line-height: 1.5;
+            color: #fff;
+            text-align: left;
+        }
+
+        .highlight-text {
+            color: #d0cc37;
+            position: relative;
+            display: inline-block;
+        }
+
+        .highlight-text::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: #d0cc37;
+            border-radius: 2px;
+        }
+
+        .growth-form {
+            display: flex;
+            gap: 0;
+            max-width: 500px;
+        }
+
+        .growth-input {
+            flex: 1;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 4px 0 0 4px;
+            font-size: 16px;
+            color: #333;
+            outline: none;
+        }
+
+        .growth-btn {
+            background-color: #007bff;
+            /* Fallback */
+            background-color: #2f80ed;
+            /* Specific Blue from image if needed, but using Page Color (Yellow) below override */
+            background-color: #d0cc37;
+            color: #000;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 0 4px 4px 0;
+            font-weight: 700;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .growth-btn:hover {
+            opacity: 0.9;
+            background-color: #bgb731;
+        }
+
+        .growth-image-container {
+            position: relative;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+        }
+
+        .growth-image {
+            max-width: 100%;
+            height: auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        @media (max-width: 768px) {
+            .growth-form {
+                flex-direction: column;
+            }
+
+            .growth-input,
+            .growth-btn {
+                width: 100%;
+                border-radius: 4px;
+            }
+
+            .growth-input {
+                margin-bottom: 10px;
+            }
+
+            .growth-image-container {
+                margin-top: 40px;
+            }
+
+            .growth-cta-content h2,
+            .growth-cta-content p.subheadline {
+                text-align: center;
+            }
+        }
     </style>
 </head>
 
@@ -1032,8 +1153,7 @@
                     <p>At Rankmator, we help startups, service-based businesses, and ambitious brands unlock predictable
                         organic growth with result-driven SEO strategies that increase visibility, traffic, leads, and
                         long-term business authority.</p>
-                    <p>Whether you're a founder building from scratch or a business owner trying to scale your revenue,
-                        our SEO services are designed to deliver real, measurable business impact—not just rankings.</p>
+
                 </div>
 
                 <!-- Right Side: Contact Form -->
@@ -1061,8 +1181,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 col-lg-offset-1 text-center">
-                    <h2 class="section-title" style="color: #fff;">Proven Results That Speak for Themselves</h2>
-                    <p class="section-subtitle" style="color: #ccc;">We don't just promise results — we deliver them.
+                    <h2 class="section-title" style="color: #1a1a1a;">Proven Results That Speak for Themselves</h2>
+                    <p class="section-subtitle" style="color: #666;">We don't just promise results — we deliver them.
                         Here's what we've achieved for businesses like yours.</p>
                 </div>
             </div>
@@ -1088,12 +1208,14 @@
     </section>
 
     <!-- Why Choose Rankmator Section -->
-    <section class="seo-section bg-white">
+    <section class="seo-section" style="background: #212121;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 col-lg-offset-1 text-center">
-                    <h2 class="section-title">Why Choose Rankmator as Your SEO Agency?</h2>
-                    <p class="section-subtitle">SEO is not just about keywords. It's about understanding the psychology
+                    <h2 class="section-title" style="color: #fff;">Why Choose Rankmator as Your SEO Agency?</h2>
+                    <p class="section-subtitle mb-4" style="color: #ccc;margin-bottom:20px">SEO is not just about
+                        keywords. It's about
+                        understanding the psychology
                         of search, user journey, and how your business solves problems better than your competitors.</p>
                 </div>
             </div>
@@ -1210,7 +1332,6 @@
                 <!-- Step 1 -->
                 <div class="process-step">
                     <div class="process-number">1</div>
-                    <div class="process-icon">🔍</div>
                     <h4>Research & Audit</h4>
                     <p>Deep dive into your business, competitors, and current SEO status</p>
                 </div>
@@ -1218,7 +1339,6 @@
                 <!-- Step 2 -->
                 <div class="process-step">
                     <div class="process-number">2</div>
-                    <div class="process-icon">🎯</div>
                     <h4>Strategy Development</h4>
                     <p>Create customized SEO roadmap tailored to your goals and industry</p>
                 </div>
@@ -1226,7 +1346,7 @@
                 <!-- Step 3 -->
                 <div class="process-step">
                     <div class="process-number">3</div>
-                    <div class="process-icon">⚙️</div>
+
                     <h4>Implementation</h4>
                     <p>Execute on-page, off-page, technical SEO with precision</p>
                 </div>
@@ -1234,7 +1354,7 @@
                 <!-- Step 4 -->
                 <div class="process-step">
                     <div class="process-number">4</div>
-                    <div class="process-icon">📊</div>
+
                     <h4>Monitor & Optimize</h4>
                     <p>Track rankings, analyze data, and continuously improve performance</p>
                 </div>
@@ -1242,62 +1362,6 @@
         </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section class="testimonials-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-10 col-lg-offset-1 text-center">
-                    <h2 class="section-title" style="color: #fff;">What Our Clients Say About Us</h2>
-                    <p class="section-subtitle" style="color: #ccc;">Don't just take our word for it — hear from
-                        businesses that have transformed their online presence with Rankmator.</p>
-                </div>
-            </div>
-            <div class="testimonials-grid">
-                <!-- Testimonial 1 -->
-                <div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <div class="testimonial-text">"Rankmator helped us rank on the first page of Google within 4 months.
-                        Our organic traffic has increased by 150% and we're getting qualified leads every day!"</div>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">A</div>
-                        <div class="testimonial-info">
-                            <h5>Amit Sharma</h5>
-                            <p>Founder, HealthFirst Clinic</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Testimonial 2 -->
-                <div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <div class="testimonial-text">"The team at Rankmator is professional, transparent, and
-                        result-driven. They understood our niche and created a strategy that actually works. Highly
-                        recommended!"</div>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">P</div>
-                        <div class="testimonial-info">
-                            <h5>Priya Mehta</h5>
-                            <p>CEO, LuxeHomes Realty</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Testimonial 3 -->
-                <div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <div class="testimonial-text">"As a startup, we had a limited budget. Rankmator gave us affordable
-                        yet high-quality SEO services. Our competitors are shocked at how fast we're growing!"</div>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">R</div>
-                        <div class="testimonial-info">
-                            <h5>Rahul Verma</h5>
-                            <p>Founder, TechFlow Solutions</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- SEO Services Section -->
     <section class="startup-usp-section">
@@ -1314,13 +1378,6 @@
                         <div class="discount">20% OFF</div>
                         <p style="font-size: 20px; font-weight: 600; color: #1a1a1a;">on all SEO plans for startups</p>
 
-                        <div class="startup-features">
-                            <div class="startup-feature">Dedicated business setup support—strategy, branding, and
-                                organic positioning guidance</div>
-                            <div class="startup-feature">We treat your business like our own and help you set up your
-                                long-term digital foundation</div>
-                            <div class="startup-feature">Stand with you, support you, and grow with you</div>
-                        </div>
 
                         <p style="font-style: italic; margin-top: 30px; font-size: 18px; color: #444;">"We know the
                             struggle of building something from scratch—that's why we stand with you."</p>
@@ -1334,12 +1391,14 @@
     </section>
 
     <!-- SEO Services Section -->
-    <section class="seo-section bg-light-gray">
+    <section class="seo-section" style="background: #212121;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 col-lg-offset-1 text-center">
-                    <h2 class="section-title">Our SEO Services – Designed for High-Growth Businesses</h2>
-                    <p class="section-subtitle">We follow a data-driven and ROI-focused SEO approach inspired by
+                    <h2 class="section-title" style="color: #fff;">Our SEO Services – Designed for High-Growth
+                        Businesses</h2>
+                    <p class="section-subtitle" style="color: #ccc;">We follow a data-driven and ROI-focused SEO
+                        approach inspired by
                         industry leaders.</p>
                 </div>
             </div>
@@ -1394,14 +1453,6 @@
                     <p>Perfect for service-based businesses, gyms, dental clinics, lawyers, and more. We optimize your
                         Google My Business, local citations, and location-based keywords to dominate local search.</p>
                 </div>
-
-                <!-- Service 7 -->
-                <div class="service-card">
-                    <div class="service-icon">📊</div>
-                    <h4>7. Monthly Reporting & Analytics</h4>
-                    <p>Transparent reports that show traffic growth, keyword improvements, conversions & leads, and
-                        competitor movements. We believe in clarity, transparency, and performance.</p>
-                </div>
             </div>
         </div>
     </section>
@@ -1438,111 +1489,31 @@
         </div>
     </section>
 
-    <!-- Startup USP Section -->
-    <section class="startup-usp-section">
+    <!-- Growth CTA Section -->
+    <section class="growth-cta-section">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-10 col-lg-offset-1">
-                    <div class="startup-usp-box text-center">
-                        <div class="startup-badge">STARTUP SPECIAL</div>
-                        <h2>We Understand Startups – And That's Our Superpower</h2>
-                        <p style="font-size: 18px; color: #666; margin-bottom: 20px;">Starting a business from zero is
-                            not easy. A small idea → a business model → first clients → market growth… this journey is
-                            emotional, challenging, and full of uncertainty.</p>
+            <div class="row" style="display: flex; align-items: center; flex-wrap: wrap;">
+                <div class="col-md-7">
+                    <div class="growth-cta-content">
+                        <h2>Ready to Stay Visible and Grow Revenue With SEO?</h2>
+                        <p class="subheadline">Get a personalized look at how our AI + SEO experts can <span
+                                class="highlight-text">accelerate your growth.</span></p>
 
-                        <div class="discount">20% OFF</div>
-                        <p style="font-size: 20px; font-weight: 600; color: #1a1a1a;">on all SEO plans for startups</p>
-
-                        <div class="startup-features">
-                            <div class="startup-feature">Dedicated business setup support—strategy, branding, and
-                                organic positioning guidance</div>
-                            <div class="startup-feature">We treat your business like our own and help you set up your
-                                long-term digital foundation</div>
-                            <div class="startup-feature">Stand with you, support you, and grow with you</div>
-                        </div>
-
-                        <p style="font-style: italic; margin-top: 30px; font-size: 18px; color: #444;">"We know the
-                            struggle of building something from scratch—that's why we stand with you."</p>
-
-                        <a href="#contact-section" class="btn btn-brand btn-lg" style="margin-top: 30px;">Get Your
-                            Startup Offer →</a>
+                        <form class="growth-form" action="#contact-section">
+                            <input type="text" class="growth-input" placeholder="Enter your website" required>
+                            <button type="submit" class="growth-btn">Get My SEO Growth Plan</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="growth-image-container">
+                        <img src="img/about-us.png" alt="SEO Team" class="growth-image">
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Pricing Section -->
-    <section class="pricing-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-10 col-lg-offset-1 text-center">
-                    <h2 class="section-title">SEO Packages Designed for Every Business Stage</h2>
-                    <p class="section-subtitle">Transparent pricing. No hidden costs. Choose the plan that fits your
-                        business goals.</p>
-                </div>
-            </div>
-            <div class="pricing-grid">
-                <!-- Starter Plan -->
-                <div class="pricing-card">
-                    <h3>Starter</h3>
-                    <p style="color: #666; margin-bottom: 0;">Perfect for new businesses</p>
-                    <div class="pricing-price">₹15,000<span>/month</span></div>
-                    <ul class="pricing-features">
-                        <li>10 Keywords Optimization</li>
-                        <li>On-Page SEO</li>
-                        <li>Technical SEO Audit</li>
-                        <li>Monthly Reports</li>
-                        <li>Google My Business Setup</li>
-                        <li>Email Support</li>
-                    </ul>
-                    <a href="#contact-section" class="btn btn-brand btn-lg btn-block">Get Started</a>
-                </div>
-
-                <!-- Growth Plan (Featured) -->
-                <div class="pricing-card featured">
-                    <div class="pricing-badge">Most Popular</div>
-                    <h3>Growth</h3>
-                    <p style="color: #666; margin-bottom: 0;">For scaling businesses</p>
-                    <div class="pricing-price">₹35,000<span>/month</span></div>
-                    <ul class="pricing-features">
-                        <li>25 Keywords Optimization</li>
-                        <li>Complete On-Page & Off-Page SEO</li>
-                        <li>Content Creation (4 blogs/month)</li>
-                        <li>Link Building Strategy</li>
-                        <li>Competitor Analysis</li>
-                        <li>Weekly Reports & Strategy Calls</li>
-                        <li>Priority Support</li>
-                    </ul>
-                    <a href="#contact-section" class="btn btn-brand btn-lg btn-block">Get Started</a>
-                </div>
-
-                <!-- Enterprise Plan -->
-                <div class="pricing-card">
-                    <h3>Enterprise</h3>
-                    <p style="color: #666; margin-bottom: 0;">For established brands</p>
-                    <div class="pricing-price">Custom</div>
-                    <ul class="pricing-features">
-                        <li>Unlimited Keywords</li>
-                        <li>Full SEO Campaign Management</li>
-                        <li>Advanced Content Marketing</li>
-                        <li>International SEO</li>
-                        <li>Dedicated Account Manager</li>
-                        <li>Custom Strategy & Execution</li>
-                        <li>24/7 Priority Support</li>
-                    </ul>
-                    <a href="#contact-section" class="btn btn-brand btn-lg btn-block">Contact Us</a>
-                </div>
-            </div>
-            <div class="row" style="margin-top: 40px;">
-                <div class="col-lg-12 text-center">
-                    <p style="font-size: 18px; color: #666; margin-bottom: 15px;">🎉 <strong>Special Offer:</strong> 20%
-                        OFF for startups on all plans!</p>
-                    <a href="#contact-section" class="btn btn-brand btn-lg">Claim Your Startup Discount →</a>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Why Rankmator Is Trusted Section -->
     <section class="seo-section bg-light-gray">
@@ -1735,6 +1706,8 @@
         </div>
     </section>
 
+
+
     <!-- Final CTA Section -->
     <section class="final-cta" id="contact-section">
         <div class="container">
@@ -1818,16 +1791,25 @@
             }
         });
 
-        // FAQ Accordion
-        $(document).ready(function () {
-            $('.faq-question').click(function () {
-                var $item = $(this).closest('.faq-item');
+        // FAQ Accordion - Vanilla JavaScript (works without jQuery)
+        document.addEventListener('DOMContentLoaded', function () {
+            const faqQuestions = document.querySelectorAll('.faq-question');
 
-                // Close all other items
-                $('.faq-item').not($item).removeClass('active');
+            faqQuestions.forEach(function (question) {
+                question.addEventListener('click', function () {
+                    const faqItem = this.closest('.faq-item');
+                    const allFaqItems = document.querySelectorAll('.faq-item');
 
-                // Toggle current item
-                $item.toggleClass('active');
+                    // Close all other items
+                    allFaqItems.forEach(function (item) {
+                        if (item !== faqItem) {
+                            item.classList.remove('active');
+                        }
+                    });
+
+                    // Toggle current item
+                    faqItem.classList.toggle('active');
+                });
             });
         });
 

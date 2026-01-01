@@ -793,6 +793,9 @@ a .fa:hover {
     border-bottom: transparent;
     text-transform: uppercase;
     color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(33, 33, 33, 0.95) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     -webkit-transition: all .8s ease;
     -moz-transition: all .8s ease;
     transition: all .8s ease;
@@ -817,7 +820,7 @@ a .fa:hover {
 }
 
 .navbar-custom.top-nav-collapse a {
-    color: #000;
+    color: #fff;
 }
 
 .navbar-custom.top-nav-collapse .navbar-brand {

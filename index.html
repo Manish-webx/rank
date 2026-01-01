@@ -208,56 +208,241 @@
 
 
 
+
+    <style>
+        /* Services Masonry Grid Layout */
+        #services {
+            background-color: #fff;
+        }
+
+        #services .section-heading {
+            color: #1a1a1a;
+            font-size: 42px;
+            font-weight: 800;
+        }
+
+        .services-masonry-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-auto-rows: 280px;
+            gap: 20px;
+            margin-top: 10px;
+        }
+
+        /* Card Size Classes */
+        .service-card-wrapper {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+        }
+
+        .service-large {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+
+        .service-medium {
+            grid-column: span 2;
+            grid-row: span 1;
+        }
+
+        .service-standard {
+            grid-column: span 1;
+            grid-row: span 1;
+        }
+
+        .service-card {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            border-radius: 15px;
+            transition: all 0.4s ease;
+        }
+
+        .service-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            transition: transform 0.4s ease;
+        }
+
+        .service-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7));
+            transition: background 0.4s ease;
+        }
+
+        .service-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 25px;
+            color: #fff;
+            z-index: 2;
+            transform: translateY(0);
+            transition: all 0.4s ease;
+        }
+
+        .service-content h4 {
+            color: #fff;
+            font-size: 20px;
+            font-weight: 700;
+            margin: 0 0 10px 0;
+            text-transform: none;
+        }
+
+        .service-large .service-content h4 {
+            font-size: 26px;
+        }
+
+        .service-medium .service-content h4 {
+            font-size: 22px;
+        }
+
+        .service-content p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 14px;
+            line-height: 1.5;
+            margin: 0;
+            opacity: 0.9;
+        }
+
+        .service-large .service-content p {
+            font-size: 16px;
+        }
+
+        /* Hover Effects */
+        .service-card-wrapper:hover .service-card {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .service-card-wrapper:hover .service-bg {
+            transform: scale(1.1);
+        }
+
+        .service-card-wrapper:hover .service-overlay {
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8));
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .services-masonry-grid {
+                grid-template-columns: repeat(3, 1fr);
+                grid-auto-rows: 260px;
+            }
+
+            .service-large {
+                grid-column: span 2;
+                grid-row: span 2;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .services-masonry-grid {
+                grid-template-columns: repeat(2, 1fr);
+                grid-auto-rows: 240px;
+            }
+
+            .service-large,
+            .service-medium {
+                grid-column: span 2;
+                grid-row: span 1;
+            }
+
+            .service-standard {
+                grid-column: span 1;
+                grid-row: span 1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .services-masonry-grid {
+                grid-template-columns: 1fr;
+                grid-auto-rows: 220px;
+                gap: 15px;
+            }
+
+            .service-large,
+            .service-medium,
+            .service-standard {
+                grid-column: span 1;
+                grid-row: span 1;
+            }
+
+            .service-content h4 {
+                font-size: 18px !important;
+            }
+
+            .service-content p {
+                font-size: 13px !important;
+            }
+        }
+    </style>
+
     <section id="services" class="section-small">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Our Services</h2>
-
+                    <h2 class="section-heading">Solutions That Drive Real Growth</h2>
                 </div>
             </div>
-            <div class="row">
-                <!-- Service 1: SEO -->
-                <div class="col-lg-4 col-md-6 col-sm-12">
+
+            <div class="services-masonry-grid">
+                <!-- Service 1: SEO (Large - Featured) -->
+                <div class="service-card-wrapper service-large">
                     <a href="seo.html" style="text-decoration: none; color: inherit;">
                         <div class="service-card">
                             <div class="service-bg" style="background-image: url('img/SEO.webp');"></div>
                             <div class="service-overlay"></div>
                             <div class="service-content">
                                 <h4>Search Engine Optimization (SEO)</h4>
-                                <p>Boost your website’s visibility and drive organic traffic.</p>
+                                <p>Boost your website's visibility and drive organic traffic.</p>
                             </div>
                         </div>
                     </a>
                 </div>
-                <!-- Service 2: Local SEO -->
-                <div class="col-lg-4 col-md-6 col-sm-12">
+
+                <!-- Service 2: Local SEO (Standard) -->
+                <div class="service-card-wrapper service-standard">
                     <a href="seo.html" style="text-decoration: none; color: inherit;">
                         <div class="service-card">
                             <div class="service-bg" style="background-image: url('img/Local.webp');"></div>
                             <div class="service-overlay"></div>
                             <div class="service-content">
                                 <h4>Local SEO</h4>
-                                <p>Dominate your neighborhood searches and reach nearby customers instantly.</p>
+                                <p>Dominate your neighborhood searches.</p>
                             </div>
                         </div>
                     </a>
                 </div>
-                <!-- Service 3: Performance Marketing -->
-                <div class="col-lg-4 col-md-6 col-sm-12">
+
+                <!-- Service 3: Performance Marketing (Standard) -->
+                <div class="service-card-wrapper service-standard">
                     <a href="performance-marketing.html" style="text-decoration: none; color: inherit;">
                         <div class="service-card">
                             <div class="service-bg" style="background-image: url('img/Performance.webp');"></div>
                             <div class="service-overlay"></div>
                             <div class="service-content">
                                 <h4>Performance Marketing</h4>
-                                <p>Get instant visibility and measurable ROI with high-performing ad campaigns.</p>
+                                <p>Get instant visibility and ROI.</p>
                             </div>
                         </div>
                     </a>
                 </div>
-                <!-- Service 4: Social Media Marketing -->
-                <div class="col-lg-4 col-md-6 col-sm-12">
+
+                <!-- Service 4: Social Media Marketing (Medium) -->
+                <div class="service-card-wrapper service-medium">
                     <a href="social-media-marketing.html" style="text-decoration: none; color: inherit;">
                         <div class="service-card">
                             <div class="service-bg" style="background-image: url('img/Social.webp');"></div>
@@ -269,8 +454,9 @@
                         </div>
                     </a>
                 </div>
-                <!-- Service 5: Website Design & Development -->
-                <div class="col-lg-4 col-md-6 col-sm-12">
+
+                <!-- Service 5: Website Design & Development (Medium) -->
+                <div class="service-card-wrapper service-medium">
                     <a href="website.html" style="text-decoration: none; color: inherit;">
                         <div class="service-card">
                             <div class="service-bg" style="background-image: url('img/Website.webp');"></div>
@@ -282,8 +468,9 @@
                         </div>
                     </a>
                 </div>
-                <!-- Service 6: E-commerce Marketing -->
-                <div class="col-lg-4 col-md-6 col-sm-12">
+
+                <!-- Service 6: E-commerce Marketing (Large - Featured) -->
+                <div class="service-card-wrapper service-large">
                     <a href="ecommerce-marketing.html" style="text-decoration: none; color: inherit;">
                         <div class="service-card">
                             <div class="service-bg" style="background-image: url('img/Ecommerce.webp');"></div>
@@ -295,54 +482,240 @@
                         </div>
                     </a>
                 </div>
-                <!-- Service 7: Branding & Creative Design -->
-                <div class="col-lg-4 col-md-6 col-sm-12">
+
+                <!-- Service 7: Branding & Creative Design (Standard) -->
+                <div class="service-card-wrapper service-standard">
                     <a href="branding-creative-design.html" style="text-decoration: none; color: inherit;">
                         <div class="service-card">
                             <div class="service-bg" style="background-image: url('img/Branding.webp');"></div>
                             <div class="service-overlay"></div>
                             <div class="service-content">
                                 <h4>Branding & Creative Design</h4>
-                                <p>Tell your story with unique visuals and brand identity.</p>
+                                <p>Tell your story with visuals.</p>
                             </div>
                         </div>
                     </a>
                 </div>
-                <!-- Service 8: Email Marketing -->
-                <div class="col-lg-4 col-md-6 col-sm-12">
+
+                <!-- Service 8: Email Marketing (Standard) -->
+                <div class="service-card-wrapper service-standard">
                     <a href="email-marketing.html" style="text-decoration: none; color: inherit;">
                         <div class="service-card">
                             <div class="service-bg" style="background-image: url('img/email.webp');"></div>
                             <div class="service-overlay"></div>
                             <div class="service-content">
                                 <h4>Email Marketing</h4>
-                                <p>Stay connected with your audience and convert leads into loyal customers.</p>
+                                <p>Convert leads into customers.</p>
                             </div>
                         </div>
                     </a>
                 </div>
 
-                <!-- Service 9: AI Marketing -->
-                <div class="col-lg-4 col-md-6 col-sm-12">
+                <!-- Service 9: AI Marketing (Medium) -->
+                <div class="service-card-wrapper service-medium">
                     <a href="ai-marketing.html" style="text-decoration: none; color: inherit;">
                         <div class="service-card">
                             <div class="service-bg" style="background-image: url('img/AI.webp');"></div>
                             <div class="service-overlay"></div>
                             <div class="service-content">
                                 <h4>AI Marketing</h4>
-                                <p>Rankmator is an AI-powered marketing agency specializing in data-driven growth
-                                    solutions.
-                                </p>
+                                <p>AI-powered marketing agency specializing in data-driven growth solutions.</p>
                             </div>
                         </div>
                     </a>
+                </div>
+
+                <!-- CTA Card: Let's Connect -->
+                <div class="service-card-wrapper service-medium">
+                    <div class="service-card service-cta-card">
+                        <div class="service-bg" style="background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);">
+                        </div>
+                        <div class="service-cta-content">
+                            <h4>Ready to Grow Your Brand?</h4>
+                            <p>Let's discuss how we can help you achieve your digital marketing goals with data-driven
+                                strategies.</p>
+                            <a href="#contact" class="cta-button">
+                                <i class="fa fa-paper-plane"></i>
+                                Let's Connect
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <style>
+        /* CTA Card Styles */
+        .service-cta-card {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .service-cta-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding: 30px;
+            width: 100%;
+        }
+
+        .service-cta-content h4 {
+            color: #fff;
+            font-size: 24px;
+            font-weight: 700;
+            margin: 0 0 15px 0;
+        }
+
+        .service-cta-content p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 15px;
+            line-height: 1.6;
+            margin: 0 0 25px 0;
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: #d0cc37;
+            color: #000 !important;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-size: 15px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: 2px solid #d0cc37;
+        }
+
+        .cta-button:hover {
+            background: transparent;
+            color: #d0cc37 !important;
+            border-color: #d0cc37;
+            transform: scale(1.05);
+        }
+
+        .cta-button i {
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .service-cta-content h4 {
+                font-size: 20px;
+            }
+
+            .service-cta-content p {
+                font-size: 14px;
+                margin-bottom: 20px;
+            }
+
+            .cta-button {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+    </div>
+    </section>
+
     <!-- Why Choose Rankmator Section -->
-    <section id="why-choose" class="section-small" style="background-color: #000;">
+    <style>
+        /* Why Choose Us Card Styles */
+        #why-choose {
+            background-color: #212121 !important;
+        }
+
+        #why-choose .section-heading {
+            color: #fff;
+            font-size: 42px;
+            font-weight: 800;
+            margin-bottom: 50px;
+        }
+
+        .why-choose-card {
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 12px;
+            padding: 30px 25px;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            min-height: 160px;
+        }
+
+        .why-choose-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            border-color: #d0cc37;
+        }
+
+        .why-choose-icon {
+            width: 60px;
+            height: 60px;
+            min-width: 60px;
+            background: linear-gradient(135deg, #f0f0f0 0%, #e6e6e6 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            color: #1a1a1a;
+            transition: all 0.3s ease;
+        }
+
+        .why-choose-card:hover .why-choose-icon {
+            background: linear-gradient(135deg, #d0cc37 0%, #c4c030 100%);
+            color: #000;
+            transform: scale(1.1);
+        }
+
+        .why-choose-content {
+            flex: 1;
+        }
+
+        .why-choose-content h4 {
+            color: #1a1a1a;
+            font-size: 18px;
+            font-weight: 700;
+            margin: 0 0 10px 0;
+            text-transform: none;
+        }
+
+        .why-choose-content p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            .why-choose-card {
+                padding: 20px 18px;
+                min-height: auto;
+            }
+
+            .why-choose-icon {
+                width: 50px;
+                height: 50px;
+                min-width: 50px;
+                font-size: 24px;
+            }
+
+            .why-choose-content h4 {
+                font-size: 16px;
+            }
+
+            .why-choose-content p {
+                font-size: 13px;
+            }
+        }
+    </style>
+    <section id="why-choose" class="section-small">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -350,96 +723,592 @@
                     </h2>
                 </div>
             </div>
-            <div class="row text-center">
+            <div class="row">
+                <!-- Card 1: Data-Driven Strategies -->
                 <div class="col-md-4">
-                    <div class="service-cs">
-                        <span class="fa-stack fa-3x">
-                            <i class="fa fa-circle fa-stack-2x text-primary" style="color: #d0cc37;"></i>
-                            <i class="fa fa-bar-chart fa-stack-1x fa-inverse"></i>
-                        </span>
-                        <h4 class="service-heading">Data-Driven Strategies</h4>
-                        <p class="text-muted">Every campaign is backed by insights and analytics — no guesswork, just
-                            proven
-                            results.</p>
+                    <div class="why-choose-card">
+                        <div class="why-choose-icon">
+                            <i class="fa fa-bar-chart"></i>
+                        </div>
+                        <div class="why-choose-content">
+                            <h4>Data-Driven Strategies</h4>
+                            <p>Every campaign is backed by insights and analytics — no guesswork, just proven results.
+                            </p>
+                        </div>
                     </div>
-
                 </div>
+
+                <!-- Card 2: Transparent Reporting -->
                 <div class="col-md-4">
-                    <div class="service-cs">
-                        <span class="fa-stack fa-3x">
-                            <i class="fa fa-circle fa-stack-2x text-primary" style="color: #d0cc37;"></i>
-                            <i class="fa fa-file-text-o fa-stack-1x fa-inverse"></i>
-                        </span>
-                        <h4 class="service-heading">Transparent Reporting</h4>
-                        <p class="text-muted">You always know where your money goes and what results you're getting.</p>
+                    <div class="why-choose-card">
+                        <div class="why-choose-icon">
+                            <i class="fa fa-file-text-o"></i>
+                        </div>
+                        <div class="why-choose-content">
+                            <h4>Transparent Reporting</h4>
+                            <p>You always know where your money goes and what results you're getting.</p>
+                        </div>
                     </div>
-
                 </div>
+
+                <!-- Card 3: Dedicated Support Team -->
                 <div class="col-md-4">
-                    <div class="service-cs">
-                        <span class="fa-stack fa-3x">
-                            <i class="fa fa-circle fa-stack-2x text-primary" style="color: #d0cc37;"></i>
-                            <i class="fa fa-users fa-stack-1x fa-inverse"></i>
-                        </span>
-                        <h4 class="service-heading">Dedicated Support Team</h4>
-                        <p class="text-muted">From planning to execution, our experts work as your extended in-house
-                            team.
-                        </p>
+                    <div class="why-choose-card">
+                        <div class="why-choose-icon">
+                            <i class="fa fa-users"></i>
+                        </div>
+                        <div class="why-choose-content">
+                            <h4>Dedicated Support Team</h4>
+                            <p>From planning to execution, our experts work as your extended in-house team.</p>
+                        </div>
                     </div>
-
                 </div>
-            </div>
-            <div class="row text-center" style="margin-top: 30px;">
-                <div class="col-md-4 col-md-offset-2">
-                    <div class="service-cs">
-                        <span class="fa-stack fa-3x">
-                            <i class="fa fa-circle fa-stack-2x text-primary" style="color: #d0cc37;"></i>
-                            <i class="fa fa-money fa-stack-1x fa-inverse"></i>
-                        </span>
-                        <h4 class="service-heading">Affordable & Scalable Plans</h4>
-                        <p class="text-muted">From startups to enterprises, we tailor solutions for every stage of
-                            business
-                            growth.</p>
-                    </div>
 
-                </div>
+                <!-- Card 4: Affordable & Scalable Plans -->
                 <div class="col-md-4">
-                    <div class="service-cs">
-                        <span class="fa-stack fa-3x">
-                            <i class="fa fa-circle fa-stack-2x text-primary" style="color: #d0cc37;"></i>
-                            <i class="fa fa-map-marker fa-stack-1x fa-inverse"></i>
-                        </span>
-                        <h4 class="service-heading">Delhi-Based, Pan-India Reach</h4>
-                        <p class="text-muted">Rooted in Delhi, serving clients across India with flexible and
-                            local-first
-                            strategies.</p>
+                    <div class="why-choose-card">
+                        <div class="why-choose-icon">
+                            <i class="fa fa-money"></i>
+                        </div>
+                        <div class="why-choose-content">
+                            <h4>Affordable & Scalable Plans</h4>
+                            <p>From startups to enterprises, we tailor solutions for every stage of business growth.</p>
+                        </div>
                     </div>
+                </div>
 
+                <!-- Card 5: Delhi-Based, Pan-India Reach -->
+                <div class="col-md-4">
+                    <div class="why-choose-card">
+                        <div class="why-choose-icon">
+                            <i class="fa fa-map-marker"></i>
+                        </div>
+                        <div class="why-choose-content">
+                            <h4>Delhi-Based, Pan-India Reach</h4>
+                            <p>Rooted in Delhi, serving clients across India with flexible and local-first strategies.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 6: Proven Track Record -->
+                <div class="col-md-4">
+                    <div class="why-choose-card">
+                        <div class="why-choose-icon">
+                            <i class="fa fa-trophy"></i>
+                        </div>
+                        <div class="why-choose-content">
+                            <h4>Proven Track Record</h4>
+                            <p>Helping 100+ brands achieve their digital goals with measurable results and growth.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Startup USP Section -->
-    <section id="startup-usp" class="section-small" style="background-color: #f9f9f9;">
+    <style>
+        /* Startup CTA Section Styles */
+        #startup-cta {
+            background-color: #f5f5f5;
+            padding: 45px 0;
+        }
+
+        .startup-cta-container {
+            background: #fff;
+            border-radius: 20px;
+            padding: 50px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .startup-cta-content {
+            flex: 1;
+        }
+
+        .startup-cta-content h2 {
+            color: #1a1a1a;
+            font-size: 32px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.3;
+            text-transform: none;
+        }
+
+        .startup-cta-content p {
+            color: #666;
+            font-size: 16px;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+
+        .startup-cta-image {
+            flex: 1;
+            max-width: 500px;
+        }
+
+        .startup-cta-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+        }
+
+        @media (max-width: 992px) {
+            .startup-cta-container {
+                flex-direction: column;
+                padding: 40px 30px;
+                gap: 30px;
+            }
+
+            .startup-cta-content h2 {
+                font-size: 26px;
+            }
+
+            .startup-cta-content p {
+                font-size: 15px;
+            }
+
+            .startup-cta-image {
+                max-width: 100%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            #startup-cta {
+                padding: 40px 0;
+            }
+
+            .startup-cta-container {
+                padding: 30px 20px;
+            }
+
+            .startup-cta-content h2 {
+                font-size: 24px;
+            }
+
+            .startup-cta-button {
+                width: 100%;
+                justify-content: center;
+                padding: 12px 30px;
+            }
+        }
+    </style>
+    <section id="startup-cta">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Helping Startups Turn Ideas into Impact — Get 20% Off for New
-                        Businesses!</h2>
-                    <p class="large text-muted">Every big brand you see today started with a small dream.</p>
-                    <p class="large text-muted">At Rankmator, we understand that journey — the late nights, the endless
-                        planning, and the courage it takes to turn a thought into a thriving business.</p>
-                    <p class="large text-muted">That’s why we offer 20% off on all digital marketing services for
-                        startups. But more than that, our team stands beside you — from setting up your online presence
-                        to launching your first campaign.</p>
-                    <p class="large text-muted">Because we believe that your idea deserves the right audience and the
-                        right strategy to grow.</p>
-                    <a href="#contact" class="btn btn-brand btn-lg">Get Your Startup Offer →</a>
+            <div class="startup-cta-container">
+                <div class="startup-cta-content">
+                    <h2>Helping Startups Turn Ideas into Impact — Get 20% Off for New Businesses!</h2>
+                    <p>Every big brand you see today started with a small dream.</p>
+                    <p>At Rankmator, we understand that journey — the late nights, the endless planning, and the courage
+                        it takes to turn a thought into a thriving business.</p>
+                    <p>That's why we offer 20% off on all digital marketing services for startups. But more than that,
+                        our team stands beside you — from setting up your online presence to launching your first
+                        campaign.</p>
+                    <a href="#contact" class="cta-button">
+                        <i class="fa fa-calendar"></i>
+                        Get Your Startup Offer
+                    </a>
+                </div>
+                <div class="startup-cta-image">
+                    <img src="img/startup-illustration.png" alt="Startup Consultation">
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Testimonials Section -->
+    <style>
+        #testimonials {
+            background-color: #212121;
+            padding: 45px 0;
+        }
+
+        #testimonials .section-heading {
+            color: #fff;
+            font-size: 42px;
+            font-weight: 800;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .testimonials-slider {
+            position: relative;
+            overflow: hidden;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px 60px;
+        }
+
+        .testimonials-track {
+            display: flex;
+            transition: transform 0.4s ease;
+            gap: 30px;
+        }
+
+        .testimonial-card {
+            min-width: calc(50% - 15px);
+            background: #fff;
+            border-radius: 15px;
+            padding: 35px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+        }
+
+        .testimonial-header {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .testimonial-avatar {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid #d0cc37;
+            flex-shrink: 0;
+        }
+
+        .testimonial-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .testimonial-info {
+            flex: 1;
+        }
+
+        .testimonial-name {
+            font-size: 18px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin: 0 0 5px 0;
+        }
+
+        .testimonial-stars {
+            color: #d0cc37;
+            font-size: 16px;
+        }
+
+        .testimonial-stars i {
+            margin-right: 2px;
+        }
+
+        .testimonial-content {
+            color: #666;
+            font-size: 15px;
+            line-height: 1.7;
+            font-style: italic;
+            margin: 0;
+        }
+
+        /* Navigation Buttons */
+        .testimonial-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #1a1a1a;
+            color: #fff;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .testimonial-nav:hover {
+            background: #d0cc37;
+            color: #000;
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .testimonial-nav.prev {
+            left: 0;
+        }
+
+        .testimonial-nav.next {
+            right: 0;
+        }
+
+        .testimonial-nav:disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+        }
+
+        .testimonial-nav:disabled:hover {
+            background: #1a1a1a;
+            color: #fff;
+            transform: translateY(-50%);
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .testimonial-card {
+                min-width: calc(50% - 15px);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .testimonials-slider {
+                padding: 20px 50px;
+            }
+
+            .testimonial-card {
+                min-width: 100%;
+                padding: 25px;
+            }
+
+            .testimonial-avatar {
+                width: 60px;
+                height: 60px;
+            }
+
+            .testimonial-name {
+                font-size: 16px;
+            }
+
+            .testimonial-content {
+                font-size: 14px;
+            }
+
+            #testimonials {
+                padding: 45px 0;
+            }
+
+            #testimonials .section-heading {
+                font-size: 28px;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+
+    <section id="testimonials">
+        <div class="container">
+            <h2 class="section-heading">What Our Clients Say</h2>
+
+            <div class="testimonials-slider">
+                <button class="testimonial-nav prev" onclick="slideTestimonials('prev')">
+                    <i class="fa fa-chevron-left"></i>
+                </button>
+
+                <div class="testimonials-track" id="testimonialsTrack">
+                    <!-- Testimonial 1 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <div class="testimonial-avatar">
+                                <img src="https://i.pravatar.cc/150?img=12" alt="Rajesh Kumar">
+                            </div>
+                            <div class="testimonial-info">
+                                <h4 class="testimonial-name">Rajesh Kumar</h4>
+                                <div class="testimonial-stars">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="testimonial-content">
+                            "Rankmator transformed our online presence completely. Their SEO strategies helped us rank
+                            #1 for our target keywords within 6 months. The team is professional, responsive, and truly
+                            understands digital marketing."
+                        </p>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <div class="testimonial-avatar">
+                                <img src="https://i.pravatar.cc/150?img=47" alt="Priya Sharma">
+                            </div>
+                            <div class="testimonial-info">
+                                <h4 class="testimonial-name">Priya Sharma</h4>
+                                <div class="testimonial-stars">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="testimonial-content">
+                            "Working with Rankmator has been a game-changer for our startup. Their performance marketing
+                            campaigns delivered a 300% ROI in the first quarter. Highly recommend their services!"
+                        </p>
+                    </div>
+
+                    <!-- Testimonial 3 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <div class="testimonial-avatar">
+                                <img src="https://i.pravatar.cc/150?img=33" alt="Amit Verma">
+                            </div>
+                            <div class="testimonial-info">
+                                <h4 class="testimonial-name">Amit Verma</h4>
+                                <div class="testimonial-stars">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="testimonial-content">
+                            "The social media marketing team at Rankmator is exceptional. They helped us grow our
+                            Instagram following from 2K to 50K in just 8 months. Our engagement rates have skyrocketed!"
+                        </p>
+                    </div>
+
+                    <!-- Testimonial 4 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <div class="testimonial-avatar">
+                                <img src="https://i.pravatar.cc/150?img=20" alt="Neha Gupta">
+                            </div>
+                            <div class="testimonial-info">
+                                <h4 class="testimonial-name">Neha Gupta</h4>
+                                <div class="testimonial-stars">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="testimonial-content">
+                            "Rankmator's website development team created a stunning, high-converting site for our
+                            e-commerce business. The design is beautiful and the functionality is flawless. Sales
+                            increased by 250%!"
+                        </p>
+                    </div>
+
+                    <!-- Testimonial 5 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <div class="testimonial-avatar">
+                                <img src="https://i.pravatar.cc/150?img=60" alt="Vikram Singh">
+                            </div>
+                            <div class="testimonial-info">
+                                <h4 class="testimonial-name">Vikram Singh</h4>
+                                <div class="testimonial-stars">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="testimonial-content">
+                            "As a startup founder, budget was tight. Rankmator's startup package was perfect for us.
+                            They delivered results beyond our expectations and helped us establish a strong digital
+                            footprint."
+                        </p>
+                    </div>
+
+                    <!-- Testimonial 6 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <div class="testimonial-avatar">
+                                <img src="https://i.pravatar.cc/150?img=38" alt="Sanjana Patel">
+                            </div>
+                            <div class="testimonial-info">
+                                <h4 class="testimonial-name">Sanjana Patel</h4>
+                                <div class="testimonial-stars">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="testimonial-content">
+                            "Their AI marketing solutions are cutting-edge. The data-driven insights helped us optimize
+                            our campaigns and reduce our customer acquisition cost by 40%. Truly innovative approach!"
+                        </p>
+                    </div>
+                </div>
+
+                <button class="testimonial-nav next" onclick="slideTestimonials('next')">
+                    <i class="fa fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        let currentSlide = 0;
+        const track = document.getElementById('testimonialsTrack');
+        const cards = document.querySelectorAll('.testimonial-card');
+        let cardsPerView = window.innerWidth > 768 ? 2 : 1;
+
+        function getCardsPerView() {
+            return window.innerWidth > 768 ? 2 : 1;
+        }
+
+        function updateSlide() {
+            cardsPerView = getCardsPerView();
+            const maxSlide = cards.length - cardsPerView;
+
+            if (currentSlide > maxSlide) {
+                currentSlide = maxSlide;
+            }
+
+            const cardWidth = cards[0].offsetWidth;
+            const gap = 30;
+            const offset = -(currentSlide * (cardWidth + gap));
+            track.style.transform = `translateX(${offset}px)`;
+
+            updateButtons();
+        }
+
+        function slideTestimonials(direction) {
+            cardsPerView = getCardsPerView();
+            const maxSlide = cards.length - cardsPerView;
+
+            if (direction === 'next' && currentSlide < maxSlide) {
+                currentSlide++;
+            } else if (direction === 'prev' && currentSlide > 0) {
+                currentSlide--;
+            }
+
+            updateSlide();
+        }
+
+        function updateButtons() {
+            const prevBtn = document.querySelector('.testimonial-nav.prev');
+            const nextBtn = document.querySelector('.testimonial-nav.next');
+            const maxSlide = cards.length - cardsPerView;
+
+            prevBtn.disabled = currentSlide === 0;
+            nextBtn.disabled = currentSlide >= maxSlide;
+        }
+
+        // Initialize
+        window.addEventListener('load', updateSlide);
+        window.addEventListener('resize', updateSlide);
+    </script>
 
     <!-- Footer Section-->
     <style>
@@ -523,7 +1392,69 @@
         }
     </style>
     <!-- Contact Section -->
-    <section id="contact" class="section-small" style="background-color: #212121;">
+    <style>
+        #contact {
+            position: relative;
+            background-image: url('https://images.unsplash.com/photo-1557804506-669a67965ba0?w=1920&h=1080&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        #contact::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 1;
+        }
+
+        #contact .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .glass-form-container {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 40px;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+
+        .glass-form-container .form-control {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: #fff;
+            border-radius: 10px;
+            padding: 12px 18px;
+        }
+
+        .glass-form-container .form-control::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .glass-form-container .form-control:focus {
+            background: rgba(255, 255, 255, 0.2);
+            border-color: #d0cc37;
+            color: #fff;
+            box-shadow: 0 0 0 0.2rem rgba(208, 204, 55, 0.25);
+        }
+
+        @media (max-width: 768px) {
+            .glass-form-container {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+    <section id="contact" class="section-small">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -533,40 +1464,37 @@
                         they find you.</p>
                 </div>
             </div>
-            <div class="row" style="margin-top: 40px; align-items: center;">
-                <!-- Left Side: Image -->
-                <div class="col-md-6">
-                    <img src="img/contact-illustration.png" class="img-responsive" alt="Contact Us"
-                        style="max-width: 100%; height: auto;">
-                </div>
-                <!-- Right Side: Form -->
-                <div class="col-md-6">
-                    <form name="sentMessage" id="contactForm" novalidate>
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Your Name *" id="name" required
-                                data-validation-required-message="Please enter your name.">
-                            <p class="help-block text-danger"></p>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" class="form-control" placeholder="Your Email *" id="email" required
-                                data-validation-required-message="Please enter your email address.">
-                            <p class="help-block text-danger"></p>
-                        </div>
-                        <div class="form-group">
-                            <input type="tel" class="form-control" placeholder="Your Phone *" id="phone" required
-                                data-validation-required-message="Please enter your phone number.">
-                            <p class="help-block text-danger"></p>
-                        </div>
-                        <div class="form-group">
-                            <textarea class="form-control" placeholder="Your Message *" id="message" required
-                                data-validation-required-message="Please enter a message." rows="5"></textarea>
-                            <p class="help-block text-danger"></p>
-                        </div>
-                        <div class="text-center">
-                            <div id="success"></div>
-                            <button type="submit" class="btn btn-brand btn-lg">Send Message</button>
-                        </div>
-                    </form>
+            <div class="row" style="margin-top: 40px;">
+                <!-- Centered Form with Glass Effect -->
+                <div class="col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
+                    <div class="glass-form-container">
+                        <form name="sentMessage" id="contactForm" novalidate>
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Your Name *" id="name" required
+                                    data-validation-required-message="Please enter your name.">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control" placeholder="Your Email *" id="email" required
+                                    data-validation-required-message="Please enter your email address.">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" class="form-control" placeholder="Your Phone *" id="phone" required
+                                    data-validation-required-message="Please enter your phone number.">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control" placeholder="Your Message *" id="message" required
+                                    data-validation-required-message="Please enter a message." rows="5"></textarea>
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div class="text-center">
+                                <div id="success"></div>
+                                <button type="submit" class="btn btn-brand btn-lg">Send Message</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>

@@ -93,6 +93,8 @@
                     <li><a href="about.html">About</a></li>
                     <li><a href="javascript:void(0)">Services <span class="caret"></span></a>
                         <ul class="dropdown-menu">
+                            <li><a href="seo.html">SEO</a></li>
+                            <li><a href="website.html">Website Development</a></li>
                             <li><a href="ai-marketing.html">AI Marketing</a></li>
                             <li><a href="email-marketing.html">Email Marketing</a></li>
                             <li><a href="branding-creative-design.html">Branding & Creative Design</a></li>
@@ -175,7 +177,7 @@
                     <a href="#about" class="btn btn-brand btn-lg">Know Our Story →</a>
                 </div>
                 <div class="col-md-6">
-                    <img src="img/about-us.png" class="img-responsive" alt="About Rankmator">
+                    <img src="img/home-page-alian.webp" class="img-responsive" alt="About Rankmator">
                 </div>
             </div>
         </div>
@@ -511,7 +513,7 @@
                                 strategies.</p>
                             <a href="#contact" class="cta-button">
                                 <i class="fa fa-paper-plane"></i>
-                                Let's Connect
+                                Ready to grow your brand
                             </a>
                         </div>
                     </div>
@@ -1021,17 +1023,6 @@
             right: 0;
         }
 
-        .testimonial-nav:disabled {
-            opacity: 0.3;
-            cursor: not-allowed;
-        }
-
-        .testimonial-nav:disabled:hover {
-            background: #1a1a1a;
-            color: #fff;
-            transform: translateY(-50%);
-        }
-
         /* Responsive */
         @media (max-width: 992px) {
             .testimonial-card {
@@ -1254,30 +1245,29 @@
             const gap = 30;
             const offset = -(currentSlide * (cardWidth + gap));
             track.style.transform = `translateX(${offset}px)`;
-
-            updateButtons();
         }
 
         function slideTestimonials(direction) {
             cardsPerView = getCardsPerView();
             const maxSlide = cards.length - cardsPerView;
 
-            if (direction === 'next' && currentSlide < maxSlide) {
-                currentSlide++;
-            } else if (direction === 'prev' && currentSlide > 0) {
-                currentSlide--;
+            if (direction === 'next') {
+                // Loop back to start when reaching the end
+                if (currentSlide >= maxSlide) {
+                    currentSlide = 0;
+                } else {
+                    currentSlide++;
+                }
+            } else if (direction === 'prev') {
+                // Loop to end when at the beginning
+                if (currentSlide <= 0) {
+                    currentSlide = maxSlide;
+                } else {
+                    currentSlide--;
+                }
             }
 
             updateSlide();
-        }
-
-        function updateButtons() {
-            const prevBtn = document.querySelector('.testimonial-nav.prev');
-            const nextBtn = document.querySelector('.testimonial-nav.next');
-            const maxSlide = cards.length - cardsPerView;
-
-            prevBtn.disabled = currentSlide === 0;
-            nextBtn.disabled = currentSlide >= maxSlide;
         }
 
         // Initialize

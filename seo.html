@@ -124,6 +124,16 @@
         }
 
         /* Why Choose Section */
+        .seo-section .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .seo-section .row>[class*='col-'] {
+            display: flex;
+            flex-direction: column;
+        }
+
         .why-choose-card {
             background: #fff;
             padding: 40px 30px;
@@ -154,6 +164,7 @@
             color: #666;
             line-height: 1.7;
             margin: 0;
+            flex-grow: 1;
         }
 
         /* Startup USP Section */
@@ -416,7 +427,7 @@
         /* Stats Section */
         .stats-section {
             background: #ffffff;
-            padding: 30px 0;
+            padding: 50px 0;
             position: relative;
         }
 
@@ -1178,37 +1189,18 @@
                     <li class="hidden"><a href="#page-top"></a></li>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
-                    <li><a href="services.html">Services <span class="caret"></span></a>
+                    <li><a href="javascript:void(0)">Services <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="creative.html">Creative</a></li>
-                            <li><a href="films.html">Films</a></li>
-                            <li><a href="javascript:void(0)">Photography <span class="angle-right"></span><span
-                                        class="caret"></span></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="fashion.html">Fashion</a></li>
-                                    <li><a href="product.html">Product</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="digital.html">Digital</a></li>
-                            <li><a href="social.html">Social</a></li>
-                            <li><a href="website.html">Website</a></li>
                             <li><a href="seo.html">SEO</a></li>
-                            <li><a href="javascript:void(0)">Marketing Services <span class="angle-right"></span><span
-                                        class="caret"></span></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="ai-marketing.html">AI Marketing</a></li>
-                                    <li><a href="email-marketing.html">Email Marketing</a></li>
-                                    <li><a href="branding-creative-design.html">Branding & Creative Design</a></li>
-                                    <li><a href="ecommerce-marketing.html">E-commerce Marketing</a></li>
-                                    <li><a href="social-media-marketing.html">Social Media Marketing</a></li>
-                                    <li><a href="performance-marketing.html">Performance Marketing</a></li>
-                                </ul>
-                            </li>
+                            <li><a href="website.html">Website Development</a></li>
+                            <li><a href="ai-marketing.html">AI Marketing</a></li>
+                            <li><a href="email-marketing.html">Email Marketing</a></li>
+                            <li><a href="branding-creative-design.html">Branding & Creative Design</a></li>
+                            <li><a href="ecommerce-marketing.html">E-commerce Marketing</a></li>
+                            <li><a href="social-media-marketing.html">Social Media Marketing</a></li>
+                            <li><a href="performance-marketing.html">Performance Marketing</a></li>
                         </ul>
                     </li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
-                    <li><a href="paltan.html">Paltan</a></li>
-                    <li><a href="clients.html">Clients</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
@@ -1318,18 +1310,25 @@
                 </div>
             </div>
             <div class="row" style="margin-top: 30px;">
-                <div class="col-md-6">
+                <div class="col-md-4">
                     <div class="why-choose-card">
                         <h4>🏆 Build Long-Term Authority</h4>
                         <p>We help you establish your brand as a trusted authority in your industry through consistent,
                             high-quality SEO practices.</p>
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-4">
                     <div class="why-choose-card">
                         <h4>🚀 Expert Team</h4>
                         <p>Our strategies are inspired by industry leaders like Brian Dean, Matt Diggity, Aleyda Solis,
                             Neil Patel, and SEMrush Academy.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="why-choose-card">
+                        <h4>🤖 AI-Powered Tracking & Performance Monitoring</h4>
+                        <p>AI-powered tracking with data-driven insights to monitor performance, optimize strategies,
+                            and ensure continuous growth.</p>
                     </div>
                 </div>
             </div>
@@ -1349,8 +1348,7 @@
             <div class="portfolio-grid">
                 <!-- Result 1 -->
                 <div class="portfolio-item">
-                    <img src="file:///C:/Users/Manish%20Kushwaha/.gemini/antigravity/brain/ac5be559-7cca-4c3b-8823-946e9e27f327/seo_results_graph_1765300456286.png"
-                        alt="Traffic Growth Results" class="portfolio-image">
+                    <img src="img/Traffic-growth1.webp" alt="Traffic Growth Results" class="portfolio-image">
                     <div class="portfolio-overlay">
                         <div class="portfolio-info">
                             <h4>400% Traffic Increase</h4>
@@ -1361,8 +1359,7 @@
 
                 <!-- Result 2 -->
                 <div class="portfolio-item">
-                    <img src="file:///C:/Users/Manish%20Kushwaha/.gemini/antigravity/brain/ac5be559-7cca-4c3b-8823-946e9e27f327/keyword_ranking_improvement_1765300532801.png"
-                        alt="Keyword Rankings" class="portfolio-image">
+                    <img src="img/Local-seo.webp" alt="Keyword Rankings" class="portfolio-image">
                     <div class="portfolio-overlay">
                         <div class="portfolio-info">
                             <h4>50+ Keywords on Page 1</h4>
@@ -1373,8 +1370,7 @@
 
                 <!-- Result 3 -->
                 <div class="portfolio-item">
-                    <img src="file:///C:/Users/Manish%20Kushwaha/.gemini/antigravity/brain/ac5be559-7cca-4c3b-8823-946e9e27f327/seo_results_graph_1765300456286.png"
-                        alt="Local SEO Success" class="portfolio-image">
+                    <img src="img/Traffic-growth2.webp">
                     <div class="portfolio-overlay">
                         <div class="portfolio-info">
                             <h4>10X Local Lead Generation</h4>

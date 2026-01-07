@@ -3038,8 +3038,8 @@ ol {
     }
 
     .section-small {
-        padding-top: 10px;
-        padding-bottom: 10px;
+        padding-top: 20px;
+        padding-bottom: 20px;
         /*     padding-top: 60px;
                 padding-bottom: 60px;*/
     }
@@ -3600,7 +3600,7 @@ ol {
 /* Service Cards */
 .service-card {
     position: relative;
-    height: 300px;
+    height: 330px;
     border-radius: 10px;
     overflow: hidden;
     margin-bottom: 30px;
@@ -3866,7 +3866,7 @@ h1 span {
 }
 
 #hero-section .hero-btn {
-    margin-top: 40px;
+    margin-top: 4px;
 }
 
 @media (max-width: 768px) {

@@ -71,6 +71,225 @@
         .navbar-custom .navbar-brand {
             padding-bottom: 0;
         }
+
+        /* Hero Section Styles */
+        #hero-section {
+            padding: 120px 0 80px 0;
+        }
+
+        .hero-heading {
+            font-size: 48px;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 30px;
+            color: #d0cc37;
+        }
+
+        .hero-text {
+            font-size: 18px;
+            line-height: 1.7;
+            margin-bottom: 30px;
+            color: #fff;
+        }
+
+        .highlight-text {
+            font-size: 22px;
+            font-weight: 600;
+            color: #d0cc37;
+            margin-top: 20px;
+        }
+
+        /* Section Headings */
+        .section-heading {
+            font-size: 42px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.3;
+        }
+
+        .section-subheading {
+            font-size: 24px;
+            font-weight: 500;
+            margin-bottom: 30px;
+        }
+
+        /* Mobile Responsive Styles for Headings */
+        @media (max-width: 992px) {
+            #hero-section {
+                padding: 100px 0 60px 0;
+            }
+
+            .hero-heading {
+                font-size: 36px;
+                line-height: 1.3;
+                margin-bottom: 25px;
+            }
+
+            .hero-text {
+                font-size: 16px;
+            }
+
+            .highlight-text {
+                font-size: 20px;
+            }
+
+            .section-heading {
+                font-size: 36px;
+                margin-bottom: 18px;
+            }
+
+            .section-subheading {
+                font-size: 20px;
+                margin-bottom: 25px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            #hero-section {
+                padding: 80px 0 50px 0;
+            }
+
+            .hero-heading {
+                font-size: 28px;
+                line-height: 1.4;
+                margin-bottom: 20px;
+                padding: 0 15px;
+            }
+
+            .hero-text {
+                font-size: 15px;
+                line-height: 1.6;
+                padding: 0 10px;
+            }
+
+            .highlight-text {
+                font-size: 18px;
+                margin-top: 15px;
+            }
+
+            .section-heading {
+                font-size: 28px;
+                margin-bottom: 15px;
+                line-height: 1.3;
+            }
+
+            .section-subheading {
+                font-size: 18px;
+                margin-bottom: 20px;
+                padding: 0 10px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            #hero-section {
+                padding: 70px 0 40px 0;
+            }
+
+            .hero-heading {
+                font-size: 24px;
+                line-height: 1.4;
+                margin-bottom: 18px;
+            }
+
+            .hero-text {
+                font-size: 14px;
+                line-height: 1.6;
+            }
+
+            .highlight-text {
+                font-size: 16px;
+                margin-top: 12px;
+            }
+
+            .section-heading {
+                font-size: 24px;
+                margin-bottom: 12px;
+                line-height: 1.35;
+            }
+
+            .section-subheading {
+                font-size: 16px;
+                margin-bottom: 18px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-heading {
+                font-size: 22px;
+            }
+
+            .section-heading {
+                font-size: 22px;
+            }
+        }
+    </style>
+    <style>
+        /* Navigation Menu Visibility Fix */
+        @media (min-width: 768px) {
+            .navbar-collapse.collapse {
+                display: block !important;
+                height: auto !important;
+                padding-bottom: 0;
+                overflow: visible !important;
+            }
+
+            .navbar-nav {
+                float: left;
+                margin: 0;
+            }
+
+            .navbar-nav>li {
+                float: left;
+            }
+
+            .navbar-nav>li>a {
+                padding-top: 21px;
+                padding-bottom: 15px;
+            }
+
+            /* Dropdown Menu */
+            .navbar-nav>li {
+                position: relative;
+            }
+
+            .navbar-nav>li>.dropdown-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: auto;
+                right: 0;
+                z-index: 1000;
+            }
+
+            .navbar-nav>li:hover>.dropdown-menu {
+                display: block;
+            }
+
+            .navbar-nav>li.open>.dropdown-menu {
+                display: block;
+            }
+        }
+
+        /* Mobile Navigation */
+        @media (max-width: 767px) {
+            .navbar-nav {
+                margin: 0;
+            }
+
+            .navbar-nav .dropdown-menu {
+                position: static;
+                float: none;
+                width: auto;
+                margin-top: 0;
+                background-color: transparent;
+                border: 0;
+                box-shadow: none;
+            }
+
+            .navbar-nav .dropdown-menu>li>a {
+                padding: 10px 15px 10px 30px;
+            }
+        }
     </style>
     <nav class="navbar navbar-universal navbar-custom navbar-fixed-top">
         <div class="container-fluid">
@@ -148,7 +367,7 @@
                         business — local or global.</p>
                     <p class="large text-muted">At Rankmator, we help you get visible, build awareness, and attract your
                         target audience right where they are — online.</p>
-                    <a href="#contact" class="btn btn-brand btn-lg">Let’s Take Your Business Online →</a>
+                    <a href="#contact" class="btn btn-brand btn-lg">Let’s Connect →</a>
                 </div>
             </div>
         </div>
@@ -161,18 +380,18 @@
                 <div class="col-md-6 text-left">
                     <h2 class="section-heading" style="color: #d0cc37;">About Rankmator – Your Growth Partner in the
                         Digital World</h2>
-                    <p class="large" style="color: #fff;">Rankmator is not just another marketing agency — it’s your
+                    <p style="color: #fff;">Rankmator is not just another marketing agency — it’s your
                         strategic
                         partner in growth.</p>
-                    <p class="large" style="color: #fff;">Founded in Delhi with a mission to make digital marketing
+                    <p style="color: #fff;">Founded in Delhi with a mission to make digital marketing
                         accessible for
                         every business, Rankmator empowers brands across India to achieve real, measurable growth.</p>
-                    <p class="large" style="color: #fff;">We blend creativity, data, and technology to help you not just
+                    <p style="color: #fff;">We blend creativity, data, and technology to help you not just
                         rank
                         higher — but grow faster. Whether you’re a startup finding your first customer or an established
                         brand aiming for scale, our goal is simple: to make your business stand out in the digital
                         crowd.</p>
-                    <p class="large" style="color: #fff;">“We know how hard it is to turn an idea into
+                    <p style="color: #fff;">“We know how hard it is to turn an idea into
                         a brand — that’s why we exist.”</p>
                     <a href="#about" class="btn btn-brand btn-lg">Know Our Story →</a>
                 </div>
@@ -196,6 +415,31 @@
             color: #1a1a1a;
             font-size: 42px;
             font-weight: 800;
+        }
+
+        /* Services Section Mobile Responsive */
+        @media (max-width: 992px) {
+            #services .section-heading {
+                font-size: 36px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            #services .section-heading {
+                font-size: 28px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            #services .section-heading {
+                font-size: 24px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            #services .section-heading {
+                font-size: 22px;
+            }
         }
 
         .services-masonry-grid {
@@ -609,6 +853,35 @@
             font-size: 42px;
             font-weight: 800;
             margin-bottom: 50px;
+        }
+
+        /* Why Choose Section Mobile Responsive */
+        @media (max-width: 992px) {
+            #why-choose .section-heading {
+                font-size: 36px;
+                margin-bottom: 40px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            #why-choose .section-heading {
+                font-size: 28px;
+                margin-bottom: 35px;
+                padding: 0 15px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            #why-choose .section-heading {
+                font-size: 24px;
+                margin-bottom: 30px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            #why-choose .section-heading {
+                font-size: 22px;
+            }
         }
 
         .why-choose-card {

@@ -135,6 +135,7 @@
             display: flex;
             flex-direction: column;
             height: 100%;
+            min-height: 280px;
         }
 
         .why-choose-card:hover {
@@ -225,7 +226,7 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
-            margin-top: 50px;
+            margin-top: 20px;
         }
 
         .service-card {
@@ -354,10 +355,9 @@
             line-height: 1.6;
         }
 
-        /* Final CTA Section */
         .final-cta {
             background: #212121;
-            padding: 100px 0;
+            padding: 30px 0;
             color: #fff;
             text-align: center;
             position: relative;
@@ -704,7 +704,33 @@
             }
 
             .final-cta {
-                padding: 60px 0;
+                padding: 40px 0;
+            }
+
+            .why-choose-card {
+                min-height: auto;
+            }
+
+            .service-card {
+                padding: 20px 15px;
+                margin-bottom: 15px;
+                height: auto;
+                min-height: auto;
+            }
+
+            .service-icon {
+                display: none;
+            }
+
+            .service-card h4 {
+                margin-top: 0;
+                margin-bottom: 10px;
+                font-size: 18px;
+            }
+
+            .service-card p {
+                margin-bottom: 0;
+                font-size: 14px;
             }
 
             .final-cta h2 {
@@ -917,6 +943,74 @@
             }
         }
     </style>
+    <style>
+        /* Navigation Menu Visibility Fix */
+        @media (min-width: 768px) {
+            .navbar-collapse.collapse {
+                display: block !important;
+                height: auto !important;
+                padding-bottom: 0;
+                overflow: visible !important;
+            }
+
+            .navbar-nav {
+                float: left;
+                margin: 0;
+            }
+
+            .navbar-nav>li {
+                float: left;
+            }
+
+            .navbar-nav>li>a {
+                padding-top: 21px;
+                padding-bottom: 15px;
+            }
+
+            /* Dropdown Menu */
+            .navbar-nav>li {
+                position: relative;
+            }
+
+            .navbar-nav>li>.dropdown-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: auto;
+                right: 0;
+                z-index: 1000;
+            }
+
+            .navbar-nav>li:hover>.dropdown-menu {
+                display: block;
+            }
+
+            .navbar-nav>li.open>.dropdown-menu {
+                display: block;
+            }
+        }
+
+        /* Mobile Navigation */
+        @media (max-width: 767px) {
+            .navbar-nav {
+                margin: 0;
+            }
+
+            .navbar-nav .dropdown-menu {
+                position: static;
+                float: none;
+                width: auto;
+                margin-top: 0;
+                background-color: transparent;
+                border: 0;
+                box-shadow: none;
+            }
+
+            .navbar-nav .dropdown-menu>li>a {
+                padding: 10px 15px 10px 30px;
+            }
+        }
+    </style>
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" class="top">
@@ -1046,21 +1140,21 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="why-choose-card">
-                        <h4>🤖 Creative Branding Automation</h4>
+                        <h4>Creative Branding Automation</h4>
                         <p>Automate repetitive tasks, optimize campaigns in real-time, and scale your marketing efforts
                             without increasing costs.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="why-choose-card">
-                        <h4>📊 Data-Driven Insights</h4>
+                        <h4>Data-Driven Insights</h4>
                         <p>Leverage advanced analytics and machine learning to understand customer behavior and predict
                             future trends.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="why-choose-card">
-                        <h4>🎯 Personalized Experiences</h4>
+                        <h4>Personalized Experiences</h4>
                         <p>Create hyper-personalized content and campaigns that resonate with each customer segment for
                             maximum engagement.</p>
                     </div>
@@ -1069,14 +1163,14 @@
             <div class="row" style="margin-top: 30px;">
                 <div class="col-md-6">
                     <div class="why-choose-card">
-                        <h4>🚀 Faster Results</h4>
+                        <h4>Faster Results</h4>
                         <p>AI accelerates testing, optimization, and execution, allowing you to achieve results in weeks
                             instead of months.</p>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="why-choose-card">
-                        <h4>💡 Innovation First</h4>
+                        <h4>Innovation First</h4>
                         <p>Stay ahead with the latest AI technologies including ChatGPT, predictive models, and
                             intelligent attribution systems.</p>
                     </div>
@@ -1175,7 +1269,7 @@
             <div class="services-grid">
                 <!-- Service 1 -->
                 <div class="service-card">
-                    <div class="service-icon">🤖</div>
+
                     <h4>1. Marketing Automation</h4>
                     <p>Automate email campaigns, social media posting, lead nurturing, and customer segmentation using
                         intelligent AI systems.</p>
@@ -1183,7 +1277,7 @@
 
                 <!-- Service 2 -->
                 <div class="service-card">
-                    <div class="service-icon">📝</div>
+
                     <h4>2. AI Content Generation</h4>
                     <p>Create high-quality blog posts, ad copy, social media content, and product descriptions with
                         Creative Branding writing tools.</p>
@@ -1191,7 +1285,7 @@
 
                 <!-- Service 3 -->
                 <div class="service-card">
-                    <div class="service-icon">🔮</div>
+
                     <h4>3. Predictive Analytics</h4>
                     <p>Forecast customer behavior, predict campaign performance, and make data-driven decisions before
                         deploying resources.</p>
@@ -1199,7 +1293,7 @@
 
                 <!-- Service 4 -->
                 <div class="service-card">
-                    <div class="service-icon">🎯</div>
+
                     <h4>4. Personalization Engine</h4>
                     <p>Deliver hyper-personalized experiences across all touchpoints using AI-driven customer insights
                         and behavior patterns.</p>
@@ -1207,7 +1301,7 @@
 
                 <!-- Service 5 -->
                 <div class="service-card">
-                    <div class="service-icon">💬</div>
+
                     <h4>5. AI Chatbots & Support</h4>
                     <p>Deploy intelligent chatbots that handle customer queries 24/7, qualify leads, and provide
                         personalized recommendations.</p>
@@ -1215,7 +1309,7 @@
 
                 <!-- Service 6 -->
                 <div class="service-card">
-                    <div class="service-icon">📊</div>
+
                     <h4>6. Performance Optimization</h4>
                     <p>Use machine learning algorithms to continuously optimize ad spend, targeting, messaging, and
                         conversion rates.</p>
@@ -1407,22 +1501,22 @@
             </div>
             <div class="guarantee-grid">
                 <div class="guarantee-item">
-                    <div class="guarantee-icon">🔒</div>
+
                     <h4>Data Security</h4>
                     <p>Your data is protected with enterprise-grade security and privacy measures</p>
                 </div>
                 <div class="guarantee-item">
-                    <div class="guarantee-icon">📊</div>
+
                     <h4>Transparent AI</h4>
                     <p>Understand exactly how our AI systems work and make decisions</p>
                 </div>
                 <div class="guarantee-item">
-                    <div class="guarantee-icon">💰</div>
+
                     <h4>ROI Focused</h4>
                     <p>We prioritize revenue impact over vanity metrics</p>
                 </div>
                 <div class="guarantee-item">
-                    <div class="guarantee-icon">🤝</div>
+
                     <h4>Partnership Approach</h4>
                     <p>We work as an extension of your team, dedicated to your success</p>
                 </div>
@@ -1442,10 +1536,10 @@
                     <p>Your customers expect personalized experiences.</p>
                     <p>And every day you wait… you fall further behind.</p>
 
-                    <p class="cta-highlight">👉 It's time to embrace the future of marketing.<br>
-                        👉 It's time to partner with Rankmator.</p>
+                    <p class="cta-highlight">It's time to embrace the future of marketing.<br>
+                        It's time to partner with Rankmator.</p>
 
-                    <a href="contact.html" class="btn btn-final-cta">💬 Book Your FREE Call Today</a>
+                    <a href="contact.html" class="btn btn-final-cta">Book Your FREE Call Today</a>
                 </div>
             </div>
         </div>
@@ -1477,11 +1571,11 @@
     <div class="sticky-cta" id="stickyCTA">
         <div class="container">
             <div class="sticky-cta-content">
-                <p class="sticky-cta-text">🚀 Ready to Transform Your Marketing with AI?</p>
+                <p class="sticky-cta-text">Ready to Transform Your Marketing with AI?</p>
                 <div class="sticky-cta-buttons">
-                    <a href="tel:+919999767666" class="btn-sticky">📞 Call Now</a>
+                    <a href="tel:+919999767666" class="btn-sticky">Call Now</a>
                     <a href="https://api.whatsapp.com/send?phone=919999767666&text=I'm interested in Branding & Creative Design services"
-                        target="_blank" class="btn-sticky">💬 WhatsApp</a>
+                        target="_blank" class="btn-sticky">WhatsApp</a>
                 </div>
             </div>
         </div>
@@ -1497,6 +1591,7 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.easing.min.js"></script>
     <script src="js/smoothscroll.min.js"></script>
+    <script src="js/jquery.smartmenus.js"></script>
     <script src="js/universal.js"></script>
 
     <script>

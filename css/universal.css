@@ -453,6 +453,7 @@ select {
     border: 2px solid #d0cc37;
     background-color: #d0cc37;
     color: #000 !important;
+    text-wrap: auto;
 }
 
 .btn-dark {

@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -446,121 +446,12 @@
                 min-height: auto;
             }
         }
-
-        /* Navigation Menu Visibility Fix */
-        @media (min-width: 768px) {
-            .navbar-collapse.collapse {
-                display: block !important;
-                height: auto !important;
-                padding-bottom: 0;
-                overflow: visible !important;
-            }
-
-            .navbar-nav {
-                float: left;
-                margin: 0;
-            }
-
-            .navbar-nav>li {
-                float: left;
-            }
-
-            .navbar-nav>li>a {
-                padding-top: 21px;
-                padding-bottom: 15px;
-            }
-
-            /* Dropdown Menu */
-            .navbar-nav>li {
-                position: relative;
-            }
-
-            .navbar-nav>li>.dropdown-menu {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: auto;
-                right: 0;
-                z-index: 1000;
-            }
-
-            .navbar-nav>li:hover>.dropdown-menu {
-                display: block;
-            }
-
-            .navbar-nav>li.open>.dropdown-menu {
-                display: block;
-            }
-
-        }
-
-        /* Mobile Navigation */
-        @media (max-width: 767px) {
-            .navbar-nav {
-                margin: 0;
-            }
-
-            .navbar-nav .dropdown-menu {
-                position: static;
-                float: none;
-                width: auto;
-                margin-top: 0;
-                background-color: transparent;
-                border: 0;
-                box-shadow: none;
-            }
-
-            .navbar-nav .dropdown-menu>li>a {
-                padding: 10px 15px 10px 30px;
-            }
-        }
-
-        .list-inline>li {
-            padding-left: 10px;
-            padding-right: 10px;
-        }
     </style>
+    <script src="js/header-loader.js"></script>
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" class="top">
-
-    <!-- Navigation -->
-    <nav class="navbar navbar-universal navbar-custom navbar-fixed-top">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" data-toggle="collapse" data-target=".navbar-main-collapse" class="navbar-toggle">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a href="index.html" class="navbar-brand page-scroll">
-                    <span style="font-size: 24px; font-weight: bold; color: #d0cc37;">Rankmator</span>
-                </a>
-            </div>
-            <div class="collapse navbar-collapse navbar-main-collapse">
-                <ul class="nav navbar-nav navbar-left">
-                    <li class="hidden"><a href="#page-top"></a></li>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="javascript:void(0)">Services <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="seo.html">SEO</a></li>
-                            <li><a href="local-seo-services.html">Local SEO</a></li>
-                            <li><a href="website.html">Website Development</a></li>
-                            <li><a href="ai-marketing.html">AI Marketing</a></li>
-                            <li><a href="email-marketing.html">Email Marketing</a></li>
-                            <li><a href="branding-creative-design.html">Branding & Creative Design</a></li>
-                            <li><a href="ecommerce-marketing.html">E-commerce Marketing</a></li>
-                            <li><a href="social-media-marketing.html">Social Media Marketing</a></li>
-                            <li><a href="performance-marketing.html">Performance Marketing</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <div id="header-include"></div>
 
     <!-- Hero Section with Form -->
     <section class="seo-hero">
@@ -570,33 +461,33 @@
                 <div class="col-md-7">
                     <h1>Dental SEO Agency Helping Clinics Get More Patient Appointments</h1>
                     <p>Running a dental clinic today is no longer just about expertise and equipment - it's about
-                        being
-                        found online at the exact moment patients are searching.</p>
-                    <p>When someone searches for "dentist near me, "dental clinic in my area, or "teeth whitening
-                        specialist, your practice needs to appear on top, not on page two.</p>
-                    <p>At Rankmator, we provide result-driven Dental SEO services that help dental clinics attract
-                        high-intent patients, increase appointment bookings, and build long-term local visibility.</p>
-
-                    <div style="margin-top: 30px;">
-                        <a href="#contact-section" class="btn btn-brand">Get a Free Dental SEO Audit</a>
-                        <a href="#contact-section" class="btn btn-default"
+                        being found online at the exact moment patients are searching.</p>
+                    <p>When someone searches for "dentist near me, " dental clinic in my area,
+                        or "teeth whitening
+                        specialist,
+                        your practice needs to appear on top,
+                        not on page two.</p>
+                    <p>At Rankmator,
+                        we provide result-driven Dental SEO services that help dental clinics attract high-intent
+                        patients,
+                        increase appointment bookings,
+                        and build long-term local visibility.</p>
+                    <div style="margin-top: 30px;"><a href="#contact-section" class="btn btn-brand">Get a Free
+                            Dental SEO Audit</a><a href="#contact-section" class="btn btn-default"
                             style="margin-left: 10px; background: transparent; color: #fff; border: 1px solid #fff; padding: 15px 30px; border-radius: 4px; font-weight: 700; text-transform: uppercase;">Talk
-                            to a Dental SEO Expert</a>
-                    </div>
+                            to a Dental SEO Expert</a></div>
                 </div>
-
                 <!-- Right Side: Contact Form -->
                 <div class="col-md-5">
                     <div class="hero-form">
                         <h3>Get Free Dental SEO Audit</h3>
-                        <form name="seoContactForm" id="seoContactForm" novalidate>
-                            <input type="text" class="form-control" placeholder="Your Name *" id="hero-name" required>
-                            <input type="email" class="form-control" placeholder="Your Email *" id="hero-email"
-                                required>
-                            <input type="tel" class="form-control" placeholder="Your Phone *" id="hero-phone" required>
-                            <textarea class="form-control" placeholder="Tell us about your clinic *" id="hero-message"
-                                required></textarea>
-                            <button type="submit" class="btn btn-brand btn-lg btn-block">Book Your FREE
+                        <form name="seoContactForm" id="seoContactForm" novalidate><input type="text"
+                                class="form-control" placeholder="Your Name *" id="hero-name" required><input
+                                type="email" class="form-control" placeholder="Your Email *" id="hero-email"
+                                required><input type="tel" class="form-control" placeholder="Your Phone *"
+                                id="hero-phone" required><textarea class="form-control"
+                                placeholder="Tell us about your clinic *" id="hero-message" required></textarea><button
+                                type="submit" class="btn btn-brand btn-lg btn-block">Book Your FREE
                                 Consultation</button>
                         </form>
                     </div>
@@ -604,61 +495,52 @@
             </div>
         </div>
     </section>
-
     <!-- Why Specialized Dental SEO Agency -->
     <section class="seo-section bg-white">
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 col-lg-offset-1 text-center">
                     <h2 class="section-title">Why Dental Clinics Need a Specialized Dental SEO Agency</h2>
-                    <p class="section-subtitle">Dental SEO is different from general SEO. Patients don't browse, they
+                    <p class="section-subtitle">Dental SEO is different from general SEO. Patients don't browse,
+                        they
                         search with urgency.</p>
-                    <p class="section-subtitle">They want trusted clinics, strong reviews, and accurate local
-                        information. Without proper SEO, your clinic stays invisible to nearby patients, competitors
-                        capture high-intent searches, and paid ads become expensive.</p>
+                    <p class="section-subtitle">They want trusted clinics,
+                        strong reviews,
+                        and accurate local information. Without proper SEO,
+                        your clinic stays invisible to nearby patients,
+                        competitors capture high-intent searches,
+                        and paid ads become expensive.</p>
                 </div>
             </div>
-
             <!-- SEO Challenges Faced by Dental Practices (Using Stats Grid Style) -->
             <div class="row" style="margin-top: 40px;">
                 <div class="col-lg-10 col-lg-offset-1 text-center">
-                    <h3 style="font-size: 28px; font-weight: 700; margin-bottom: 20px;">SEO Challenges Faced by Dental
-                        Practices</h3>
+                    <h3 style="font-size: 28px; font-weight: 700; margin-bottom: 20px;">SEO Challenges Faced by
+                        Dental Practices</h3>
                 </div>
             </div>
             <div class="text-stats-grid">
-                <div class="text-stat-item">
-                    <i class="fa fa-eye-slash"></i>
-                    <span>Low Visibility in Search</span>
+                <div class="text-stat-item"><i class="fa fa-eye-slash"></i><span>Low Visibility in Search</span>
                 </div>
-                <div class="text-stat-item">
-                    <i class="fa fa-map-marker"></i>
-                    <span>Not Ranking for 'Dentist Near Me'</span>
+                <div class="text-stat-item"><i class="fa fa-map-marker"></i><span>Not Ranking for 'Dentist Near
+                        Me' </span></div>
+                <div class="text-stat-item"><i class="fa fa-map-o"></i><span>Poor Google Maps Presence</span>
                 </div>
-                <div class="text-stat-item">
-                    <i class="fa fa-map-o"></i>
-                    <span>Poor Google Maps Presence</span>
+                <div class="text-stat-item"><i class="fa fa-star-half-o"></i><span>Weak Online Reputation</span>
                 </div>
-                <div class="text-stat-item">
-                    <i class="fa fa-star-half-o"></i>
-                    <span>Weak Online Reputation</span>
-                </div>
-                <div class="text-stat-item">
-                    <i class="fa fa-mouse-pointer"></i>
-                    <span>Traffic But No Appointments</span>
-                </div>
+                <div class="text-stat-item"><i class="fa fa-mouse-pointer"></i><span>Traffic But No
+                        Appointments</span></div>
             </div>
         </div>
     </section>
-
     <!-- Our Proven Dental SEO Service Framework -->
     <section class="process-section">
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 col-lg-offset-1 text-center">
                     <h2 class="section-title" style="color: #fff;">Our Proven Dental SEO Service Framework</h2>
-                    <p class="section-subtitle" style="color: #ccc;">A comprehensive strategy to help your dental
-                        practice dominate local search results.</p>
+                    <p class="section-subtitle" style="color: #ccc;">A comprehensive strategy to help your
+                        dental practice dominate local search results.</p>
                 </div>
             </div>
             <div class="process-grid">
@@ -666,211 +548,227 @@
                 <div class="process-step">
                     <div class="process-number">1</div>
                     <h4>Local Keyword & Patient Intent Research</h4>
-                    <p>We identify keywords patients actually use, based on treatments, location, and urgency.</p>
+                    <p>We identify keywords patients actually use,
+                        based on treatments,
+                        location,
+                        and urgency.</p>
                 </div>
-
                 <!-- Step 2 -->
                 <div class="process-step">
                     <div class="process-number">2</div>
                     <h4>Google Maps & Local SEO Optimization</h4>
-                    <p>We optimize your Google Business Profile to improve visibility, calls, and appointments.</p>
+                    <p>We optimize your Google Business Profile to improve visibility,
+                        calls,
+                        and appointments.</p>
                 </div>
-
                 <!-- Step 3 -->
                 <div class="process-step">
                     <div class="process-number">3</div>
                     <h4>Dental Website SEO & Content Optimization</h4>
-                    <p>We optimize service pages, treatment pages, and dental blogs to build trust and authority.</p>
+                    <p>We optimize service pages,
+                        treatment pages,
+                        and dental blogs to build trust and authority.</p>
                 </div>
-
                 <!-- Step 4 -->
                 <div class="process-step">
                     <div class="process-number">4</div>
                     <h4>Technical SEO for Fast & Secure Websites</h4>
-                    <p>We improve site speed, mobile usability, and technical health - crucial for healthcare SEO.</p>
+                    <p>We improve site speed,
+                        mobile usability,
+                        and technical health - crucial for healthcare SEO.</p>
                 </div>
-
                 <!-- Step 5 -->
                 <div class="process-step">
                     <div class="process-number">5</div>
-                    <h4>Reviews, Reputation & Authority Building</h4>
-                    <p>We help strengthen your online reputation and build credible backlinks from relevant sources.</p>
+                    <h4>Reviews,
+                        Reputation & Authority Building</h4>
+                    <p>We help strengthen your online reputation and build credible
+                        backlinks from relevant sources.</p>
                 </div>
-
                 <!-- Step 6 -->
                 <div class="process-step">
                     <div class="process-number">6</div>
                     <h4>Performance Analysis to Track Growth</h4>
-                    <p>We track rankings, traffic, and leads to measure performance and drive continuous growth.</p>
+                    <p>We track rankings,
+                        traffic,
+                        and leads to measure performance and drive continuous growth.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
-
     <!-- Why Choose Rankmator Section -->
     <section class="seo-section bg-light-gray">
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 col-lg-offset-1 text-center">
                     <h2 class="section-title">Why Clinics Choose Rankmator as Their Dental SEO Agency</h2>
-                    <p class="section-subtitle" style="margin-bottom: 20px;">We understand both healthcare ethics and
-                        search engine algorithms. We don't just improve rankings - we help clinics grow sustainably.
+                    <p class="section-subtitle" style="margin-bottom: 20px;">We understand both healthcare
+                        ethics and search engine algorithms. We don't just improve rankings - we help
+                        clinics grow sustainably.
                     </p>
                 </div>
             </div>
-
             <div class="row">
                 <div class="col-md-4">
                     <div class="why-choose-card">
                         <h4>Dedicated Specialists</h4>
-                        <p>Our team consists of dedicated dental SEO specialists who know the industry inside out.</p>
+                        <p>Our team consists of dedicated dental SEO specialists who know the industry
+                            inside out.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="why-choose-card">
                         <h4>Ethical Practices</h4>
-                        <p>We strictly follow ethical, guideline-based SEO practices to ensure ling-term safety.</p>
+                        <p>We strictly follow ethical,
+                            guideline-based SEO practices to ensure ling-term safety.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="why-choose-card">
                         <h4>Appointment Focused</h4>
-                        <p>We focus on generating real patient appointments, not just vanity traffic numbers.</p>
+                        <p>We focus on generating real patient appointments,
+                            not just vanity traffic numbers.</p>
                     </div>
                 </div>
             </div>
-
             <div class="row text-center" style="margin-top: 30px;">
                 <div class="col-md-12">
                     <ul class="list-inline" style="margin-top: 20px;">
                         <li style="font-size: 16px;"><i class="fa fa-check"
-                                style="color: #d0cc37; margin-right: 5px;"></i> AI-powered keyword & trend analysis</li>
+                                style="color: #d0cc37; margin-right: 5px;"></i>AI-powered keyword & trend
+                            analysis</li>
                         <li style="font-size: 16px;"><i class="fa fa-check"
-                                style="color: #d0cc37; margin-right: 5px;"></i> Transparent reporting & measurable ROI
+                                style="color: #d0cc37; margin-right: 5px;"></i>Transparent reporting &
+                            measurable ROI </li>
+                        <li style="font-size: 16px;"><i class="fa fa-check"
+                                style="color: #d0cc37; margin-right: 5px;"></i>Focus on high-intent searches
                         </li>
-                        <li style="font-size: 16px;"><i class="fa fa-check"
-                                style="color: #d0cc37; margin-right: 5px;"></i> Focus on high-intent searches</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- Who We Work With (Optional / Can be kept generic or removed if not in prompt, but good for structure) -->
-    <!-- Keeping consistent structure from template but simplified as not explicitly detailed in prompt -->
-
-
+    <!-- Who We Work With (Optional / Can be kept generic or removed if not in prompt, but good for
+                    structure) -->
+    <!-- Keeping consistent structure from template but simplified as not explicitly detailed in prompt
+                        -->
     <!-- FAQ Section -->
     <section class="faq-section">
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 col-lg-offset-1 text-center">
-                    <h2 class="section-title" style="color: #fff;">Frequently Asked Questions - Dental SEO</h2>
+                    <h2 class="section-title" style="color: #fff;">Frequently Asked Questions -
+                        Dental SEO</h2>
                 </div>
             </div>
             <div class="faq-container">
                 <div class="faq-item">
-                    <div class="faq-question">
-                        <span>What is Dental SEO?</span>
-                        <span class="faq-icon">+</span>
-                    </div>
+                    <div class="faq-question"><span>What is Dental SEO?</span><span class="faq-icon">+</span></div>
                     <div class="faq-answer">
-                        <div class="faq-answer-content">
-                            Dental SEO is the process of optimizing a dental clinic's online presence to attract local
-                            patients through organic search results.
-                        </div>
+                        <div class="faq-answer-content">Dental SEO is the process of optimizing
+                            a dental clinic's online presence to attract local
+                            patients through organic search results. </div>
                     </div>
                 </div>
-
                 <div class="faq-item">
-                    <div class="faq-question">
-                        <span>How long does Dental SEO take to show results?</span>
-                        <span class="faq-icon">+</span>
-                    </div>
+                    <div class="faq-question"><span>How long does Dental SEO take to show
+                            results?</span><span class="faq-icon">+</span></div>
                     <div class="faq-answer">
-                        <div class="faq-answer-content">
-                            Most clinics see noticeable improvements within 3-4 months, depending on competition and
-                            location.
-                        </div>
+                        <div class="faq-answer-content">Most clinics see noticeable improvements
+                            within 3-4 months,
+                            depending on competition and location. </div>
                     </div>
                 </div>
-
                 <div class="faq-item">
-                    <div class="faq-question">
-                        <span>Is Dental SEO better than paid ads?</span>
-                        <span class="faq-icon">+</span>
-                    </div>
+                    <div class="faq-question"><span>Is Dental SEO better than paid
+                            ads?</span><span class="faq-icon">+</span></div>
                     <div class="faq-answer">
-                        <div class="faq-answer-content">
-                            SEO delivers long-term patient flow, while ads stop working when the budget ends. The best
-                            clinics use SEO as their foundation.
-                        </div>
+                        <div class="faq-answer-content">SEO delivers long-term patient flow,
+                            while ads stop working when the budget ends. The best clinics use
+                            SEO as their foundation. </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
     <!-- Final CTA Section -->
     <section class="final-cta" id="contact-section">
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 col-lg-offset-1 text-center" style="position: relative; z-index: 2;">
                     <h2>Ready to Get More Patients Through Organic Search?</h2>
-                    <p>Partner with a trusted Dental SEO agency that understands your practice, patients, and growth
-                        goals.</p>
-
-                    <a href="contact.html" class="btn btn-final-cta">ðŸ‘‰ Get a Free Dental SEO Audit</a>
+                    <p>Partner with a trusted Dental SEO agency that understands your
+                        practice,
+                        patients,
+                        and growth goals.</p><a href="contact.html" class="btn btn-final-cta">?? Get a Free Dental SEO
+                        Audit</a>
                 </div>
             </div>
         </div>
     </section>
-
     <!-- Footer -->
     <section class="section-small footer bg-dark">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-4 col-sm-12 text-center">
                     <h4 style="color: #fff;">Rankmator</h4>
-                    <p style="color: #ccc;">Your Growth Partner in the Digital World.</p>
+                    <p style="color: #ccc;">Your Growth Partner in the Digital World.
+                    </p>
                 </div>
                 <div class="col-md-4 col-sm-12 text-center">
                     <ul class="list-inline" style="margin-top: 20px;">
-                        <li><a href="#" target="_blank"><i class="fa fa-facebook-square fa-fw fa-lg"></i></a></li>
+                        <li><a href="#" target="_blank"><i class="fa fa-facebook-square fa-fw fa-lg"></i></a>
+                        </li>
                         <li><a href="#" target="_blank"><i class="fa fa-instagram fa-fw fa-lg"></i></a></li>
-                        <li><a href="#" target="_blank"><i class="fa fa-linkedin-square fa-fw fa-lg"></i></a></li>
+                        <li><a href="#" target="_blank"><i class="fa fa-linkedin-square fa-fw fa-lg"></i></a>
+                        </li>
                     </ul>
                 </div>
                 <div class="col-md-4 col-sm-12 text-center">
-                    <p style="color: #ccc; margin-top: 20px;">&copy; 2025 Rankmator. All Rights Reserved.</p>
+                    <p style="color: #ccc; margin-top: 20px;">&copy;
+                        2025 Rankmator. All Rights Reserved.</p>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- WhatsApp Float Button -->
-    <a href="https://api.whatsapp.com/send?phone=919999767666&text=Let%e2%80%99s%20brew%20thoughts." target="_blank">
-        <img src="img/whatsup.png" style="position: fixed; bottom:10px; right:10px; z-index: 999;" alt="WhatsApp" />
-    </a>
-
-    <!-- Scripts -->
+    <!-- WhatsApp Float Button --><a
+        href="https://api.whatsapp.com/send?phone=919999767666&text=Let%e2%80%99s%20brew%20thoughts."
+        target="_blank"><img src="img/whatsup.png" style="position: fixed; bottom:10px; right:10px; z-index: 999;"
+            alt="WhatsApp" /></a>
+    <!-- jQuery-->
     <script src="js/jquery-1.12.4.min.js"></script>
+    <!-- Bootstrap Core JavaScript-->
     <script src="js/bootstrap.min.js"></script>
+    <!-- Plugin JavaScript-->
     <script src="js/jquery.easing.min.js"></script>
+    <script src="js/jquery.countdown.min.js"></script>
+    <script src="js/device.min.js"></script>
+    <script src="js/form.min.js"></script>
+    <script src="js/jquery.placeholder.min.js"></script>
+    <script src="js/jquery.shuffle.min.js"></script>
+    <script src="js/jquery.parallax.min.js"></script>
+    <script src="js/jquery.circle-progress.min.js"></script>
+    <script src="js/jquery.swipebox.min.js"></script>
     <script src="js/smoothscroll.min.js"></script>
+    <script src="js/wow.min.js"></script>
     <script src="js/jquery.smartmenus.js"></script>
-    <script src="js/universal.js"></script>
 
-    <script>
-        // Smooth scroll for anchor links
+    <!-- Custom Theme JavaScript-->
+    <script src="js/universal.js"></script>
+    <script> // Smooth scroll for anchor links
+
         $('a[href*="#"]:not([href="#"])').click(function () {
             if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
                 var target = $(this.hash);
                 target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+
                 if (target.length) {
                     $('html, body').animate({
                         scrollTop: target.offset().top - 80
-                    }, 1000);
+                    }
+
+                        , 1000);
                     return false;
                 }
             }
@@ -898,6 +796,7 @@
             });
         });
     </script>
+    <script src="js/footer-loader.js"></script>
 </body>
 
 </html>

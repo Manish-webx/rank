@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -228,7 +228,7 @@
         }
 
         .startup-feature::before {
-            content: 'ðŸŒŸ';
+            content: '🌟';
             margin-right: 15px;
             font-size: 24px;
         }
@@ -959,115 +959,13 @@
         }
     </style>
     <style>
-        /* Navigation Menu Visibility Fix */
-        @media (min-width: 768px) {
-            .navbar-collapse.collapse {
-                display: block !important;
-                height: auto !important;
-                padding-bottom: 0;
-                overflow: visible !important;
-            }
-
-            .navbar-nav {
-                float: left;
-                margin: 0;
-            }
-
-            .navbar-nav>li {
-                float: left;
-            }
-
-            .navbar-nav>li>a {
-                padding-top: 21px;
-                padding-bottom: 15px;
-            }
-
-            /* Dropdown Menu */
-            .navbar-nav>li {
-                position: relative;
-            }
-
-            .navbar-nav>li>.dropdown-menu {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: auto;
-                right: 0;
-                z-index: 1000;
-            }
-
-            .navbar-nav>li:hover>.dropdown-menu {
-                display: block;
-            }
-
-            .navbar-nav>li.open>.dropdown-menu {
-                display: block;
-            }
-        }
-
-        /* Mobile Navigation */
-        @media (max-width: 767px) {
-            .navbar-nav {
-                margin: 0;
-            }
-
-            .navbar-nav .dropdown-menu {
-                position: static;
-                float: none;
-                width: auto;
-                margin-top: 0;
-                background-color: transparent;
-                border: 0;
-                box-shadow: none;
-            }
-
-            .navbar-nav .dropdown-menu>li>a {
-                padding: 10px 15px 10px 30px;
-            }
-        }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="js/header-loader.js"></script>
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" class="top">
-
-    <!-- Navigation -->
-    <nav class="navbar navbar-universal navbar-custom navbar-fixed-top">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" data-toggle="collapse" data-target=".navbar-main-collapse" class="navbar-toggle">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a href="index.html" class="navbar-brand page-scroll">
-                    <span style="font-size: 24px; font-weight: bold; color: #d0cc37;">Rankmator</span>
-                </a>
-            </div>
-            <div class="collapse navbar-collapse navbar-main-collapse">
-                <ul class="nav navbar-nav navbar-left">
-                    <li class="hidden"><a href="#page-top"></a></li>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="javascript:void(0)">Services <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="seo.html">SEO</a></li>
-                            <li><a href="local-seo-services.html">Local SEO</a></li>
-                            <li><a href="website.html">Website Development</a></li>
-                            <li><a href="ai-marketing.html">AI Marketing</a></li>
-                            <li><a href="email-marketing.html">Email Marketing</a></li>
-                            <li><a href="branding-creative-design.html">Branding & Creative Design</a></li>
-                            <li><a href="ecommerce-marketing.html">E-commerce Marketing</a></li>
-                            <li><a href="social-media-marketing.html">Social Media Marketing</a></li>
-                            <li><a href="performance-marketing.html">Performance Marketing</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <div id="header-include"></div>
 
     <!-- Hero Section with Form -->
     <section class="seo-hero">
@@ -1579,17 +1477,12 @@
                 <p class="sticky-cta-text">Ready to Transform Your Marketing with AI?</p>
                 <div class="sticky-cta-buttons">
                     <a href="tel:+919999767666" class="btn-sticky">Call Now</a>
-                    <a href="https://api.whatsapp.com/send?phone=919999767666&text=I'm interested in AI Marketing services"
-                        target="_blank" class="btn-sticky">WhatsApp</a>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- WhatsApp Float Button -->
-    <a href="https://api.whatsapp.com/send?phone=919999767666&text=Let%e2%80%99s%20brew%20thoughts." target="_blank">
-        <img src="img/whatsup.png" style="position: fixed; z-index: 999; bottom:10px; right:10px;" alt="WhatsApp" />
-    </a>
 
     <!-- Scripts -->
     <script src="js/jquery-1.12.4.min.js"></script>
@@ -1648,6 +1541,7 @@
             }
         });
     </script>
+    <script src="js/footer-loader.js"></script>
 </body>
 
 </html>

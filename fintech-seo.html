@@ -446,121 +446,12 @@
                 min-height: auto;
             }
         }
-
-
-        /* Navigation Menu Visibility Fix */
-        @media (min-width: 768px) {
-            .navbar-collapse.collapse {
-                display: block !important;
-                height: auto !important;
-                padding-bottom: 0;
-                overflow: visible !important;
-            }
-
-            .navbar-nav {
-                float: left;
-                margin: 0;
-            }
-
-            .navbar-nav>li {
-                float: left;
-            }
-
-            .navbar-nav>li>a {
-                padding-top: 21px;
-                padding-bottom: 15px;
-            }
-
-            /* Dropdown Menu */
-            .navbar-nav>li {
-                position: relative;
-            }
-
-            .navbar-nav>li>.dropdown-menu {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: auto;
-                right: 0;
-                z-index: 1000;
-            }
-
-            .navbar-nav>li:hover>.dropdown-menu {
-                display: block;
-            }
-
-            .navbar-nav>li.open>.dropdown-menu {
-                display: block;
-            }
-        }
-
-        /* Mobile Navigation */
-        @media (max-width: 767px) {
-            .navbar-nav {
-                margin: 0;
-            }
-
-            .navbar-nav .dropdown-menu {
-                position: static;
-                float: none;
-                width: auto;
-                margin-top: 0;
-                background-color: transparent;
-                border: 0;
-                box-shadow: none;
-            }
-
-            .navbar-nav .dropdown-menu>li>a {
-                padding: 10px 15px 10px 30px;
-            }
-        }
-
-        .list-inline>li {
-            padding-left: 10px;
-            padding-right: 10px;
-        }
     </style>
+    <script src="js/header-loader.js"></script>
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" class="top">
-
-    <!-- Navigation -->
-    <nav class="navbar navbar-universal navbar-custom navbar-fixed-top">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" data-toggle="collapse" data-target=".navbar-main-collapse" class="navbar-toggle">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a href="index.html" class="navbar-brand page-scroll">
-                    <span style="font-size: 24px; font-weight: bold; color: #d0cc37;">Rankmator</span>
-                </a>
-            </div>
-            <div class="collapse navbar-collapse navbar-main-collapse">
-                <ul class="nav navbar-nav navbar-left">
-                    <li class="hidden"><a href="#page-top"></a></li>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="javascript:void(0)">Services <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="seo.html">SEO</a></li>
-                            <li><a href="local-seo-services.html">Local SEO</a></li>
-                            <li><a href="website.html">Website Development</a></li>
-                            <li><a href="ai-marketing.html">AI Marketing</a></li>
-                            <li><a href="email-marketing.html">Email Marketing</a></li>
-                            <li><a href="branding-creative-design.html">Branding & Creative Design</a></li>
-                            <li><a href="ecommerce-marketing.html">E-commerce Marketing</a></li>
-                            <li><a href="social-media-marketing.html">Social Media Marketing</a></li>
-                            <li><a href="performance-marketing.html">Performance Marketing</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <div id="header-include"></div>
 
     <!-- Hero Section with Form -->
     <section class="seo-hero">
@@ -569,80 +460,77 @@
                 <!-- Left Side: Content -->
                 <div class="col-md-7">
                     <h1>Fintech SEO Agency That Drives High-Intent Traffic & Qualified Leads</h1>
-                    <p>In today’s digital-first financial ecosystem, fintech brands don’t just compete on products -
-                        they compete on visibility, trust, and search intent.</p>
-                    <p>Whether you’re a fintech startup, SaaS platform, lending company, or financial app, ranking on
-                        Google at the right moment can directly impact user acquisition and revenue.</p>
-                    <p>At Rankmator, we help fintech brands grow through data-driven Fintech SEO strategies designed to
-                        attract compliant, high-quality, and conversion-ready users - not just traffic.</p>
-                    <p><strong>Because in fintech, visibility without trust doesn’t convert.</strong></p>
-
-
+                    <p>In today’s digital-first financial ecosystem,
+                        fintech brands don’t just compete on products - they compete on visibility,
+                        trust,
+                        and search intent.</p>
+                    <p>Whether you’re a fintech startup,
+                        SaaS platform,
+                        lending company,
+                        or financial app,
+                        ranking on Google at the right moment can directly impact user acquisition and revenue.</p>
+                    <p>At Rankmator,
+                        we help fintech brands grow through data-driven Fintech SEO strategies designed to attract
+                        compliant,
+                        high-quality,
+                        and conversion-ready users - not just traffic.</p>
+                    <p><strong>Because in fintech,
+                            visibility without trust doesn’t convert.</strong></p>
                 </div>
-
                 <!-- Right Side: Contact Form -->
                 <div class="col-md-5">
                     <div class="hero-form">
                         <h3>Get Free Fintech SEO Audit</h3>
-                        <form name="seoContactForm" id="seoContactForm" novalidate>
-                            <input type="text" class="form-control" placeholder="Your Name *" id="hero-name" required>
-                            <input type="email" class="form-control" placeholder="Your Email *" id="hero-email"
-                                required>
-                            <input type="tel" class="form-control" placeholder="Your Phone *" id="hero-phone" required>
-                            <textarea class="form-control" placeholder="Tell us about your fintech business *"
-                                id="hero-message" required></textarea>
-                            <button type="submit" class="btn btn-brand btn-lg btn-block">Book Your FREE
-                                Consultation</button>
+                        <form name="seoContactForm" id="seoContactForm" novalidate><input type="text"
+                                class="form-control" placeholder="Your Name *" id="hero-name" required><input
+                                type="email" class="form-control" placeholder="Your Email *" id="hero-email"
+                                required><input type="tel" class="form-control" placeholder="Your Phone *"
+                                id="hero-phone" required><textarea class="form-control"
+                                placeholder="Tell us about your fintech business *" id="hero-message"
+                                required></textarea><button type="submit" class="btn btn-brand btn-lg btn-block">Book
+                                Your FREE Consultation</button>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
     <!-- Why Fintech SEO Needs Specialized Approach -->
     <section class="seo-section bg-white">
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 col-lg-offset-1 text-center">
                     <h2 class="section-title">Why SEO for Fintech Needs a Specialized Approach</h2>
-                    <p class="section-subtitle">Fintech SEO is not like traditional SEO. Financial products operate in
-                        highly regulated, trust-sensitive, and competitive search environments, where Google closely
-                        evaluates content quality, authority, and compliance.</p>
+                    <p class="section-subtitle">Fintech SEO is not like traditional SEO. Financial products operate
+                        in highly regulated,
+                        trust-sensitive,
+                        and competitive search environments,
+                        where Google closely evaluates content quality,
+                        authority,
+                        and compliance.</p>
                     <p class="section-subtitle">Generic SEO tactics fail in fintech. That’s why working with a
                         specialized Fintech SEO agency matters.</p>
                 </div>
             </div>
-
             <div class="text-stats-grid">
-                <div class="text-stat-item">
-                    <i class="fa fa-users"></i>
-                    <span>Financial User Intent</span>
+                <div class="text-stat-item"><i class="fa fa-users"></i><span>Financial User Intent</span></div>
+                <div class="text-stat-item"><i class="fa fa-shield"></i><span>Compliance-Friendly Content</span>
                 </div>
-                <div class="text-stat-item">
-                    <i class="fa fa-shield"></i>
-                    <span>Compliance-Friendly Content</span>
-                </div>
-                <div class="text-stat-item">
-                    <i class="fa fa-link"></i>
-                    <span>Authority-Driven Backlink Strategies</span>
-                </div>
-                <div class="text-stat-item">
-                    <i class="fa fa-clock-o"></i>
-                    <span>Long Decision-Making Cycles</span>
+                <div class="text-stat-item"><i class="fa fa-link"></i><span>Authority-Driven Backlink
+                        Strategies</span></div>
+                <div class="text-stat-item"><i class="fa fa-clock-o"></i><span>Long Decision-Making Cycles</span>
                 </div>
             </div>
         </div>
     </section>
-
     <!-- Our Proven Fintech SEO Framework (Process) -->
     <section class="process-section">
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 col-lg-offset-1 text-center">
                     <h2 class="section-title" style="color: #fff;">Our Proven Fintech SEO Framework</h2>
-                    <p class="section-subtitle" style="color: #ccc;">A specialized framework designed for compliance and
-                        growth</p>
+                    <p class="section-subtitle" style="color: #ccc;">A specialized framework designed for
+                        compliance and growth</p>
                 </div>
             </div>
             <div class="process-grid">
@@ -650,66 +538,68 @@
                 <div class="process-step">
                     <div class="process-number">1</div>
                     <h4>Fintech-Specific Keyword & Intent Research</h4>
-                    <p>We identify keywords based on financial search intent, not just volume - focusing on
-                        conversion-ready users.</p>
+                    <p>We identify keywords based on financial search intent,
+                        not just volume - focusing on conversion-ready users.</p>
                 </div>
-
                 <!-- Step 2 -->
                 <div class="process-step">
                     <div class="process-number">2</div>
                     <h4>Compliance-First Content Strategy</h4>
-                    <p>We create SEO content aligned with E-E-A-T, YMYL, and fintech compliance standards, building
-                        trust with users and search engines.</p>
+                    <p>We create SEO content aligned with E-E-A-T,
+                        YMYL,
+                        and fintech compliance standards,
+                        building trust with users and search engines.</p>
                 </div>
-
                 <!-- Step 3 -->
                 <div class="process-step">
                     <div class="process-number">3</div>
                     <h4>Technical SEO for Fintech Platforms</h4>
-                    <p>From site architecture to page speed and security, we ensure your fintech website meets technical
-                        excellence benchmarks.</p>
+                    <p>From site architecture to page speed and security,
+                        we ensure your fintech website meets technical excellence benchmarks.</p>
                 </div>
-
                 <!-- Step 4 -->
                 <div class="process-step">
                     <div class="process-number">4</div>
                     <h4>Authority & Digital PR Backlinks</h4>
-                    <p>We build links from relevant, authoritative financial and tech platforms - not spammy networks.
-                    </p>
+                    <p>We build links from relevant,
+                        authoritative financial and tech platforms - not spammy networks. </p>
                 </div>
             </div>
         </div>
     </section>
-
     <!-- Why Choose Rankmator Section -->
     <section class="seo-section bg-light-gray">
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 col-lg-offset-1 text-center">
                     <h2 class="section-title">Why Choose Rankmator as Your Fintech SEO Agency</h2>
-                    <p class="section-subtitle" style="margin-bottom: 20px;">We’re not just another SEO vendor - we’re
-                        your organic growth partner.</p>
+                    <p class="section-subtitle" style="margin-bottom: 20px;">We’re not just another SEO
+                        vendor - we’re your organic growth partner.</p>
                 </div>
             </div>
-
             <div class="row">
                 <div class="col-md-4">
                     <div class="why-choose-card">
                         <h4>Results Before Everything</h4>
-                        <p>We focus on leads, conversions, sales, and ROI - not vanity metrics.</p>
+                        <p>We focus on leads,
+                            conversions,
+                            sales,
+                            and ROI - not vanity metrics.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="why-choose-card">
-                        <h4>AI + Human Intelligence</h4>
-                        <p>We don’t blindly rely on tools. We combine AI insights with human judgment for smarter
-                            decisions.</p>
+                        <h4>AI+Human Intelligence</h4>
+                        <p>We don’t blindly rely on tools. We combine AI insights with human judgment for
+                            smarter decisions.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="why-choose-card">
                         <h4>Strategy-First Approach</h4>
-                        <p>Every campaign begins with research, audience understanding, and clear business goals.</p>
+                        <p>Every campaign begins with research,
+                            audience understanding,
+                            and clear business goals.</p>
                     </div>
                 </div>
             </div>
@@ -722,121 +612,116 @@
                 </div>
                 <div class="col-md-6">
                     <div class="why-choose-card">
-                        <h4>Modern, Performance-Driven Execution</h4>
-                        <p>Latest platforms, advanced analytics, automation, and optimization frameworks.</p>
+                        <h4>Modern,
+                            Performance-Driven Execution</h4>
+                        <p>Latest platforms,
+                            advanced analytics,
+                            automation,
+                            and optimization frameworks.</p>
                     </div>
                 </div>
             </div>
-
             <div class="row text-center" style="margin-top: 30px;">
                 <div class="col-md-12">
                     <ul class="list-inline">
                         <li style="font-size: 16px;"><i class="fa fa-check"
-                                style="color: #d0cc37; margin-right: 5px;"></i> Proven experience in SEO for fintech
+                                style="color: #d0cc37; margin-right: 5px;"></i>Proven experience in SEO for
+                            fintech </li>
+                        <li style="font-size: 16px;"><i class="fa fa-check"
+                                style="color: #d0cc37; margin-right: 5px;"></i>Deep understanding of
+                            financial compliance</li>
+                        <li style="font-size: 16px;"><i class="fa fa-check"
+                                style="color: #d0cc37; margin-right: 5px;"></i>AI-powered SEO strategies
                         </li>
                         <li style="font-size: 16px;"><i class="fa fa-check"
-                                style="color: #d0cc37; margin-right: 5px;"></i> Deep understanding of financial
-                            compliance</li>
+                                style="color: #d0cc37; margin-right: 5px;"></i>Transparent reporting & KPIs
+                        </li>
                         <li style="font-size: 16px;"><i class="fa fa-check"
-                                style="color: #d0cc37; margin-right: 5px;"></i> AI-powered SEO strategies</li>
-                        <li style="font-size: 16px;"><i class="fa fa-check"
-                                style="color: #d0cc37; margin-right: 5px;"></i> Transparent reporting & KPIs</li>
-                        <li style="font-size: 16px;"><i class="fa fa-check"
-                                style="color: #d0cc37; margin-right: 5px;"></i> Startup-friendly & enterprise-ready
-                            approach</li>
+                                style="color: #d0cc37; margin-right: 5px;"></i>Startup-friendly &
+                            enterprise-ready approach</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
-
     <!-- Who We Work With -->
     <section class="seo-section bg-white">
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 col-lg-offset-1 text-center">
                     <h2 class="section-title">Who We Work With</h2>
-                    <p class="section-subtitle">From local brands to pan-India and global clients, our strategies are
-                        always custom-built and data-informed.</p>
-
+                    <p class="section-subtitle">From local brands to pan-India and global clients,
+                        our strategies are always custom-built and data-informed.</p>
                     <div class="text-stats-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
                         <div class="text-stat-item">Startups & early-stage businesses</div>
                         <div class="text-stat-item">Service-based companies</div>
                         <div class="text-stat-item">Professionals & consultants</div>
                         <div class="text-stat-item">E-commerce & D2C brands</div>
                         <div class="text-stat-item">SaaS & tech-driven businesses</div>
-                        <div class="text-stat-item">Healthcare, education, real estate</div>
+                        <div class="text-stat-item">Healthcare,
+                            education,
+                            real estate</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
     <!-- FAQ Section -->
     <section class="faq-section">
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 col-lg-offset-1 text-center">
-                    <h2 class="section-title" style="color: #fff;">Frequently Asked Questions About Fintech SEO</h2>
+                    <h2 class="section-title" style="color: #fff;">Frequently Asked Questions About
+                        Fintech SEO</h2>
                 </div>
             </div>
             <div class="faq-container">
                 <div class="faq-item">
-                    <div class="faq-question">
-                        <span>What is Fintech SEO?</span>
-                        <span class="faq-icon">+</span>
-                    </div>
+                    <div class="faq-question"><span>What is Fintech SEO?</span><span class="faq-icon">+</span></div>
                     <div class="faq-answer">
-                        <div class="faq-answer-content">
-                            Fintech SEO is the process of optimizing financial technology websites to rank for
-                            high-intent, trust-based search queries while meeting compliance and E-E-A-T standards.
-                        </div>
+                        <div class="faq-answer-content">Fintech SEO is the process of optimizing
+                            financial technology websites to rank for high-intent,
+                            trust-based search queries while meeting compliance and E-E-A-T
+                            standards. </div>
                     </div>
                 </div>
-
                 <div class="faq-item">
-                    <div class="faq-question">
-                        <span>Is SEO safe for fintech companies?</span>
-                        <span class="faq-icon">+</span>
-                    </div>
+                    <div class="faq-question"><span>Is SEO safe for fintech companies?</span><span
+                            class="faq-icon">+</span></div>
                     <div class="faq-answer">
-                        <div class="faq-answer-content">
-                            Yes - when done ethically and strategically. A specialized fintech SEO agency ensures
-                            compliance with Google and industry regulations.
-                        </div>
+                        <div class="faq-answer-content">Yes - when done ethically and strategically.
+                            A specialized fintech SEO agency ensures compliance with Google and
+                            industry regulations. </div>
                     </div>
                 </div>
-
                 <div class="faq-item">
-                    <div class="faq-question">
-                        <span>How long does Fintech SEO take to show results?</span>
-                        <span class="faq-icon">+</span>
-                    </div>
+                    <div class="faq-question"><span>How long does Fintech SEO take to show
+                            results?</span><span class="faq-icon">+</span></div>
                     <div class="faq-answer">
-                        <div class="faq-answer-content">
-                            Typically 3–6 months, depending on competition, authority, and website readiness.
-                        </div>
+                        <div class="faq-answer-content">Typically 3–6 months,
+                            depending on competition,
+                            authority,
+                            and website readiness. </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
     <!-- Final CTA Section -->
     <section class="final-cta" id="contact-section">
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 col-lg-offset-1 text-center" style="position: relative; z-index: 2;">
                     <h2>Ready to Scale Your Fintech Brand with SEO That Converts?</h2>
-                    <p>Let’s build a compliant, scalable, and ROI-focused SEO strategy tailored for your fintech
-                        business.</p>
-
-                    <a href="contact.html" class="btn btn-final-cta">👉 Get Your Free Fintech SEO Audit</a>
+                    <p>Let’s build a compliant,
+                        scalable,
+                        and ROI-focused SEO strategy tailored for your fintech business.</p><a href="contact.html"
+                        class="btn btn-final-cta">👉 Get Your Free Fintech
+                        SEO Audit</a>
                 </div>
             </div>
         </div>
     </section>
-
     <!-- Footer -->
     <section class="section-small footer bg-dark">
         <div class="container-fluid">
@@ -853,35 +738,49 @@
                     </ul>
                 </div>
                 <div class="col-md-4 col-sm-12 text-center">
-                    <p style="color: #ccc; margin-top: 20px;">&copy; 2025 Rankmator. All Rights Reserved.</p>
+                    <p style="color: #ccc; margin-top: 20px;">&copy;
+                        2025 Rankmator. All Rights Reserved.</p>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- WhatsApp Float Button -->
-    <a href="https://api.whatsapp.com/send?phone=919999767666&text=Let%e2%80%99s%20brew%20thoughts." target="_blank">
-        <img src="img/whatsup.png" style="position: fixed; bottom:10px; right:10px; z-index: 999;" alt="WhatsApp" />
-    </a>
-
-    <!-- Scripts -->
+    <!-- WhatsApp Float Button --><a
+        href="https://api.whatsapp.com/send?phone=919999767666&text=Let%e2%80%99s%20brew%20thoughts."
+        target="_blank"><img src="img/whatsup.png" style="position: fixed; bottom:10px; right:10px; z-index: 999;"
+            alt="WhatsApp" /></a>
+    <!-- jQuery-->
     <script src="js/jquery-1.12.4.min.js"></script>
+    <!-- Bootstrap Core JavaScript-->
     <script src="js/bootstrap.min.js"></script>
+    <!-- Plugin JavaScript-->
     <script src="js/jquery.easing.min.js"></script>
+    <script src="js/jquery.countdown.min.js"></script>
+    <script src="js/device.min.js"></script>
+    <script src="js/form.min.js"></script>
+    <script src="js/jquery.placeholder.min.js"></script>
+    <script src="js/jquery.shuffle.min.js"></script>
+    <script src="js/jquery.parallax.min.js"></script>
+    <script src="js/jquery.circle-progress.min.js"></script>
+    <script src="js/jquery.swipebox.min.js"></script>
     <script src="js/smoothscroll.min.js"></script>
+    <script src="js/wow.min.js"></script>
     <script src="js/jquery.smartmenus.js"></script>
-    <script src="js/universal.js"></script>
 
-    <script>
-        // Smooth scroll for anchor links
+    <!-- Custom Theme JavaScript-->
+    <script src="js/universal.js"></script>
+    <script> // Smooth scroll for anchor links
+
         $('a[href*="#"]:not([href="#"])').click(function () {
             if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
                 var target = $(this.hash);
                 target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+
                 if (target.length) {
                     $('html, body').animate({
                         scrollTop: target.offset().top - 80
-                    }, 1000);
+                    }
+
+                        , 1000);
                     return false;
                 }
             }
@@ -909,6 +808,7 @@
             });
         });
     </script>
+    <script src="js/footer-loader.js"></script>
 </body>
 
 </html>

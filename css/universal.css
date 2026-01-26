@@ -3934,3 +3934,71 @@ h1 span {
 #why-choose .fa-stack {
     color: #d0cc37;
 }
+
+/* Navigation Menu Visibility Fix (Added for Shared Header) */
+@media (min-width: 768px) {
+    .navbar-collapse.collapse {
+        display: block !important;
+        height: auto !important;
+        padding-bottom: 0;
+        overflow: visible !important;
+    }
+
+    .navbar-nav {
+        float: left;
+        margin: 0;
+    }
+
+    .navbar-nav>li {
+        float: left;
+    }
+
+    .navbar-nav>li>a {
+        padding-top: 21px;
+        padding-bottom: 15px;
+    }
+
+    /* Dropdown Menu */
+    .navbar-nav>li {
+        position: relative;
+    }
+
+    .navbar-nav>li>.dropdown-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: auto;
+        right: 0;
+        z-index: 1000;
+    }
+
+    .navbar-nav>li:hover>.dropdown-menu {
+        display: block;
+    }
+
+    .navbar-nav>li.open>.dropdown-menu {
+        display: block;
+    }
+}
+
+/* Mobile Navigation */
+@media (max-width: 767px) {
+    .navbar-nav {
+        margin: 0;
+    }
+
+    .navbar-nav .dropdown-menu {
+        position: static;
+        float: none;
+        width: auto;
+        margin-top: 0;
+        background-color: transparent;
+        border: 0;
+        box-shadow: none;
+    }
+
+    .navbar-nav .dropdown-menu>li>a {
+        padding: 10px 15px 10px 30px;
+    }
+}
+

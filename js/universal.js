@@ -4,9 +4,18 @@
  Copyright 2016 ForBetterWeb.com
  ***************************************************************************************/
 
-(function($){
+(function ($) {
     "use strict";
-    $(document).ready(function() {
+    $(document).ready(function () {
+
+        /***********************************************
+         * Active Menu Highlighting
+         ***********************************************/
+        var url = window.location.pathname.split("/").pop() || "index.html";
+        $('ul.nav a[href="' + url + '"]').parent().addClass('active');
+        $('ul.nav a').filter(function () {
+            return this.href == window.location.href;
+        }).parent().addClass('active');
 
         /***********************************************
          * Preloader
@@ -27,16 +36,16 @@
 
         buildModuleHeader(introHeader);
 
-        $(window).resize(function() {
+        $(window).resize(function () {
             var width = Math.max($(window).width(), window.innerWidth);
             buildModuleHeader(introHeader);
         });
 
-        $(window).scroll(function() {
+        $(window).scroll(function () {
             effectsModuleHeader(introHeader, this);
         });
 
-        intro.each(function(i) {
+        intro.each(function (i) {
             if ($(this).attr('data-background')) {
                 $(this).css('background-image', 'url(' + $(this).attr('data-background') + ')');
             }
@@ -53,7 +62,7 @@
                     introHeader.css('top', (topScroll * .4));
                 }
                 if (introHeader.hasClass('intro') && ($(scrollTopp).scrollTop() <= homeSHeight)) {
-                    introHeader.css('opacity', (1 - topScroll/introHeader.height() * 1));
+                    introHeader.css('opacity', (1 - topScroll / introHeader.height() * 1));
                 }
             }
         };
@@ -62,11 +71,13 @@
          * jQuery Parallax
          ***********************************************/
 
-        $('.bg-img').parallax("50%", .12);
-        $('.bg-img2').parallax("50%", .12);
-        $('.bg-img3').parallax("50%", .12);
-        $('.bg-img4').parallax("50%", .12);
-        $('.bg-img5').parallax("50%", .12);
+        if ($.fn.parallax) {
+            $('.bg-img').parallax("50%", .12);
+            $('.bg-img2').parallax("50%", .12);
+            $('.bg-img3').parallax("50%", .12);
+            $('.bg-img4').parallax("50%", .12);
+            $('.bg-img5').parallax("50%", .12);
+        }
 
         /***********************************************
          * jQuery to collapse the navbar on scroll
@@ -81,7 +92,8 @@
                     $(".navbar-fixed-top").addClass("top-nav-collapse");
                 } else {
                     $(".navbar-fixed-top").removeClass("top-nav-collapse");
-                }}
+                }
+            }
         });
 
         /***********************************************
@@ -121,55 +133,49 @@
          * Closes the Responsive Menu on Menu Item Click in One Page Nav
          ***********************************************/
 
-        $('.navbar-onepage .navbar-collapse ul li a') .on('click', function() { $('.navbar-onepage .navbar-toggle:visible') .click(); });
+        $('.navbar-onepage .navbar-collapse ul li a').on('click', function () { $('.navbar-onepage .navbar-toggle:visible').click(); });
 
-        /***********************************************
-         * Active class to nav
-         ***********************************************/
 
-        var url = window.location;
-        $('ul.nav a[href="' + url + '"]').parent().addClass('active');
-        $('ul.nav a').filter(function () {
-            return this.href == url;
-        }).parent().addClass('active');
 
         /***********************************************
          * Countdown
          ***********************************************/
 
-        $('#clock').countdown('2017/01/21 11:00:00').on('update.countdown', function (event) {
-            var $this = $(this).html(event.strftime(''
-                + '<div><span>%-w</span>week%!w</div>'
-                + '<div><span>%-d</span>day%!d</div>'
-                + '<div><span>%H</span>hr</div>'
-                + '<div><span>%M</span>min</div>'
-                + '<div><span>%S</span>sec</div>'));
-        });
+        if ($.fn.countdown) {
+            $('#clock').countdown('2017/01/21 11:00:00').on('update.countdown', function (event) {
+                var $this = $(this).html(event.strftime(''
+                    + '<div><span>%-w</span>week%!w</div>'
+                    + '<div><span>%-d</span>day%!d</div>'
+                    + '<div><span>%H</span>hr</div>'
+                    + '<div><span>%M</span>min</div>'
+                    + '<div><span>%S</span>sec</div>'));
+            });
 
-        $('#clock2').countdown('2017/03/22 12:00:00').on('update.countdown', function (event) {
-            var $this = $(this).html(event.strftime(''
-                + '<div><span>%-w</span>week%!w</div>'
-                + '<div><span>%-d</span>day%!d</div>'
-                + '<div><span>%H</span>hr</div>'
-                + '<div><span>%M</span>min</div>'
-                + '<div><span>%S</span>sec</div>'));
-        });
-        $('#clock3').countdown('2017/04/25 13:00:00').on('update.countdown', function (event) {
-            var $this = $(this).html(event.strftime(''
-                + '<div><span>%-w</span>week%!w</div>'
-                + '<div><span>%-d</span>day%!d</div>'
-                + '<div><span>%H</span>hr</div>'
-                + '<div><span>%M</span>min</div>'
-                + '<div><span>%S</span>sec</div>'));
-        });
-        $('#clock4').countdown('2017/05/27 14:00:00').on('update.countdown', function (event) {
-            var $this = $(this).html(event.strftime(''
-                + '<div><span>%-w</span>week%!w</div>'
-                + '<div><span>%-d</span>day%!d</div>'
-                + '<div><span>%H</span>hr</div>'
-                + '<div><span>%M</span>min</div>'
-                + '<div><span>%S</span>sec</div>'));
-        });
+            $('#clock2').countdown('2017/03/22 12:00:00').on('update.countdown', function (event) {
+                var $this = $(this).html(event.strftime(''
+                    + '<div><span>%-w</span>week%!w</div>'
+                    + '<div><span>%-d</span>day%!d</div>'
+                    + '<div><span>%H</span>hr</div>'
+                    + '<div><span>%M</span>min</div>'
+                    + '<div><span>%S</span>sec</div>'));
+            });
+            $('#clock3').countdown('2017/04/25 13:00:00').on('update.countdown', function (event) {
+                var $this = $(this).html(event.strftime(''
+                    + '<div><span>%-w</span>week%!w</div>'
+                    + '<div><span>%-d</span>day%!d</div>'
+                    + '<div><span>%H</span>hr</div>'
+                    + '<div><span>%M</span>min</div>'
+                    + '<div><span>%S</span>sec</div>'));
+            });
+            $('#clock4').countdown('2017/05/27 14:00:00').on('update.countdown', function (event) {
+                var $this = $(this).html(event.strftime(''
+                    + '<div><span>%-w</span>week%!w</div>'
+                    + '<div><span>%-d</span>day%!d</div>'
+                    + '<div><span>%H</span>hr</div>'
+                    + '<div><span>%M</span>min</div>'
+                    + '<div><span>%S</span>sec</div>'));
+            });
+        }
 
         /***********************************************
          * Carousel
@@ -190,44 +196,46 @@
          ***********************************************/
 
         $(function () {
-            $('input, textarea').placeholder();
+            if ($.fn.placeholder) {
+                $('input, textarea').placeholder();
+            }
         });
 
-        /***********************************************
-         * Load WOW.js
-         ***********************************************/
-
-        new WOW().init();
+        if (typeof WOW !== 'undefined') {
+            new WOW().init();
+        }
 
         /***********************************************
          * Circle Chart
         ***********************************************/
 
-        var el = $('.circle'),
-            inited = false;
-        el.appear({ force_process: true });
-        el.on('appear', function() {
-            if (!inited) {
-                el.circleProgress();
-                inited = true;
-            }
-        });
-
-        $('.circle').circleProgress({
-                size:100,
-                fill: {color: "#333"},
-                startAngle: 300,
-                animation: {duration: 4000}
-            })
-            .on('circle-animation-progress', function (event, progress, stepValue) {
-                $(this).find('span').text((stepValue * 100).toFixed(1));
+        if ($.fn.circleProgress) {
+            var el = $('.circle'),
+                inited = false;
+            el.appear({ force_process: true });
+            el.on('appear', function () {
+                if (!inited) {
+                    el.circleProgress();
+                    inited = true;
+                }
             });
+
+            $('.circle').circleProgress({
+                size: 100,
+                fill: { color: "#333" },
+                startAngle: 300,
+                animation: { duration: 4000 }
+            })
+                .on('circle-animation-progress', function (event, progress, stepValue) {
+                    $(this).find('span').text((stepValue * 100).toFixed(1));
+                });
+        }
 
         /***********************************************
          * Progress Bar
          ***********************************************/
 
-        $(".progress-bar").each(function(){
+        $(".progress-bar").each(function () {
             var each_bar_width;
             each_bar_width = $(this).attr('aria-valuenow');
             $(this).width(each_bar_width + '%');
@@ -237,33 +245,33 @@
          *  Swipe box
          ***********************************************/
 
-        ;( function( $ ) {
+        ; (function ($) {
 
             /* Basic Gallery */
 
-            $( '.swipebox' ).swipebox( {
-                useCSS : true, // false will force the use of jQuery for animations
-                useSVG : false, // false to force the use of png for buttons
-                hideCloseButtonOnMobile : false, // true will hide the close button on mobile devices
-                hideBarsDelay : 0, // delay before hiding bars on desktop
-                videoMaxWidth : 1140, // videos max width
+            $('.swipebox').swipebox({
+                useCSS: true, // false will force the use of jQuery for animations
+                useSVG: false, // false to force the use of png for buttons
+                hideCloseButtonOnMobile: false, // true will hide the close button on mobile devices
+                hideBarsDelay: 0, // delay before hiding bars on desktop
+                videoMaxWidth: 1140, // videos max width
                 loopAtEnd: false, // true will return to the first image after the last image is reached
                 autoplayVideos: true // true will autoplay Youtube and Vimeo videos
-            } );
+            });
 
             /* Video */
 
-            $( '.swipebox-video' ).swipebox();
+            $('.swipebox-video').swipebox();
 
-        } )( jQuery );
+        })(jQuery);
 
         // addition for swipebox, closing img on click on bg
-        jQuery(function(){
+        jQuery(function () {
             jQuery(document.body)
-                .on('click touchend','#swipebox-slider .current img', function(e){
+                .on('click touchend', '#swipebox-slider .current img', function (e) {
                     return false;
                 })
-                .on('click touchend','#swipebox-slider .current', function(e){
+                .on('click touchend', '#swipebox-slider .current', function (e) {
                     jQuery('#swipebox-close').trigger('click');
                 });
         });
@@ -274,38 +282,38 @@
          *  Developers: Arun David, Boobalan
          ***********************************************/
 
-        $(window).on("load",function(){
+        $(window).on("load", function () {
             $(document).scrollzipInit();
             $(document).rollerInit();
         });
-        $(window).on("load scroll resize", function(){
+        $(window).on("load scroll resize", function () {
             $('.numscroller').scrollzip({
-                showFunction    :   function() {
+                showFunction: function () {
                     numberRoller($(this).attr('data-slno'));
                 },
-                wholeVisible    :     false,
+                wholeVisible: false,
             });
         });
-        $.fn.scrollzipInit=function(){
-            $('body').prepend("<div style='position:fixed;top:0;left:0;width:0;height:0;' id='scrollzipPoint'></div>" );
+        $.fn.scrollzipInit = function () {
+            $('body').prepend("<div style='position:fixed;top:0;left:0;width:0;height:0;' id='scrollzipPoint'></div>");
         };
-        $.fn.rollerInit=function(){
-            var i=0;
-            $('.numscroller').each(function() {
+        $.fn.rollerInit = function () {
+            var i = 0;
+            $('.numscroller').each(function () {
                 i++;
-                $(this).attr('data-slno',i);
-                $(this).addClass("roller-title-number-"+i);
+                $(this).attr('data-slno', i);
+                $(this).addClass("roller-title-number-" + i);
             });
         };
-        $.fn.scrollzip = function(options){
+        $.fn.scrollzip = function (options) {
             var settings = $.extend({
-                showFunction    : null,
-                hideFunction    : null,
-                showShift       : 0,
-                wholeVisible    : false,
-                hideShift       : 0
+                showFunction: null,
+                hideFunction: null,
+                showShift: 0,
+                wholeVisible: false,
+                hideShift: 0
             }, options);
-            return this.each(function(i,obj){
+            return this.each(function (i, obj) {
 
                 var numbers = $('#scrollzipPoint');
                 if (numbers.length) {
@@ -324,25 +332,25 @@
             });
         };
 
-        function numberRoller(slno){
-            var min=$('.roller-title-number-'+slno).attr('data-min');
-            var max=$('.roller-title-number-'+slno).attr('data-max');
-            var timediff=$('.roller-title-number-'+slno).attr('data-delay');
-            var increment=$('.roller-title-number-'+slno).attr('data-increment');
-            var numdiff=max-min;
-            var timeout=(timediff*1000)/numdiff;
+        function numberRoller(slno) {
+            var min = $('.roller-title-number-' + slno).attr('data-min');
+            var max = $('.roller-title-number-' + slno).attr('data-max');
+            var timediff = $('.roller-title-number-' + slno).attr('data-delay');
+            var increment = $('.roller-title-number-' + slno).attr('data-increment');
+            var numdiff = max - min;
+            var timeout = (timediff * 1000) / numdiff;
             //if(numinc<10){
             //increment=Math.floor((timediff*1000)/10);
             //}//alert(increment);
-            numberRoll(slno,min,max,increment,timeout);
+            numberRoll(slno, min, max, increment, timeout);
         }
-        function numberRoll(slno,min,max,increment,timeout){//alert(slno+"="+min+"="+max+"="+increment+"="+timeout);
-            if(min<=max){
-                $('.roller-title-number-'+slno).html(min);
-                min=parseInt(min, 10)+parseInt(increment, 10)
-                setTimeout(function(){numberRoll(eval(slno),eval(min),eval(max),eval(increment),eval(timeout))},timeout);
-            }else{
-                $('.roller-title-number-'+slno).html(max);
+        function numberRoll(slno, min, max, increment, timeout) {//alert(slno+"="+min+"="+max+"="+increment+"="+timeout);
+            if (min <= max) {
+                $('.roller-title-number-' + slno).html(min);
+                min = parseInt(min, 10) + parseInt(increment, 10)
+                setTimeout(function () { numberRoll(eval(slno), eval(min), eval(max), eval(increment), eval(timeout)) }, timeout);
+            } else {
+                $('.roller-title-number-' + slno).html(max);
             }
         }
 
@@ -350,16 +358,16 @@
          * Portfolio
          ***********************************************/
 
-        var shuffleme = (function( $ ) {
+        var shuffleme = (function ($) {
             'use strict';
             var $grid = $('#grid'), //locate what we want to sort
                 $filterOptions = $('.portfolio-sorting li'),  //locate the filter categories
                 $sizer = $grid.find('.shuffle_sizer'),    //sizer stores the size of the items
 
-                init = function() {
+                init = function () {
 
                     // None of these need to be executed synchronously
-                    setTimeout(function() {
+                    setTimeout(function () {
                         listen();
                         setupFilters();
                     }, 100);
@@ -371,51 +379,51 @@
                     });
                 },
 
-            // Set up button clicks
-                setupFilters = function() {
+                // Set up button clicks
+                setupFilters = function () {
                     var $btns = $filterOptions.children();
-                    $btns.on('click', function(e) {
+                    $btns.on('click', function (e) {
                         e.preventDefault();
                         var $this = $(this),
-                            isActive = $this.hasClass( 'active' ),
+                            isActive = $this.hasClass('active'),
                             group = isActive ? 'all' : $this.data('group');
 
                         // Hide current label, show current label in title
-                        if ( !isActive ) {
+                        if (!isActive) {
                             $('.portfolio-sorting li a').removeClass('active');
                         }
 
                         $this.toggleClass('active');
 
                         // Filter elements
-                        $grid.shuffle( 'shuffle', group );
+                        $grid.shuffle('shuffle', group);
                     });
 
                     $btns = null;
                 },
 
-            // Re layout shuffle when images load. This is only needed
-            // below 768 pixels because the .picture-item height is auto and therefore
-            // the height of the picture-item is dependent on the image
-            // I recommend using imagesloaded to determine when an image is loaded
-            // but that doesn't support IE7
-                listen = function() {
-                    var debouncedLayout = $.throttle( 300, function() {
+                // Re layout shuffle when images load. This is only needed
+                // below 768 pixels because the .picture-item height is auto and therefore
+                // the height of the picture-item is dependent on the image
+                // I recommend using imagesloaded to determine when an image is loaded
+                // but that doesn't support IE7
+                listen = function () {
+                    var debouncedLayout = $.throttle(300, function () {
                         $grid.shuffle('update');
                     });
 
                     // Get all images inside shuffle
-                    $grid.find('img').each(function() {
+                    $grid.find('img').each(function () {
                         var proxyImage;
 
                         // Image already loaded
-                        if ( this.complete && this.naturalWidth !== undefined ) {
+                        if (this.complete && this.naturalWidth !== undefined) {
                             return;
                         }
 
                         // If none of the checks above matched, simulate loading on detached element.
                         proxyImage = new Image();
-                        $( proxyImage ).on('load', function() {
+                        $(proxyImage).on('load', function () {
                             $(this).off('load');
                             debouncedLayout();
                         });
@@ -424,7 +432,7 @@
                     });
 
                     // Because this method doesn't seem to be perfect.
-                    setTimeout(function() {
+                    setTimeout(function () {
                         debouncedLayout();
                     }, 500);
                 };
@@ -432,7 +440,7 @@
             return {
                 init: init
             };
-        }( jQuery ));
+        }(jQuery));
 
         shuffleme.init(); //filter portfolio
 

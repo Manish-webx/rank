@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -445,122 +445,13 @@
                 min-height: auto;
             }
         }
-
-        /* Navigation Menu Visibility Fix */
-        @media (min-width: 768px) {
-            .navbar-collapse.collapse {
-                display: block !important;
-                height: auto !important;
-                padding-bottom: 0;
-                overflow: visible !important;
-            }
-
-            .navbar-nav {
-                float: left;
-                margin: 0;
-            }
-
-            .navbar-nav>li {
-                float: left;
-            }
-
-            .navbar-nav>li>a {
-                padding-top: 21px;
-                padding-bottom: 15px;
-            }
-
-            /* Dropdown Menu */
-            .navbar-nav>li {
-                position: relative;
-            }
-
-            .navbar-nav>li>.dropdown-menu {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: auto;
-                right: 0;
-                z-index: 1000;
-            }
-
-            .navbar-nav>li:hover>.dropdown-menu {
-                display: block;
-            }
-
-            .navbar-nav>li.open>.dropdown-menu {
-                display: block;
-            }
-
-        }
-
-        /* Mobile Navigation */
-        @media (max-width: 767px) {
-            .navbar-nav {
-                margin: 0;
-            }
-
-            .navbar-nav .dropdown-menu {
-                position: static;
-                float: none;
-                width: auto;
-                margin-top: 0;
-                background-color: transparent;
-                border: 0;
-                box-shadow: none;
-            }
-
-            .navbar-nav .dropdown-menu>li>a {
-                padding: 10px 15px 10px 30px;
-            }
-        }
-
-        .list-inline>li {
-            padding-left: 10px;
-            padding-right: 10px;
-        }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="js/header-loader.js"></script>
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" class="top">
-
-    <!-- Navigation -->
-    <nav class="navbar navbar-universal navbar-custom navbar-fixed-top">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" data-toggle="collapse" data-target=".navbar-main-collapse" class="navbar-toggle">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a href="index.html" class="navbar-brand page-scroll">
-                    <span style="font-size: 24px; font-weight: bold; color: #d0cc37;">Rankmator</span>
-                </a>
-            </div>
-            <div class="collapse navbar-collapse navbar-main-collapse">
-                <ul class="nav navbar-nav navbar-left">
-                    <li class="hidden"><a href="#page-top"></a></li>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="javascript:void(0)">Services <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="seo.html">SEO</a></li>
-                            <li><a href="local-seo-services.html">Local SEO</a></li>
-                            <li><a href="website.html">Website Development</a></li>
-                            <li><a href="ai-marketing.html">AI Marketing</a></li>
-                            <li><a href="email-marketing.html">Email Marketing</a></li>
-                            <li><a href="branding-creative-design.html">Branding & Creative Design</a></li>
-                            <li><a href="ecommerce-marketing.html">E-commerce Marketing</a></li>
-                            <li><a href="social-media-marketing.html">Social Media Marketing</a></li>
-                            <li><a href="performance-marketing.html">Performance Marketing</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <div id="header-include"></div>
 
     <!-- Hero Section with Form -->
     <section class="seo-hero">
@@ -570,83 +461,75 @@
                 <div class="col-md-7">
                     <h1>Healthcare SEO Agency in India - Drive More Patient Appointments With Rankmator</h1>
                     <p>Healthcare today is no longer just about providing excellent treatment. It's also about being
-                        found at the right moment, when patients are actively searching for doctors, clinics, hospitals,
+                        found at the right moment,
+                        when patients are actively searching for doctors,
+                        clinics,
+                        hospitals,
                         or healthcare services online.</p>
-                    <p>If your healthcare practice is not visible on Google, you are losing patients to competitors
-                        every single day.</p>
-                    <p>Rankmator is a specialized Healthcare SEO Agency in India that helps hospitals, clinics, doctors,
-                        and medical professionals attract high-intent patients, increase appointment bookings, and build
-                        long-term digital authority through ethical, compliant, and result-driven SEO strategies.</p>
-
-
+                    <p>If your healthcare practice is not visible on Google,
+                        you are losing patients to competitors every single day.</p>
+                    <p>Rankmator is a specialized Healthcare SEO Agency in India that helps hospitals,
+                        clinics,
+                        doctors,
+                        and medical professionals attract high-intent patients,
+                        increase appointment bookings,
+                        and build long-term digital authority through ethical,
+                        compliant,
+                        and result-driven SEO strategies.</p>
                 </div>
-
                 <!-- Right Side: Contact Form -->
                 <div class="col-md-5">
                     <div class="hero-form">
                         <h3>Get Free Healthcare SEO Audit</h3>
-                        <form name="seoContactForm" id="seoContactForm" novalidate>
-                            <input type="text" class="form-control" placeholder="Your Name *" id="hero-name" required>
-                            <input type="email" class="form-control" placeholder="Your Email *" id="hero-email"
-                                required>
-                            <input type="tel" class="form-control" placeholder="Your Phone *" id="hero-phone" required>
-                            <textarea class="form-control" placeholder="Tell us about your practice *" id="hero-message"
-                                required></textarea>
-                            <button type="submit" class="btn btn-brand btn-lg btn-block">Book Your FREE
-                                Consultation</button>
+                        <form name="seoContactForm" id="seoContactForm" novalidate><input type="text"
+                                class="form-control" placeholder="Your Name *" id="hero-name" required><input
+                                type="email" class="form-control" placeholder="Your Email *" id="hero-email"
+                                required><input type="tel" class="form-control" placeholder="Your Phone *"
+                                id="hero-phone" required><textarea class="form-control"
+                                placeholder="Tell us about your practice *" id="hero-message"
+                                required></textarea><button type="submit" class="btn btn-brand btn-lg btn-block">Book
+                                Your FREE Consultation</button>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
     <!-- Why Healthcare SEO Is Different -->
     <section class="seo-section bg-white">
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 col-lg-offset-1 text-center">
                     <h2 class="section-title">Why Healthcare SEO Is Different From Other Industries</h2>
-                    <p class="section-subtitle">Healthcare SEO is one of the most complex and sensitive SEO niches. It
-                        requires much more than basic keyword optimization.</p>
-                    <p class="section-subtitle">Healthcare SEO needs specialized expertise. As an experienced Healthcare
-                        SEO Agency, Rankmator understands challenges and builds SEO strategies that align with both
-                        patient trust and search engine guidelines.</p>
+                    <p class="section-subtitle">Healthcare SEO is one of the most complex and sensitive SEO niches.
+                        It requires much more than basic keyword optimization.</p>
+                    <p class="section-subtitle">Healthcare SEO needs specialized expertise. As an experienced
+                        Healthcare SEO Agency,
+                        Rankmator understands challenges and builds SEO strategies that align with both patient
+                        trust and search engine guidelines.</p>
                 </div>
             </div>
-
             <div class="text-stats-grid">
-                <div class="text-stat-item">
-                    <i class="fa fa-heartbeat"></i>
-                    <span>Patient Trust & Safety</span>
+                <div class="text-stat-item"><i class="fa fa-heartbeat"></i><span>Patient Trust & Safety</span></div>
+                <div class="text-stat-item"><i class="fa fa-medkit"></i><span>HIPAA/Medical Compliance</span></div>
+                <div class="text-stat-item"><i class="fa fa-user-md"></i><span>E-E-A-T Content Standards</span>
                 </div>
-                <div class="text-stat-item">
-                    <i class="fa fa-medkit"></i>
-                    <span>HIPAA/Medical Compliance</span>
-                </div>
-                <div class="text-stat-item">
-                    <i class="fa fa-user-md"></i>
-                    <span>E-E-A-T Content Standards</span>
-                </div>
-                <div class="text-stat-item">
-                    <i class="fa fa-map-marker"></i>
-                    <span>Local Patient Search</span>
-                </div>
+                <div class="text-stat-item"><i class="fa fa-map-marker"></i><span>Local Patient Search</span></div>
             </div>
         </div>
     </section>
-
     <!-- Our Healthcare SEO Strategy -->
     <section class="process-section">
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 col-lg-offset-1 text-center">
-                    <h2 class="section-title" style="color: #fff;">Our Healthcare SEO Strategy - Built for Patient
-                        Growth</h2>
-                    <p class="section-subtitle" style="color: #ccc;">At Rankmator, we don't apply one-size-fits-all
-                        SEO.
-                        We create custom healthcare SEO strategies based on your medical specialty, location, and
-                        patient behavior.</p>
+                    <h2 class="section-title" style="color: #fff;">Our Healthcare SEO Strategy - Built for
+                        Patient Growth</h2>
+                    <p class="section-subtitle" style="color: #ccc;">At Rankmator,
+                        we don't apply one-size-fits-all
+                        SEO. We create custom healthcare SEO strategies based on your medical specialty,
+                        location,
+                        and patient behavior.</p>
                 </div>
             </div>
             <div class="process-grid">
@@ -654,114 +537,114 @@
                 <div class="process-step">
                     <div class="process-number">1</div>
                     <h4>In-Depth Healthcare Keyword Research</h4>
-                    <p>We identify high-intent keywords that patients use when searching for treatments and specialists.
-                    </p>
+                    <p>We identify high-intent keywords that patients use when searching for treatments and
+                        specialists. </p>
                 </div>
-
                 <!-- Step 2 -->
                 <div class="process-step">
                     <div class="process-number">2</div>
                     <h4>Local SEO for Healthcare Practices</h4>
-                    <p>Optimizing your Google Business Profile to ensure you appear when patients search for "doctors
+                    <p>Optimizing your Google Business Profile to ensure you appear when patients search
+                        for "doctors
                         near me".</p>
                 </div>
-
                 <!-- Step 3 -->
                 <div class="process-step">
                     <div class="process-number">3</div>
                     <h4>Medical Content Optimization (E-E-A-T Focused)</h4>
-                    <p>Creating medically accurate content that builds trust with patients and satisfies Google's
+                    <p>Creating medically accurate content that builds trust with patients and
+                        satisfies Google's
                         E-E-A-T guidelines.</p>
                 </div>
-
                 <!-- Step 4 -->
                 <div class="process-step">
                     <div class="process-number">4</div>
                     <h4>Technical SEO for Healthcare Websites</h4>
-                    <p>Ensuring your website is fast, mobile-friendly, secure (HTTPS), and easy for patients to
-                        navigate.</p>
+                    <p>Ensuring your website is fast,
+                        mobile-friendly,
+                        secure (HTTPS),
+                        and easy for patients to navigate.</p>
                 </div>
-
                 <!-- Step 5 -->
                 <div class="process-step">
                     <div class="process-number">5</div>
                     <h4>Reputation & Trust Optimization</h4>
-                    <p>Managing patient reviews and building a positive online reputation to encourage new appointments.
-                    </p>
+                    <p>Managing patient reviews and building a positive online reputation to
+                        encourage new appointments. </p>
                 </div>
-
                 <!-- Step 6 -->
                 <div class="process-step">
                     <div class="process-number">6</div>
                     <h4>Industry-Oriented Guest Post</h4>
-                    <p>Building high-quality backlinks from reputable healthcare and medical websites to boost your
-                        authority.</p>
+                    <p>Building high-quality backlinks from reputable healthcare and
+                        medical websites to boost your authority.</p>
                 </div>
             </div>
         </div>
     </section>
-
     <!-- Why Choose Rankmator Section -->
     <section class="seo-section bg-light-gray">
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 col-lg-offset-1 text-center">
                     <h2 class="section-title">Why Choose Rankmator as Your Healthcare SEO Agency</h2>
-                    <p class="section-subtitle" style="margin-bottom: 20px;">Rankmator is not just another SEO agency.
-                        We are an AI-focused, data-driven marketing agency that understands the future of healthcare
-                        digital growth.</p>
+                    <p class="section-subtitle" style="margin-bottom: 20px;">Rankmator is not just another
+                        SEO agency. We are an AI-focused,
+                        data-driven marketing agency that understands the future of healthcare digital
+                        growth.</p>
                 </div>
             </div>
-
             <div class="row">
                 <div class="col-md-4">
                     <div class="why-choose-card">
                         <h4>Healthcare-Specific Expertise</h4>
-                        <p>We understand the unique challenges and regulations of the healthcare industry.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="why-choose-card">
-                        <h4>AI-Powered Analysis</h4>
-                        <p>Using advanced AI to analyze patient search intent and keyword trends for better targeting.
+                        <p>We understand the unique challenges and regulations of the healthcare industry.
                         </p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="why-choose-card">
+                        <h4>AI-Powered Analysis</h4>
+                        <p>Using advanced AI to analyze patient search intent and keyword trends for better
+                            targeting. </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="why-choose-card">
                         <h4>Long-Term Growth</h4>
-                        <p>We focus on building sustainable growth and digital authority for your practice.</p>
+                        <p>We focus on building sustainable growth and digital authority for your practice.
+                        </p>
                     </div>
                 </div>
             </div>
-
             <div class="row text-center" style="margin-top: 30px;">
                 <div class="col-md-12">
-                    <p style="font-size: 18px; color: #666;">We understand the journey from patient search -> trust ->
-                        appointment, and optimize every step.</p>
+                    <p style="font-size: 18px; color: #666;">We understand the journey from patient search
+                        ->trust ->appointment,
+                        and optimize every step.</p>
                     <ul class="list-inline" style="margin-top: 20px;">
                         <li style="font-size: 16px;"><i class="fa fa-check"
-                                style="color: #d0cc37; margin-right: 5px;"></i> Ethical & Compliant SEO</li>
+                                style="color: #d0cc37; margin-right: 5px;"></i>Ethical & Compliant SEO</li>
                         <li style="font-size: 16px;"><i class="fa fa-check"
-                                style="color: #d0cc37; margin-right: 5px;"></i> Data-Driven Strategies</li>
+                                style="color: #d0cc37; margin-right: 5px;"></i>Data-Driven Strategies</li>
                         <li style="font-size: 16px;"><i class="fa fa-check"
-                                style="color: #d0cc37; margin-right: 5px;"></i> Focus on Patient Appointments</li>
+                                style="color: #d0cc37; margin-right: 5px;"></i>Focus on Patient Appointments
+                        </li>
                         <li style="font-size: 16px;"><i class="fa fa-check"
-                                style="color: #d0cc37; margin-right: 5px;"></i> Transparent Reporting</li>
+                                style="color: #d0cc37; margin-right: 5px;"></i>Transparent Reporting</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
-
     <!-- Who We Work With -->
     <section class="seo-section bg-white">
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 col-lg-offset-1 text-center">
                     <h2 class="section-title">Who We Work With</h2>
-                    <p class="section-subtitle">Tailored SEO solutions for various healthcare providers.</p>
-
+                    <p class="section-subtitle">Tailored SEO solutions for various healthcare providers.
+                    </p>
                     <div class="text-stats-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
                         <div class="text-stat-item">Hospitals & Medical Centers</div>
                         <div class="text-stat-item">Private Clinics</div>
@@ -774,74 +657,65 @@
             </div>
         </div>
     </section>
-
     <!-- FAQ Section -->
     <section class="faq-section">
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 col-lg-offset-1 text-center">
-                    <h2 class="section-title" style="color: #fff;">Frequently Asked Questions - Healthcare SEO</h2>
+                    <h2 class="section-title" style="color: #fff;">Frequently Asked Questions -
+                        Healthcare SEO</h2>
                 </div>
             </div>
             <div class="faq-container">
                 <div class="faq-item">
-                    <div class="faq-question">
-                        <span>How long does healthcare SEO take to show results?</span>
-                        <span class="faq-icon">+</span>
-                    </div>
+                    <div class="faq-question"><span>How long does healthcare SEO take to show
+                            results?</span><span class="faq-icon">+</span></div>
                     <div class="faq-answer">
-                        <div class="faq-answer-content">
-                            Healthcare SEO usually starts showing visible improvements within 3-4 months, with strong
-                            and stable results in 6-9 months, depending on competition and location.
+                        <div class="faq-answer-content">Healthcare SEO usually starts showing
+                            visible improvements within 3-4 months,
+                            with strong and stable results in 6-9 months,
+                            depending on competition and location. </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question"><span>Is healthcare SEO compliant with Google
+                            guidelines?</span><span class="faq-icon">+</span></div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">Yes. When done ethically and correctly,
+                            healthcare SEO fully complies with Google's
+                            medical and E-E-A-T guidelines. We strictly follow white-hat practices.
                         </div>
                     </div>
                 </div>
-
                 <div class="faq-item">
-                    <div class="faq-question">
-                        <span>Is healthcare SEO compliant with Google guidelines?</span>
-                        <span class="faq-icon">+</span>
-                    </div>
+                    <div class="faq-question"><span>Can SEO help generate more patient
+                            appointments?</span><span class="faq-icon">+</span></div>
                     <div class="faq-answer">
-                        <div class="faq-answer-content">
-                            Yes. When done ethically and correctly, healthcare SEO fully complies with Google's
-                            medical
-                            and E-E-A-T guidelines. We strictly follow white-hat practices.
-                        </div>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>Can SEO help generate more patient appointments?</span>
-                        <span class="faq-icon">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <div class="faq-answer-content">
-                            Absolutely. Healthcare SEO focuses on high-intent searches, local visibility, and
-                            trust-building, all of which directly increase appointment bookings.
-                        </div>
+                        <div class="faq-answer-content">Absolutely. Healthcare SEO focuses on
+                            high-intent searches,
+                            local visibility,
+                            and trust-building,
+                            all of which directly increase appointment bookings. </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
     <!-- Final CTA Section -->
     <section class="final-cta" id="contact-section">
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 col-lg-offset-1 text-center" style="position: relative; z-index: 2;">
                     <h2>Ready to Grow Your Healthcare Practice Online?</h2>
-                    <p>If you want more patients, a stronger online authority, and long-term growth without relying only
-                        on ads, Healthcare SEO is the answer.</p>
-
-                    <a href="contact.html" class="btn btn-final-cta">👉 Talk to Rankmator today</a>
+                    <p>If you want more patients,
+                        a stronger online authority,
+                        and long-term growth without relying only on ads,
+                        Healthcare SEO is the answer.</p><a href="contact.html" class="btn btn-final-cta">?? Talk to
+                        Rankmator today</a>
                 </div>
             </div>
         </div>
     </section>
-
     <!-- Footer -->
     <section class="section-small footer bg-dark">
         <div class="container-fluid">
@@ -858,35 +732,49 @@
                     </ul>
                 </div>
                 <div class="col-md-4 col-sm-12 text-center">
-                    <p style="color: #ccc; margin-top: 20px;">&copy; 2025 Rankmator. All Rights Reserved.</p>
+                    <p style="color: #ccc; margin-top: 20px;">&copy;
+                        2025 Rankmator. All Rights Reserved.</p>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- WhatsApp Float Button -->
-    <a href="https://api.whatsapp.com/send?phone=919999767666&text=Let%e2%80%99s%20brew%20thoughts." target="_blank">
-        <img src="img/whatsup.png" style="position: fixed; bottom:10px; right:10px; z-index: 999;" alt="WhatsApp" />
-    </a>
-
-    <!-- Scripts -->
+    <!-- WhatsApp Float Button --><a
+        href="https://api.whatsapp.com/send?phone=919999767666&text=Let%e2%80%99s%20brew%20thoughts."
+        target="_blank"><img src="img/whatsup.png" style="position: fixed; bottom:10px; right:10px; z-index: 999;"
+            alt="WhatsApp" /></a>
+    <!-- jQuery-->
     <script src="js/jquery-1.12.4.min.js"></script>
+    <!-- Bootstrap Core JavaScript-->
     <script src="js/bootstrap.min.js"></script>
+    <!-- Plugin JavaScript-->
     <script src="js/jquery.easing.min.js"></script>
+    <script src="js/jquery.countdown.min.js"></script>
+    <script src="js/device.min.js"></script>
+    <script src="js/form.min.js"></script>
+    <script src="js/jquery.placeholder.min.js"></script>
+    <script src="js/jquery.shuffle.min.js"></script>
+    <script src="js/jquery.parallax.min.js"></script>
+    <script src="js/jquery.circle-progress.min.js"></script>
+    <script src="js/jquery.swipebox.min.js"></script>
     <script src="js/smoothscroll.min.js"></script>
+    <script src="js/wow.min.js"></script>
     <script src="js/jquery.smartmenus.js"></script>
-    <script src="js/universal.js"></script>
 
-    <script>
-        // Smooth scroll for anchor links
+    <!-- Custom Theme JavaScript-->
+    <script src="js/universal.js"></script>
+    <script> // Smooth scroll for anchor links
+
         $('a[href*="#"]:not([href="#"])').click(function () {
             if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
                 var target = $(this.hash);
                 target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+
                 if (target.length) {
                     $('html, body').animate({
                         scrollTop: target.offset().top - 80
-                    }, 1000);
+                    }
+
+                        , 1000);
                     return false;
                 }
             }
@@ -914,6 +802,7 @@
             });
         });
     </script>
+    <script src="js/footer-loader.js"></script>
 </body>
 
 </html>

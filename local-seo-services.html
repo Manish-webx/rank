@@ -1130,115 +1130,13 @@
         }
     </style>
     <style>
-        /* Navigation Menu Visibility Fix */
-        @media (min-width: 768px) {
-            .navbar-collapse.collapse {
-                display: block !important;
-                height: auto !important;
-                padding-bottom: 0;
-                overflow: visible !important;
-            }
-
-            .navbar-nav {
-                float: left;
-                margin: 0;
-            }
-
-            .navbar-nav>li {
-                float: left;
-            }
-
-            .navbar-nav>li>a {
-                padding-top: 21px;
-                padding-bottom: 15px;
-            }
-
-            /* Dropdown Menu */
-            .navbar-nav>li {
-                position: relative;
-            }
-
-            .navbar-nav>li>.dropdown-menu {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: auto;
-                right: 0;
-                z-index: 1000;
-            }
-
-            .navbar-nav>li:hover>.dropdown-menu {
-                display: block;
-            }
-
-            .navbar-nav>li.open>.dropdown-menu {
-                display: block;
-            }
-        }
-
-        /* Mobile Navigation */
-        @media (max-width: 767px) {
-            .navbar-nav {
-                margin: 0;
-            }
-
-            .navbar-nav .dropdown-menu {
-                position: static;
-                float: none;
-                width: auto;
-                margin-top: 0;
-                background-color: transparent;
-                border: 0;
-                box-shadow: none;
-            }
-
-            .navbar-nav .dropdown-menu>li>a {
-                padding: 10px 15px 10px 30px;
-            }
-        }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="js/header-loader.js"></script>
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" class="top">
-
-    <!-- Navigation -->
-    <nav class="navbar navbar-universal navbar-custom navbar-fixed-top">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" data-toggle="collapse" data-target=".navbar-main-collapse" class="navbar-toggle">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a href="index.html" class="navbar-brand page-scroll">
-                    <span style="font-size: 24px; font-weight: bold; color: #d0cc37;">Rankmator</span>
-                </a>
-            </div>
-            <div class="collapse navbar-collapse navbar-main-collapse">
-                <ul class="nav navbar-nav navbar-left">
-                    <li class="hidden"><a href="#page-top"></a></li>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="javascript:void(0)">Services <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="seo.html">SEO</a></li>
-                            <li><a href="local-seo-services.html">Local SEO</a></li>
-                            <li><a href="website.html">Website Development</a></li>
-                            <li><a href="ai-marketing.html">AI Marketing</a></li>
-                            <li><a href="email-marketing.html">Email Marketing</a></li>
-                            <li><a href="branding-creative-design.html">Branding & Creative Design</a></li>
-                            <li><a href="ecommerce-marketing.html">E-commerce Marketing</a></li>
-                            <li><a href="social-media-marketing.html">Social Media Marketing</a></li>
-                            <li><a href="performance-marketing.html">Performance Marketing</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <div id="header-include"></div>
 
     <!-- Hero Section with Form -->
     <section class="seo-hero">
@@ -1247,13 +1145,13 @@
                 <!-- Left Side: Content -->
                 <div class="col-md-7">
                     <h1>Local SEO Services That Help Your Business Get Found & Chosen Locally</h1>
-                    <p>If your business depends on local customers, visibility on Google is no longer optional - it’s
-                        critical. When people search for “near me, “best service in my area, or “local business nearby,
-                        Google shows only a handful of results. If your business isn’t there, those customers go
+                    <p>If your business depends on local customers, visibility on Google is no longer optional - its
+                        critical. When people search for near me, best service in my area, or local business nearby,
+                        Google shows only a handful of results. If your business isn't there, those customers go
                         straight to your competitors.</p>
                     <p>At Rankmator, we provide Local SEO services designed to help businesses dominate local search
                         results, generate real inquiries, and turn nearby searches into paying customers.</p>
-                    <p>We don’t just help you rank, we help you get chosen.<br><strong>👉 Because Dikhega Tabhi To
+                    <p>We don't just help you rank, we help you get chosen.<br><strong>?? Because Dikhega Tabhi To
                             Bikega.</strong></p>
 
                 </div>
@@ -1284,7 +1182,7 @@
                 <div class="col-lg-10 col-lg-offset-1 text-center">
                     <h2 class="section-title" style="color: #1a1a1a;">Why Local SEO Is a Game-Changer</h2>
                     <p class="section-subtitle" style="color: #666;">Local search has completely changed how customers
-                        discover businesses. Today, people don’t browse directories; they search with intent.</p>
+                        discover businesses. Today, people don't browse directories; they search with intent.</p>
                 </div>
             </div>
             <div class="stats-grid">
@@ -1302,7 +1200,7 @@
                 </div>
             </div>
             <div class="row" style="margin-top: 30px; text-align: center;">
-                <p style="font-size: 18px; color: #444;">If your business doesn’t appear in these places, you’re
+                <p style="font-size: 18px; color: #444;">If your business doesn't appear in these places, you're
                     invisible to high-intent customers. Our Local SEO services for small businesses ensure your brand
                     appears exactly when customers are ready to take action.</p>
             </div>
@@ -1314,7 +1212,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 col-lg-offset-1 text-center">
-                    <h2 class="section-title" style="color: #fff;">Rankmator – A Local SEO Agency That Understands Local
+                    <h2 class="section-title" style="color: #fff;">Rankmator - A Local SEO Agency That Understands Local
                         Markets</h2>
                     <p class="section-subtitle mb-4" style="color: #ccc;margin-bottom:20px">Rankmator is a
                         growth-focused, AI-driven digital marketing agency built for businesses that want measurable
@@ -1326,7 +1224,7 @@
                     <div class="why-choose-card">
                         <h4>Local Keyword & Intent Research</h4>
                         <p>We identify how real customers search locally, including location-based, service-based, and
-                            “near me” keywords that drive conversions, not just traffic.</p>
+                            near me keywords that drive conversions, not just traffic.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -1393,9 +1291,9 @@
             </div>
             <div class="row" style="margin-top: 30px;">
                 <div class="col-lg-12 text-center">
-                    <p style="font-size: 16px; color: #666;">We don’t lock clients into long contracts. We focus on
+                    <p style="font-size: 16px; color: #666;">We don't lock clients into long contracts. We focus on
                         performance, trust, and long-term partnerships.</p>
-                    <a href="#contact-section" class="btn btn-brand btn-lg">Get Your Free Local SEO Audit →</a>
+                    <a href="#contact-section" class="btn btn-brand btn-lg">Get Your Free Local SEO Audit ?</a>
                 </div>
             </div>
         </div>
@@ -1444,7 +1342,7 @@
                         <div class="industry-tag">Nutritionist Sites</div>
                         <div class="industry-tag">Real Estate Portals</div>
                         <div class="industry-tag">Luxury Villas</div>
-                        <div class="industry-tag">Home DÃ©cor E-commerce</div>
+                        <div class="industry-tag">Home Décor E-commerce</div>
                         <div class="industry-tag">Resort Websites</div>
                         <div class="industry-tag">Yacht Rental Booking</div>
                         <div class="industry-tag">Education Platforms</div>
@@ -1552,7 +1450,7 @@
                     </div>
                     <div class="faq-answer">
                         <div class="faq-answer-content">
-                            Most businesses start seeing improvements within 2–4 months, depending on competition,
+                            Most businesses start seeing improvements within 2 -4 months, depending on competition,
                             location, and current online presence.
                         </div>
                     </div>
@@ -1615,7 +1513,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 col-lg-offset-1 text-center" style="position: relative; z-index: 2;">
-                    <h2>Ready to Grow Locally? Let’s Get Started</h2>
+                    <h2>Ready to Grow Locally? Let -s Get Started</h2>
                     <p>If you want your business to appear where local customers are searching, Rankmator is here to
                         help.</p>
                     <p>Partner with a trusted agency offering Local SEO services for small businesses that actually
@@ -1686,9 +1584,9 @@
                                 style="color: #ccc; font-size: 15px; text-decoration: none; transition: all 0.3s ease;">Home</a>
                         </li>
                         <li style="margin-bottom: 12px;">
-                            <a href="about.html"
-                                style="color: #ccc; font-size: 15px; text-decoration: none; transition: all 0.3s ease;">About
-                                Us</a>
+                            <a href="contact.html"
+                                style="color: #ccc; font-size: 15px; text-decoration: none; transition: all 0.3s ease;">Connect
+                                with us</a>
                         </li>
                         <li style="margin-bottom: 12px;">
                             <a href="contact.html"
@@ -1854,6 +1752,7 @@
             }
         });
     </script>
+    <script src="js/footer-loader.js"></script>
 </body>
 
 </html>

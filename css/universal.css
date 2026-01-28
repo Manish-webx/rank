@@ -1,63 +1,18 @@
-/*!
-    Universal - Smart multi-purpose html5 template
-    To use this template you must have a license purchased at Themeforest (themeforest.com)
-    Copyright 1995-2016 ForBetterWeb.com
-*/
-/*------------------------------------------------------------------
+﻿
 
-Table of contents
 
-* Fonts
-* Plugins
-* Base structure
-  * Preloader
-  * Buttons
-  * NavBar
-  * Backgrounds and font color
-  * Intro
-    * Intro solid color
-    * Video background
-  * Forms
-    * Subscribe form
-  * Countdown
-  * News - Blog grid
-  * Team
-  * Contact
-  * Quote
-  * Facts
-  * Map
-  * Carousel
-    * Shop thumbnails carousel
-  * Animated mouse
-  * Text rotator
-  * Number scroller
-  * Testimonials
-  *  Portfolio
-  * Pricing
-  * Miscellaneous
-  * Pager
-  * Bars and charts
-  * Shop
-  * Media Queries
-  * Magic background
-  * Footer
-* Stop animation on mobile devices
-* Demo page
 
--------------------------------------------------------------------*/
-/* Fonts */
-/*@import "https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900|Roboto+Mono:100,400|Caveat";*/
-/*@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');*/
-/*@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');*/
+
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100..900;1,100..900&display=swap');
-/* Plugins */
+
 @import url(../js/vegas/vegas.min.css);
 @import url(ionicons.min.css);
 @import url(font-awesome.min.css);
 @import url(animate.min.css);
 @import url(swipebox.css);
 
-/* Base structure */
+
 html {
     width: 100% !important;
     height: 100% !important;
@@ -66,7 +21,7 @@ html {
 body {
     width: 100% !important;
     height: 100% !important;
-    /*font: normal 15px/1.8 Raleway, sans-serif;*/
+    
     font-family: 'Inter', sans-serif;
     font-weight: 500;
     font-size: 16px;
@@ -76,7 +31,7 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-/* Preloader */
+
 #preloader {
     top: 0;
     left: 0;
@@ -128,9 +83,9 @@ body {
 
 .grayscale img {
     filter: gray;
-    /* IE6-9 */
+    
     -webkit-filter: grayscale(100%);
-    /* Chrome 19+ & Safari 6+ */
+    
 }
 
 .grayscale img:hover {
@@ -194,7 +149,7 @@ h5,
 h6 {
     margin: 0 0 20px;
     text-transform: uppercase;
-    /*letter-spacing: 0.1em;*/
+    
     line-height: 1.3;
     font-weight: 800;
 }
@@ -323,9 +278,7 @@ section,
     padding-top: 20px;
     padding-bottom: 20px;
     background-color: #fff;
-    /*  padding-top: 140px;
-      padding-bottom: 140px;
-      background-color: #fff;*/
+    
 }
 
 section#makebeauty {
@@ -396,7 +349,7 @@ select {
     margin-top: 3%;
 }
 
-/* Buttons */
+
 .btn {
     font-size: 12px !important;
     letter-spacing: 2px;
@@ -553,10 +506,8 @@ header .icon-big {
     font-family: 'Inter', sans-serif;
 }
 
-/*------------------------------------------------------------------------------------------------------------------Alok*/
-/*.greengband,.greengbandtext,.greengbandtext p{
-    font-family: 'Rozha One', serif;
-}*/
+
+
 section#greengband {
     background: #d0cc37;
 }
@@ -588,11 +539,7 @@ section#sevendchallenge {
     padding: 80px 100px 80px 100px;
 }
 
-/*.col-md-12.col-sm-12.col-xs-12.sevendchallengeicon {
-    position: absolute;
-    left: 0;
-    top: 88%;
-}*/
+
 .sevendchallengetext {
     color: #ffffff;
     font-size: 31px;
@@ -752,7 +699,7 @@ body::-webkit-scrollbar-thumb {
     margin-left: 10px;
 }
 
-/*---------------------------------------------------------------------------------------------------------------Alok*/
+
 .thin {
     font-weight: 100 !important;
 }
@@ -788,7 +735,7 @@ a .fa:hover {
     float: right;
 }
 
-/* NavBar */
+
 .navbar-custom {
     margin-bottom: 0;
     border-bottom: transparent;
@@ -810,7 +757,7 @@ a .fa:hover {
     padding: 0px 5px 12px 15px;
 }
 
-/*padding: 17px 5px 12px 15px; }*/
+
 .navbar-custom img {
     display: inline-block;
 }
@@ -840,7 +787,7 @@ a .fa:hover {
 }
 
 .navbar-custom .navbar-brand .logo {
-    /*max-height: 28px;*/
+    
     display: inline-block;
 }
 
@@ -876,8 +823,7 @@ img.logo {
 }
 
 .navbar-custom.top-nav-collapse .navbar-brand .logodark {
-    /*  max-width: 160px;
-      max-height: 20px; */
+    
 }
 
 .navbar-custom .navbar-brand i {
@@ -904,7 +850,7 @@ img.logo {
 }
 
 .navbar-custom .nav li a:hover {
-    /*font-weight: 600;*/
+    
     color: #878787;
 
 }
@@ -969,7 +915,7 @@ img.logo {
 
 .navbar-custom .nav li.active a:hover {
     color: #d0cc37;
-    /*font-weight: 600;*/
+    
 }
 
 .dropdown-menu {
@@ -1286,7 +1232,7 @@ a.btn-nav .btn {
     }
 
     .navbar-custom.top-nav-collapse {
-        /*padding: 0 30px;*/
+        
         background-color: #d0cc37;
     }
 
@@ -1481,7 +1427,7 @@ a.btn-nav .btn {
     max-height: 400px;
 }
 
-/* Backgrounds and font color */
+
 .bg-white {
     background-color: #fff;
     border-top: 1px solid #eee;
@@ -1627,11 +1573,11 @@ a.btn-nav .btn {
     color: rgba(255, 255, 255, 0.8);
 }
 
-/* Intro */
 
 
 
-/* Video background */
+
+
 .video-controls {
     position: absolute;
     bottom: 30px;
@@ -1687,7 +1633,7 @@ a.btn-nav .btn {
     top: 0 !important;
 }
 
-/* Forms */
+
 .small-form {
     margin: 0 auto 40px !important;
     max-width: 480px;
@@ -1756,7 +1702,7 @@ input[type=radio] {
     border: 0;
 }
 
-/* Subscribe form */
+
 #subscribe {
     color: #212121 !important;
     text-shadow: none;
@@ -1766,7 +1712,7 @@ input[type=radio] {
     color: #212121 !important;
 }
 
-/* Countdown */
+
 [id*="clock"] {
     padding: 40px 0;
 }
@@ -1823,7 +1769,7 @@ input[type=radio] {
     }
 }
 
-/* News - Blog etc grid */
+
 #news div[class*="col-"] {
     margin-bottom: 60px;
 }
@@ -1846,7 +1792,7 @@ input[type=radio] {
 }
 
 
-/* Team */
+
 #team h2 {
     margin-top: -40px !important;
     padding-bottom: 0 !important;
@@ -1864,7 +1810,7 @@ input[type=radio] {
     border-radius: 50%;
 }
 
-/* Contact */
+
 #contact2 a {
     text-decoration: none;
     color: #555;
@@ -1886,7 +1832,7 @@ input[type=radio] {
     }
 }
 
-/* Quote */
+
 blockquote {
     padding: 18px;
     margin: 0 0 20px;
@@ -1914,7 +1860,7 @@ blockquote:after {
     font-size: 18px;
 }
 
-/* Facts */
+
 @media (max-width: 768px) {
     .facts .col-sm-3 {
         margin-top: 25px;
@@ -1935,7 +1881,7 @@ blockquote:after {
     font-size: 18px;
 }
 
-/* Map */
+
 #map,
 #mapdark {
     width: 100%;
@@ -1953,7 +1899,7 @@ blockquote:after {
     border: 0 !important;
 }
 
-/* Carousel */
+
 .carousel-control {
     width: 8%;
     color: #000;
@@ -2100,7 +2046,7 @@ blockquote:after {
     width: 100%;
 }
 
-/* Shop thumbnails carousel */
+
 #carousel-example-generic {
     margin: 20px auto;
     width: 400px;
@@ -2161,7 +2107,7 @@ blockquote:after {
     padding: 0;
 }
 
-/* Animated mouse */
+
 .scroll-btn {
     width: 57px;
     display: block;
@@ -2273,12 +2219,12 @@ blockquote:after {
     }
 }
 
-/* Text rotator */
+
 .rotating {
     display: inline-block;
 }
 
-/* Number scroller */
+
 .numscroller {
     font-family: 'Figtree', sans-serif;
     font-weight: 100;
@@ -2287,7 +2233,7 @@ blockquote:after {
     letter-spacing: 0px;
 }
 
-/* Testimonials */
+
 #testimonials .carousel-inner img {
     width: 160px;
     height: 160px;
@@ -2304,7 +2250,7 @@ blockquote:after {
     color: #fff;
 }
 
-/*  Portfolio  */
+
 .portfolio-sorting {
     text-transform: uppercase;
     margin-bottom: 48px;
@@ -2354,10 +2300,7 @@ blockquote:after {
     width: 100%;
 }
 
-/*.portfolio-item:hover img {
-  transform: scale(1.2, 1.2) translate(15px, 15px);
-  -ms-transform: scale(1.2, 1.2) translate(15px, 15px);
-  -webkit-transform: scale(1.2, 1.2) translate(15px, 15px); }*/
+
 
 .portfolio-overlay {
     background: none repeat scroll 0 0 rgba(0, 0, 0, 0.75);
@@ -2410,7 +2353,7 @@ img.typo {
     margin-bottom: 0px;
 }
 
-/* Pricing */
+
 .panel {
     transition: all 0.4s ease;
     -moz-transition: all 0.4s ease;
@@ -2495,12 +2438,12 @@ section#services p {
     padding: 17px 10px;
 }
 
-/* Miscellaneous */
+
 .nav-tabs {
     margin-bottom: 30px;
 }
 
-/* Pager */
+
 .pager li>a,
 .pager li>span {
     padding: 30px 0;
@@ -2557,7 +2500,7 @@ section#services p {
     border-radius: 50% !important;
 }
 
-/* Bars and charts */
+
 #animate img {
     padding-bottom: 180px;
 }
@@ -2640,7 +2583,7 @@ section#services p {
     transition: width 2.50s ease !important;
 }
 
-/* Shop */
+
 .shop-nav {
     width: 250px;
     overflow: hidden;
@@ -2792,7 +2735,7 @@ li .shop-cart a:hover {
 
 .servicetext p {
     font-size: 15px;
-    /*font-weight: 300;*/
+    
 }
 
 .servicetext h3 {
@@ -2800,7 +2743,7 @@ li .shop-cart a:hover {
 }
 
 .lifecncsec {
-    /*    padding-bottom: 1px;*/
+    
     background: #000;
     padding-right: 15px;
     padding-bottom: 15px;
@@ -2853,19 +2796,19 @@ ol {
 }
 
 .flcontainer {
-    /* vertical-align: middle; */
+    
     margin-top: 48%;
 }
 
 .footersocial {
-    /* vertical-align: middle; */
+    
     margin-top: 48%;
 }
 
 .contacttypo {
     padding: 20px;
     filter: gray;
-    /* IE6-9 */
+    
     -webkit-filter: grayscale(100%);
 }
 
@@ -2936,9 +2879,9 @@ ol {
     }
 
     .flcontainer {
-        /* vertical-align: middle; */
+        
         margin-top: 0%;
-        /* padding: 10px; */
+        
         margin-top: 10px;
         font-size: 12px;
         text-align: center;
@@ -2950,7 +2893,7 @@ ol {
     }
 
     .footersocial {
-        /* vertical-align: middle; */
+        
         margin-top: 0%;
         margin-bottom: 10px !important;
         text-align: center;
@@ -2964,7 +2907,7 @@ ol {
 
 }
 
-/* Media Queries */
+
 .mobileplus {
     display: none;
 }
@@ -3041,8 +2984,7 @@ ol {
     .section-small {
         padding-top: 20px;
         padding-bottom: 20px;
-        /*     padding-top: 60px;
-                padding-bottom: 60px;*/
+        
     }
 
     section#about {
@@ -3148,7 +3090,7 @@ ol {
 
     .servicetext p {
         font-size: 14px;
-        /*font-weight: 300;*/
+        
     }
 
     .abouttext {
@@ -3157,7 +3099,7 @@ ol {
 
     .abouttext p {
         font-size: 14px;
-        /*font-weight: 300;*/
+        
     }
 
     .abouttext h3 {
@@ -3165,7 +3107,7 @@ ol {
     }
 
     .flcontainer {
-        /* vertical-align: middle; */
+        
         margin-top: 2% !important;
         text-align: center;
     }
@@ -3176,7 +3118,7 @@ ol {
     }
 
     .footersocial {
-        /* vertical-align: middle; */
+        
         margin-top: 2% !important;
         margin-bottom: 2% !important;
         text-align: center;
@@ -3322,8 +3264,8 @@ ol {
 
 @media (max-width: 480px) {
 
-    /*All page header alok*/
-    /*type 0*/
+    
+    
     .headerbannertext {
         padding: 100px 0px 0px 0px;
         margin-left: 0px;
@@ -3359,8 +3301,8 @@ ol {
         text-align: center !important;
     }
 
-    /*type 0*/
-    /*type 1*/
+    
+    
     .headerbannertext-right {
         text-align: center;
         font-size: 35px;
@@ -3386,8 +3328,8 @@ ol {
         margin-right: 40%;
     }
 
-    /*type 1*/
-    /*type 2*/
+    
+    
     .headerbannertext-left {
         text-align: center;
         font-size: 35px;
@@ -3414,7 +3356,7 @@ ol {
         min-width: 160px;
     }
 
-    /*type 2*/
+    
     .greengbandtext p {
         font-size: 18px !important;
         margin-bottom: 6px;
@@ -3426,7 +3368,7 @@ ol {
 
     .sevendchallengeimg img {
         max-width: 236px;
-        /* text-align: center; */
+        
         margin-left: 22%;
     }
 
@@ -3450,7 +3392,7 @@ ol {
         font-size: 14px !important;
     }
 
-    /*All page header*/
+    
 
     h4.hbnrh4 img {
         max-width: 577px;
@@ -3512,7 +3454,7 @@ ol {
 
     .sevendchallengeimg img {
         max-width: 220px;
-        /* text-align: center; */
+        
         margin-left: 15%;
     }
 }
@@ -3530,7 +3472,7 @@ ol {
 
 }
 
-/* Magic background */
+
 .magic,
 .magic2 {
     position: absolute;
@@ -3540,7 +3482,7 @@ ol {
     left: 0;
 }
 
-/* Footer */
+
 .footer {
     color: #fff;
     font-size: 14px;
@@ -3598,7 +3540,7 @@ ol {
     transition: all 0.3s;
 }
 
-/* Service Cards */
+
 .service-card {
     position: relative;
     height: 330px;
@@ -3683,7 +3625,7 @@ a.contact-round:hover {
     }
 }
 
-/* Stop animation on mobile devices */
+
 @media (max-width: 800px) {
     .wow {
         animation-name: none !important;
@@ -3691,7 +3633,7 @@ a.contact-round:hover {
     }
 }
 
-/* Demo page */
+
 .intro.demo-header h1 {
     font-size: 90px;
 }
@@ -3739,7 +3681,7 @@ a.contact-round:hover {
 }
 
 .intro.demo-header .intro-body:before {
-    /*background: rgba(25, 25, 35, 0.7);*/
+    
 }
 
 .scroll-background {
@@ -3770,7 +3712,7 @@ a.contact-round:hover {
     }
 }
 
-/*# sourceMappingURL=universal.css.map */
+
 @media (max-width: 480px) {
     .b_charyenimg img {
         padding: 20px 30px 28px 30px;
@@ -3801,16 +3743,7 @@ a.contact-round:hover {
 }
 
 
-/*@media (max-width: 480px) {
-        
-        .img-left{margin-left: 0 0 0 0} 
-}
 
-@media (max-width: 991px) {
-        
-        .img-left{margin-left: 0 0 0 0} 
-}
-*/
 
 .showcasesec {
     background: #111;
@@ -3818,7 +3751,7 @@ a.contact-round:hover {
 
 }
 
-/*.showcasesec img{border: 50px #fff Solid }*/
+
 
 h1 span {
     color: #d0cc37;
@@ -3834,7 +3767,7 @@ h1 span {
     text-decoration: underline;
 }
 
-/* New Hero Section */
+
 #hero-section {
     background-color: #000;
     color: #fff;
@@ -3884,7 +3817,7 @@ h1 span {
     }
 }
 
-/* Why Choose Section */
+
 #why-choose {
     color: #fff;
 }
@@ -3935,7 +3868,7 @@ h1 span {
     color: #d0cc37;
 }
 
-/* Navigation Menu Visibility Fix (Added for Shared Header) */
+
 @media (min-width: 768px) {
     .navbar-collapse.collapse {
         display: block !important;
@@ -3958,7 +3891,7 @@ h1 span {
         padding-bottom: 15px;
     }
 
-    /* Dropdown Menu */
+    
     .navbar-nav>li {
         position: relative;
     }
@@ -3981,7 +3914,7 @@ h1 span {
     }
 }
 
-/* Mobile Navigation */
+
 @media (max-width: 767px) {
     .navbar-nav {
         margin: 0;

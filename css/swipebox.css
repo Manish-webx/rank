@@ -1,4 +1,4 @@
-/*! Swipebox v1.3.0 | Constantin Saguin csag.co | MIT License | github.com/brutaldesign/swipebox */
+﻿
 html.swipebox-html.swipebox-touch {
     overflow: hidden !important;
 }
@@ -268,8 +268,7 @@ html.swipebox-html.swipebox-touch {
         left: 0;
     }
 }
-/* Skin
---------------------------*/
+
 #swipebox-overlay {
     background: rgba(0,0,0,.9);
 }

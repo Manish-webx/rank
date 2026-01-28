@@ -1,6 +1,6 @@
-document.addEventListener("DOMContentLoaded", function () {
+﻿document.addEventListener("DOMContentLoaded", function () {
     const footerHtml = `
-    <!-- Footer Section -->
+    
     <section class="section-small footer bg-dark">
         <div class="container-fluid">
             <div class="row">
@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
         </div>
     </section>
 
-    <!-- WhatsApp Floating Widget -->
+    
     <a href="https://api.whatsapp.com/send?phone=919560864432&text=Hi%20Rankmator!%20I%20need%20help%20with%20digital%20marketing." 
        target="_blank">
         <img src="img/whatsup.png" 

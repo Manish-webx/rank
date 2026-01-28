@@ -1,23 +1,4 @@
-/*___________________________________________________________________________________________________________________________________________________
- _ jquery.mb.components                                                                                                                             _
- _                                                                                                                                                  _
- _ file: jquery.mb.YTPlayer.js                                                                                                                      _
- _ last modified: 19/08/14 20.13                                                                                                                    _
- _                                                                                                                                                  _
- _ Open Lab s.r.l., Florence - Italy                                                                                                                _
- _                                                                                                                                                  _
- _ email: matteo@open-lab.com                                                                                                                       _
- _ site: http://pupunzi.com                                                                                                                         _
- _       http://open-lab.com                                                                                                                        _
- _ blog: http://pupunzi.open-lab.com                                                                                                                _
- _ Q&A:  http://jquery.pupunzi.com                                                                                                                  _
- _                                                                                                                                                  _
- _ Licences: MIT, GPL                                                                                                                               _
- _    http://www.opensource.org/licenses/mit-license.php                                                                                            _
- _    http://www.gnu.org/licenses/gpl.html                                                                                                          _
- _                                                                                                                                                  _
- _ Copyright (c) 2001-2014. Matteo Bicocchi (Pupunzi);                                                                                              _
- ___________________________________________________________________________________________________________________________________________________*/
+﻿
 
 var ytp = ytp || {};
 
@@ -31,7 +12,7 @@ function onYouTubePlayerAPIReady() {
     jQuery(document).trigger("YTAPIReady");
 }
 (function (jQuery, ytp) {
-    /*Browser detection patch*/
+    
     var nAgt = navigator.userAgent;
     if (!jQuery.browser) {
         jQuery.browser = {};
@@ -66,9 +47,7 @@ function onYouTubePlayerAPIReady() {
     jQuery.browser.windowsMobile = /IEMobile|Windows Phone/i.test(nAgt);
     jQuery.browser.mobile = jQuery.browser.android || jQuery.browser.blackberry || jQuery.browser.ios || jQuery.browser.windowsMobile || jQuery.browser.operaMobile || jQuery.browser.kindle;
 
-    /*******************************************************************************
-     * jQuery.mb.components: jquery.mb.CSSAnimate
-     ******************************************************************************/
+    
 
     jQuery.fn.CSSAnimate = function (a, g, p, m, h) {
         function r(a) {
@@ -189,7 +168,7 @@ function onYouTubePlayerAPIReady() {
         })
     };
 
-    /******************************************************************************/
+    
 
     var getYTPVideoID = function (url) {
 
@@ -210,10 +189,7 @@ function onYouTubePlayerAPIReady() {
         return {videoID: videoID, playlistID: playlistID};
     };
 
-    /* todo:
-     setPlaybackRate()
-     playlist
-     */
+    
 
     jQuery.mbYTPlayer = {
         name: "jquery.mb.YTPlayer",
@@ -248,7 +224,7 @@ function onYouTubePlayerAPIReady() {
 
         },
 
-        /* @fontface icons */
+        
         controls: {
             play: "P",
             pause: "p",
@@ -263,10 +239,7 @@ function onYouTubePlayerAPIReady() {
 
         buildPlayer: function (options) {
 
-            /*
-             if (jQuery.browser.mobile)
-             return this;
-             */
+            
 
             return this.each(function () {
                 var YTPlayer = this;
@@ -588,14 +561,7 @@ function onYouTubePlayerAPIReady() {
                                 },
 
                                 'onStateChange': function (event) {
-                                    /*
-                                     -1 (unstarted)
-                                     0 (ended)
-                                     1 (playing)
-                                     2 (paused)
-                                     3 (buffering)
-                                     5 (video cued).
-                                     */
+                                    
 
                                     if (typeof event.target.getPlayerState != "function")
                                         return;
@@ -1123,7 +1089,7 @@ function onYouTubePlayerAPIReady() {
             var YTPlayer = this.get(0);
             var data = YTPlayer.opt;
 
-            /** @data.printUrl is deprecated; use data.showYTLogo */
+            
             data.showYTLogo = data.showYTLogo || data.printUrl;
 
             if (jQuery("#controlBar_" + YTPlayer.id).length)
@@ -1372,7 +1338,7 @@ function onYouTubePlayerAPIReady() {
         return newArray;
     };
 
-    /*Exposed method for external use*/
+    
     jQuery.fn.YTPlayer = jQuery.mbYTPlayer.buildPlayer;
     jQuery.fn.YTPlaylist = jQuery.mbYTPlayer.YTPlaylist;
     jQuery.fn.playNext = jQuery.mbYTPlayer.playNext;
@@ -1395,7 +1361,7 @@ function onYouTubePlayerAPIReady() {
     jQuery.fn.manageYTPProgress = jQuery.mbYTPlayer.manageYTPProgress;
     jQuery.fn.getDataFromFeed = jQuery.mbYTPlayer.getVideoData;
 
-    /** @deprecated **/
+    
     jQuery.fn.mb_YTPlayer = jQuery.fn.YTPlayer;
     jQuery.fn.muteYTPVolume = jQuery.mbYTPlayer.muteYTP;
     jQuery.fn.unmuteYTPVolume = jQuery.mbYTPlayer.unmuteYTP;

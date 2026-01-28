@@ -1,35 +1,24 @@
-/****************************************************************************************
- Universal - Smart multi-purpose html5 template
- To use this template you must have a license purchased at Themeforest (themeforest.com)
- Copyright 2016 ForBetterWeb.com
- ***************************************************************************************/
+﻿
 
 (function ($) {
     "use strict";
     $(document).ready(function () {
 
-        /***********************************************
-         * Active Menu Highlighting
-         ***********************************************/
+        
         var url = window.location.pathname.split("/").pop() || "index.html";
         $('ul.nav a[href="' + url + '"]').parent().addClass('active');
         $('ul.nav a').filter(function () {
             return this.href == window.location.href;
         }).parent().addClass('active');
 
-        /***********************************************
-         * Preloader
-         ***********************************************/
+        
 
         jQuery(window).load(function () {
             jQuery("#status").fadeOut();
             jQuery("#preloader").delay(1000).fadeOut("slow");
         })
 
-        /***********************************************
-         * Universal Parallax
-         * Copyright - ForBetterWeb.com
-         ***********************************************/
+        
 
         var introHeader = $('.intro'),
             intro = $('.intro');
@@ -67,9 +56,7 @@
             }
         };
 
-        /***********************************************
-         * jQuery Parallax
-         ***********************************************/
+        
 
         if ($.fn.parallax) {
             $('.bg-img').parallax("50%", .12);
@@ -79,9 +66,7 @@
             $('.bg-img5').parallax("50%", .12);
         }
 
-        /***********************************************
-         * jQuery to collapse the navbar on scroll
-         ***********************************************/
+        
 
         $(window).scroll(function () {
 
@@ -96,9 +81,7 @@
             }
         });
 
-        /***********************************************
-         * Tabs
-         ***********************************************/
+        
 
         $('#myTabs a').click(function (e) {
             e.preventDefault()
@@ -106,9 +89,7 @@
         })
 
 
-        /***********************************************
-         * jQuery for page scrolling feature
-         ***********************************************/
+        
 
         $(function () {
             $('a.page-scroll').on('click', function (event) {
@@ -120,26 +101,20 @@
             });
         });
 
-        /***********************************************
-         * Highlight the top nav as scrolling occurs
-         ***********************************************/
+        
 
         $('body').scrollspy({
             target: '.navbar-fixed-top',
             offset: 65
         })
 
-        /***********************************************
-         * Closes the Responsive Menu on Menu Item Click in One Page Nav
-         ***********************************************/
+        
 
         $('.navbar-onepage .navbar-collapse ul li a').on('click', function () { $('.navbar-onepage .navbar-toggle:visible').click(); });
 
 
 
-        /***********************************************
-         * Countdown
-         ***********************************************/
+        
 
         if ($.fn.countdown) {
             $('#clock').countdown('2017/01/21 11:00:00').on('update.countdown', function (event) {
@@ -177,9 +152,7 @@
             });
         }
 
-        /***********************************************
-         * Carousel
-         ***********************************************/
+        
 
         $('.carousel-big').carousel({
             interval: 6500, //changes the speed
@@ -191,9 +164,7 @@
             pause: "false"
         })
 
-        /***********************************************
-         * HTML5 Placeholder
-         ***********************************************/
+        
 
         $(function () {
             if ($.fn.placeholder) {
@@ -205,9 +176,7 @@
             new WOW().init();
         }
 
-        /***********************************************
-         * Circle Chart
-        ***********************************************/
+        
 
         if ($.fn.circleProgress) {
             var el = $('.circle'),
@@ -231,9 +200,7 @@
                 });
         }
 
-        /***********************************************
-         * Progress Bar
-         ***********************************************/
+        
 
         $(".progress-bar").each(function () {
             var each_bar_width;
@@ -241,13 +208,11 @@
             $(this).width(each_bar_width + '%');
         });
 
-        /***********************************************
-         *  Swipe box
-         ***********************************************/
+        
 
         ; (function ($) {
 
-            /* Basic Gallery */
+            
 
             $('.swipebox').swipebox({
                 useCSS: true, // false will force the use of jQuery for animations
@@ -259,7 +224,7 @@
                 autoplayVideos: true // true will autoplay Youtube and Vimeo videos
             });
 
-            /* Video */
+            
 
             $('.swipebox-video').swipebox();
 
@@ -277,10 +242,7 @@
         });
 
 
-        /***********************************************
-         *  jQuery Animated Number
-         *  Developers: Arun David, Boobalan
-         ***********************************************/
+        
 
         $(window).on("load", function () {
             $(document).scrollzipInit();
@@ -354,9 +316,7 @@
             }
         }
 
-        /***********************************************
-         * Portfolio
-         ***********************************************/
+        
 
         var shuffleme = (function ($) {
             'use strict';

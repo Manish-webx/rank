@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+﻿document.addEventListener("DOMContentLoaded", function () {
     const headerHtml = `
     <nav class="navbar navbar-universal navbar-custom navbar-fixed-top">
         <div class="container-fluid">
@@ -17,7 +17,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 <ul class="nav navbar-nav navbar-left">
                     <li class="hidden"><a href="#page-top"></a></li>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
                     <li><a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">Services <span
                                 class="caret"></span></a>
                         <ul class="dropdown-menu">
@@ -30,10 +29,6 @@ document.addEventListener("DOMContentLoaded", function () {
                             <li><a href="ecommerce-marketing.html">E-commerce Marketing</a></li>
                             <li><a href="social-media-marketing.html">Social Media Marketing</a></li>
                             <li><a href="performance-marketing.html">Performance Marketing</a></li>
-                            <li class="divider"></li>
-                            <li><a href="healthcare-seo-agency.html">Healthcare SEO</a></li>
-                            <li><a href="fintech-seo.html">Fintech SEO</a></li>
-                            <li><a href="dental-seo-agency.html">Dental SEO</a></li>
                         </ul>
                     </li>
                     <li><a href="contact.html">Contact</a></li>
@@ -47,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (container) {
         container.innerHTML = headerHtml;
 
-        // Active Menu Highlighting
+
         var url = window.location.pathname.split("/").pop() || "index.html";
         var navLinks = container.querySelectorAll('ul.nav a');
         navLinks.forEach(function (link) {
@@ -57,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
 
-        // Re-trigger scroll to ensure navbar transparency logic in universal.js works
+
         window.dispatchEvent(new Event('scroll'));
     }
 });
